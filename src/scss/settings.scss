@@ -1,0 +1,92 @@
+$body-font-family: 'JetBrains Mono', sans-serif;
+$heading-font-family: 'Bebas Neue', sans-serif;
+
+@use 'vuetify/settings' with (
+  $color-pack: false,
+  $body-font-family: $body-font-family,
+  $heading-font-family: $heading-font-family,
+
+  //   $typography: (
+  //     'h1': (
+  //       'font-family': $heading-font-family,
+  //       'weight': 700,
+  //       'size': 97px,
+  //       'line-height': 112px,
+  //       'letter-spacing': -1.5px
+  //     ),
+  //     'h2': (
+  //       'weight': 700,
+  //       'size': 61px,
+  //       'line-height': 72px,
+  //       'letter-spacing': -0.5px
+  //     ),
+  //     'h3': (
+  //       'weight': 700,
+  //       'size': 48px,
+  //       'line-height': 56px
+  //     ),
+  //     'h4': (
+  //       'weight': 700,
+  //       'size': 34px,
+  //       'line-height': 36px,
+  //       'letter-spacing': 0.25px
+  //     ),
+  //     'h5': (
+  //       'weight': 700,
+  //       'size': 24px,
+  //       'line-height': 24px
+  //     ),
+  //     'h6': (
+  //       'weight': 700,
+  //       'size': 20px,
+  //       'line-height': 24px,
+  //       'letter-spacing': 0.15px
+  //     ),
+  //     'subtitle-1': (
+  //       'weight': 400,
+  //       'size': 16px,
+  //       'line-height': 24px,
+  //       'letter-spacing': 0.15px
+  //     ),
+  //     'subtitle-2': (
+  //       'weight': 500,
+  //       'size': 14px,
+  //       'line-height': 24px,
+  //       'letter-spacing': 0.1px
+  //     ),
+  //     'body-1': (
+  //       'weight': 800,
+  //       'size': 20px,
+  //       'line-height': 24px,
+  //       'letter-spacing': 0.5px
+  //     ),
+  //     'body-2': (
+  //       'weight': 400,
+  //       'size': 14px,
+  //       'line-height': 20px,
+  //       'letter-spacing': 0.25px
+  //     ),
+  //     'button': (
+  //       'weight': 700,
+  //       'size': 16px,
+  //       'line-height': 16px,
+  //       'letter-spacing': 1.25px,
+  //       'text-transform': none
+  //     ),
+  //     'caption': (
+  //       'weight': 400,
+  //       'size': 12px,
+  //       'line-height': 16px,
+  //       'letter-spacing': 0.4px
+  //     ),
+  //     'overline': (
+  //       'weight': 700,
+  //       'size': 10px,
+  //       'line-height': 16px,
+  //       'letter-spacing': 1.5px,
+  //       'text-transform': uppercase
+  //     )
+  //   ),
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@100..800&display=swap');
