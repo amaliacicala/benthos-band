@@ -99,7 +99,8 @@ onMounted(() => {
     text-decoration-style: dotted !important;
   }
 }
-:deep(.v-list-item__overlay) {
+:deep(.v-list-item__overlay),
+:deep(.v-ripple__container) {
   opacity: 0 !important;
 }
 .active {
