@@ -27,8 +27,9 @@ onMounted(() => {
     elevation="0"
     scroll-behavior="hide"
     scroll-threshold="179"
-    color="white"
+    color="green-lighten-1"
     class="pa-2 pa-md-0"
+    height="80"
   >
     <v-container class="d-flex justify-space-between align-center">
       <div>
@@ -46,7 +47,7 @@ onMounted(() => {
           v-for="item in navigation"
           :key="item.name"
           link
-          height="64"
+          height="80"
           class="d-flex justify-center text-lowercase"
           :class="{ 'active font-weight-bold': isActive(item.link) }"
           @click="router.push(item.link)"
@@ -82,6 +83,10 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+.v-app-bar {
+  border-bottom: solid 5px;
+  border-image: url('../assets/pattern.png') 100 round;
+}
 .v-img {
   &:hover {
     cursor: pointer;
@@ -94,11 +99,11 @@ onMounted(() => {
     text-decoration-style: dotted !important;
   }
 }
+:deep(.v-list-item__overlay) {
+  opacity: 0 !important;
+}
 .active {
   text-decoration: underline !important;
   text-underline-offset: 2px !important;
-}
-:deep(.v-list-item__overlay) {
-  opacity: 0 !important;
 }
 </style>

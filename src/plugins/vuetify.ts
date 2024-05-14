@@ -8,7 +8,8 @@ const lightTheme: ThemeDefinition = {
   dark: false,
   colors: {
     white: '#f4f2e4',
-    black: '#000000',
+    black: '#111111',
+    background: '#111111',
     'green-darken-4': '#312f28',
     'green-darken-3': '#343221',
     'green-lighten-2': '#aab5a1',
