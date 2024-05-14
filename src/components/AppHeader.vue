@@ -1,0 +1,104 @@
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { fetchNavigation } from '@/api/navigation'
+import type { NavigationItem } from '@/types/Navigation'
+import logo from '../assets/benthos_logo_new.png'
+import AppSideMenu from './AppSideMenu.vue'
+
+const router = useRouter()
+const route = useRoute()
+
+const navigation = ref<Array<NavigationItem>>([])
+const showDialog = ref(false)
+
+const isActive = (link: string) => {
+  return route.path === link || route.name === link
+}
+
+onMounted(() => {
+  const data = fetchNavigation()
+  navigation.value = data.navigation
+})
+</script>
+
+<template>
+  <v-app-bar
+    elevation="0"
+    scroll-behavior="hide"
+    scroll-threshold="179"
+    color="white"
+    class="pa-2 pa-md-0"
+  >
+    <v-container class="d-flex justify-space-between align-center">
+      <div>
+        <v-img
+          :src="logo"
+          :width="120"
+          cursor-pointer
+          alt="Benthos band"
+          @click="router.push({ name: 'Homepage' })"
+        />
+      </div>
+
+      <div class="d-none d-md-flex">
+        <v-list-item
+          v-for="item in navigation"
+          :key="item.name"
+          link
+          height="64"
+          class="d-flex justify-center text-lowercase"
+          :class="{ 'active font-weight-bold': isActive(item.link) }"
+          @click="router.push(item.link)"
+        >
+          {{ item.name }}
+        </v-list-item>
+      </div>
+
+      <v-app-bar-nav-icon
+        id="appsidemenu-activator"
+        icon="mdi-menu"
+        variant="text"
+        color="black"
+        class="d-flex d-md-none"
+      />
+      <v-dialog
+        v-model="showDialog"
+        activator="#appsidemenu-activator"
+        height="100%"
+        max-height="100%"
+        width="256px"
+        content-class="ma-0"
+        location="left"
+        class="justify-start"
+        transition="slide-x-transition"
+      >
+        <v-card height="100%" class="py-2 px-4" rounded="0">
+          <AppSideMenu @close="showDialog = false" />
+        </v-card>
+      </v-dialog>
+    </v-container>
+  </v-app-bar>
+</template>
+
+<style lang="scss" scoped>
+.v-img {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.v-list-item {
+  &:hover {
+    text-decoration: underline !important;
+    text-underline-offset: 2px !important;
+    text-decoration-style: dotted !important;
+  }
+}
+.active {
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
+}
+:deep(.v-list-item__overlay) {
+  opacity: 0 !important;
+}
+</style>

@@ -1,0 +1,32 @@
+{
+  "navigation": [
+    {
+      "name": "Homepage",
+      "link": "/"
+    },
+    {
+      "name": "Music",
+      "link": "/music"
+    },
+    {
+      "name": "Video",
+      "link": "/video"
+    },
+    {
+      "name": "Tour",
+      "link": "/tour-dates"
+    },
+    {
+      "name": "Shop",
+      "link": "/shop-merch"
+    },
+    {
+      "name": "About",
+      "link": "/about"
+    },
+    {
+      "name": "Contacts",
+      "link": "/contacts"
+    }
+  ]
+}

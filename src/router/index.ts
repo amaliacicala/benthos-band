@@ -6,7 +6,37 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Homepage',
+      component: HomeView
+    },
+    {
+      path: '/music',
+      name: 'Music',
+      component: HomeView
+    },
+    {
+      path: '/video',
+      name: 'Video',
+      component: HomeView
+    },
+    {
+      path: '/tour-dates',
+      name: 'Tour',
+      component: HomeView
+    },
+    {
+      path: '/shop-merch',
+      name: 'Shop',
+      component: HomeView
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: HomeView
+    },
+    {
+      path: '/contacts',
+      name: 'Contacts',
       component: HomeView
     }
   ]
