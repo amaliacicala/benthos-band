@@ -85,7 +85,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .v-app-bar {
   border-bottom: solid 5px;
-  border-image: url('../assets/pattern.png') 100 round;
+  border-image: url('../assets/pattern.avif') 100 round;
 }
 .v-img {
   &:hover {
