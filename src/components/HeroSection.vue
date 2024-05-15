@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="background"></div>
+  <div class="background" />
 </template>
 
 <style lang="scss" scoped>
@@ -10,7 +10,6 @@
   height: 100vh;
   background-image: url('../assets/hero_image.avif');
   background-position: center;
-  background-repeat: none;
   opacity: 0.4;
   animation: animatedBackground 10s ease-in-out infinite alternate;
 }

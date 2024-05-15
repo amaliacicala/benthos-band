@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { fetchNavigation } from '@/api/navigation'
 import type { NavigationItem } from '@/types/Navigation'
-import logo from '../assets/benthos_logo_new.png'
+import logo from '@/assets/benthos_logo_new.png'
 import AppSideMenu from './AppSideMenu.vue'
 
 const router = useRouter()
@@ -13,7 +13,7 @@ const navigation = ref<Array<NavigationItem>>([])
 const showDialog = ref(false)
 
 const isActive = (link: string) => {
-  return route.path === link || route.name === link
+  return route.path === link
 }
 
 onMounted(() => {
@@ -66,15 +66,13 @@ onMounted(() => {
       <v-dialog
         v-model="showDialog"
         activator="#appsidemenu-activator"
-        height="100%"
-        max-height="100%"
-        width="256px"
+        fullscreen
         content-class="ma-0"
         location="left"
         class="justify-start"
         transition="slide-x-transition"
       >
-        <v-card height="100%" class="py-2 px-4" rounded="0">
+        <v-card height="100%" class="py-2 px-4 bg-brown-lighten-5" rounded="0">
           <AppSideMenu @close="showDialog = false" />
         </v-card>
       </v-dialog>
@@ -83,14 +81,22 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+:deep(.mdi-menu::before) {
+  content: '\F035C';
+  font-size: 32px;
+}
 .v-app-bar {
   border-bottom: solid 5px;
-  border-image: url('../assets/pattern.avif') 100 round;
+  border-image: url('@/assets/pattern.avif') 100 round;
 }
 .v-img {
   &:hover {
     cursor: pointer;
   }
+}
+.active {
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
 }
 .v-list-item {
   &:hover {
@@ -103,8 +109,16 @@ onMounted(() => {
 :deep(.v-ripple__container) {
   opacity: 0 !important;
 }
-.active {
-  text-decoration: underline !important;
-  text-underline-offset: 2px !important;
+.v-card {
+  border: solid 10px;
+  animation: animatedBorder 3s ease-in-out infinite alternate;
+}
+@keyframes animatedBorder {
+  from {
+    border-image: url('@/assets/pattern.avif') 80;
+  }
+  to {
+    border-image: url('@/assets/pattern.avif') 20;
+  }
 }
 </style>
