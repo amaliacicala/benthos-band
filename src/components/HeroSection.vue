@@ -1,17 +1,22 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="background" />
+  <div class="background w-100 h-100" />
 </template>
 
 <style lang="scss" scoped>
 .background {
-  width: 100%;
-  height: 100vh;
-  background-image: url('../assets/hero_image.avif');
+  background-image: url('../assets/hero_image_desktop.avif');
   background-position: center;
-  opacity: 0.4;
-  animation: animatedBackground 10s ease-in-out infinite alternate;
+  background-size: cover;
+  opacity: 0.8;
+  animation: animatedBackground 15s ease-in-out infinite alternate;
+
+  @media screen and (max-width: 1299px) {
+    background-image: url('../assets/hero_image_mobile.avif');
+    opacity: 1;
+    animation: none;
+  }
 }
 
 @keyframes animatedBackground {

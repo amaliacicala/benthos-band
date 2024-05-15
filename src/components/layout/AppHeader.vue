@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useDisplay } from 'vuetify'
 import { useRoute, useRouter } from 'vue-router'
 import { fetchNavigation } from '@/api/navigation'
 import type { NavigationItem } from '@/types/Navigation'
 import logo from '@/assets/benthos_logo_new.png'
 import AppSideMenu from './AppSideMenu.vue'
+
+const { mobile } = useDisplay()
 
 const router = useRouter()
 const route = useRoute()
@@ -27,9 +30,9 @@ onMounted(() => {
     elevation="0"
     scroll-behavior="hide"
     scroll-threshold="179"
-    color="green-lighten-1"
+    color="brown-lighten-5"
     class="pa-2 pa-md-0"
-    height="80"
+    :height="mobile ? 58 : 80"
   >
     <v-container class="d-flex justify-space-between align-center">
       <div>
