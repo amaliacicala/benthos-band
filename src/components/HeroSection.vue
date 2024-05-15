@@ -12,7 +12,7 @@
   opacity: 0.8;
   animation: animatedBackground 15s ease-in-out infinite alternate;
 
-  @media screen and (max-width: 1299px) {
+  @media screen and (max-width: 600px) {
     background-image: url('../assets/hero_image_mobile.avif');
     opacity: 1;
     animation: none;
