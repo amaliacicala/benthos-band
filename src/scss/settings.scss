@@ -89,4 +89,19 @@ $heading-font-family: 'Bebas Neue', sans-serif;
   //   ),
 );
 
+.bg-debris {
+  background-image: url('@/assets/debris-bg.large.avif');
+  background-size: cover;
+  animation: animatedBackground 12s ease-in-out infinite alternate;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% 100%;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@100..800&display=swap');
