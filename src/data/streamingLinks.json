@@ -1,0 +1,86 @@
+{
+  "ii": {
+    "overline": "The debut album",
+    "title": "Benthos - II",
+    "cover": "src/assets/benthos_ii_cover.jpg",
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": "https://open.spotify.com/album/5jLm0U00y9utdjUPT88B1l?si=INDVdUr1Sti7OM-Fr-4LPg"
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": "https://geo.music.apple.com/it/album/_/1545065439?app=music&at=1000lHKX&ct=linktree_http&itscg=30200&itsct=lt_m&ls=1&mt=1"
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": "https://music.amazon.com/albums/B08QRBWC4M"
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": "https://listen.tidal.com/album/166359206"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://www.youtube.com/playlist?list=OLAK5uy_nOJ6EOxnGqt6Ieu9IOmYU73EivJwY8FeQ"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": "https://music.youtube.com/playlist?list=OLAK5uy_nOJ6EOxnGqt6Ieu9IOmYU73EivJwY8FeQ"
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": "https://www.deezer.com/album/193593432"
+      }
+    ]
+  },
+  "debris_essence": {
+    "overline": "B-side single",
+    "title": "Debris // Essence",
+    "cover": "src/assets/benthos_debris_cover.jpg",
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": "https://open.spotify.com/track/3kRBJAl3B1FVFI6PQEJxAw?si=Xl8KCd1UT0WCX7d1hj8UQg&utm_medium=share&utm_source=linktree"
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": "https://geo.music.apple.com/it/album/_/1597024043?app=music&at=1000lHKX&ct=linktree_http&i=1597024048&itscg=30200&itsct=lt_m&ls=1&mt=1"
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": "https://music.amazon.com/albums/B09MH3THK9?trackAsin=B09MHB9JYX"
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": "https://listen.tidal.com/track/206390485"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://www.youtube.com/watch?v=1tVxbYR59Gc"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": "https://music.youtube.com/watch?v=co4wC-fTtr8"
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": "https://www.deezer.com/track/1564501592"
+      }
+    ]
+  }
+}

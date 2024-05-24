@@ -29,7 +29,7 @@ onMounted(() => {
   <v-app-bar
     elevation="0"
     scroll-behavior="hide"
-    scroll-threshold="179"
+    scroll-threshold="100"
     color="brown-lighten-5"
     class="pa-2 pa-md-0"
     :height="mobile ? 58 : 80"
