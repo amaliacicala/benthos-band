@@ -38,7 +38,7 @@ $heading-font-family: 'Bebas Neue', sans-serif;
 .bg-debris {
   background-image: url('@/assets/debris-bg.large.avif');
   background-size: cover;
-  animation: animatedBgDebris 15s ease-in-out infinite alternate;
+  animation: animatedBgDebris 30s ease-in-out infinite alternate;
 
   @media screen and (max-width: 600px) {
     animation-duration: 60s;
@@ -59,10 +59,10 @@ $heading-font-family: 'Bebas Neue', sans-serif;
 }
 @keyframes animatedBgDebris {
   from {
-    background-position: 100% 100%;
+    background-position: 100% 0%;
   }
   to {
-    background-position: 0% 0%;
+    background-position: 0% 100%;
   }
 }
 @keyframes pulse {

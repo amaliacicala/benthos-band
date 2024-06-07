@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import AppHeader from '@/components/layout/AppHeader.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
-import MusicSection from '@/components/sections/MusicSection.vue'
 </script>
 
 <template>
@@ -10,5 +9,4 @@ import MusicSection from '@/components/sections/MusicSection.vue'
   </v-container>
 
   <HeroSection />
-  <MusicSection />
 </template>
