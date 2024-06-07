@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import Login from '../components/sections/Login.vue'
+import LoginSection from '../components/sections/LoginSection.vue'
 </script>
 
 <template>
-  <Login />
+  <LoginSection />
 </template>
