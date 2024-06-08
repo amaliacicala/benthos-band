@@ -2,6 +2,7 @@
 import BiographyBlock from '../atoms/BiographyBlock.vue'
 import BandMembersBlock from '../atoms/BandMembersBlock.vue'
 import EpkContactsBlock from '../atoms/EpkContactsBlock.vue'
+import FFOBlock from '../atoms/FFOBlock.vue'
 </script>
 
 <template>
@@ -21,6 +22,10 @@ import EpkContactsBlock from '../atoms/EpkContactsBlock.vue'
           <v-divider class="my-6" inset color="brown-darken-4" />
 
           <EpkContactsBlock />
+
+          <v-divider class="my-6" inset color="brown-darken-4" />
+
+          <FFOBlock />
         </v-col>
       </v-row>
     </v-container>

@@ -14,7 +14,7 @@ import epkData from '@/data/epkData.json'
     <v-list-item
       v-for="(bandMember, index) in epkData.bandMembers"
       :key="index"
-      class="bg-green-lighten-1 rounded-lg mb-1"
+      class="bg-green-lighten-1 text-body-2 rounded-lg mb-1"
     >
       <p>{{ bandMember.name }} - {{ bandMember.instrument }}</p>
     </v-list-item>

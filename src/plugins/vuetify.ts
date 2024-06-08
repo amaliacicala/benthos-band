@@ -40,6 +40,7 @@ export default createVuetify({
           'brown-darken-3': '#734427',
           'brown-darken-2': '#411e17',
           'amber-darken-1': '#e8b72b',
+          'amber-lighten-1': '#fde6a5',
           'purple-lighten-1': '#bf9ab6',
           'purple-lighten-2': '#956c8b',
           'pink-lighten-4': '#c09a9d'
