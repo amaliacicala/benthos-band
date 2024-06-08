@@ -3,33 +3,12 @@ import { ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { fetchNavigation } from '@/api/navigation'
 import type { NavigationItem } from '@/types/Navigation'
+import SocialMediaButtons from '../atoms/SocialMediaButtons.vue'
 
 const router = useRouter()
 const route = useRoute()
 
 const navigation = ref<Array<NavigationItem>>([])
-const socialMedia = [
-  {
-    name: 'instagram',
-    link: 'https://www.instagram.com/benthos_official'
-  },
-  {
-    name: 'facebook',
-    link: 'https://www.facebook.com/Benthos.Milano'
-  },
-  {
-    name: 'spotify',
-    link: 'https://open.spotify.com/artist/0A7v88d7h8uYeGaBhflb45?si=MqEbglqXQ4WLSApPIQYulw'
-  },
-  {
-    name: 'youtube',
-    link: 'https://www.youtube.com/channel/UCAoS8hqW5oR2xVZJH8P6z_w'
-  },
-  {
-    name: 'twitter',
-    link: 'https://twitter.com/benthos_band'
-  }
-]
 
 const emits = defineEmits(['close'])
 
@@ -74,16 +53,7 @@ watch([() => route.name], ([newRouteName]) => {
   <div class="align-self-center mt-auto pb-2">
     <v-divider class="border-opacity-40 pb-1" />
 
-    <v-btn
-      v-for="(social, index) in socialMedia"
-      icon
-      variant="text"
-      :key="index"
-      :href="social.link"
-      target="_blank"
-    >
-      <v-icon :icon="`mdi-${social.name}`" />
-    </v-btn>
+    <SocialMediaButtons />
   </div>
 </template>
 

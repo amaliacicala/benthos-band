@@ -5,7 +5,7 @@ import EpkContactsBlock from '../atoms/EpkContactsBlock.vue'
 </script>
 
 <template>
-  <div class="d-flex flex-column justify-center align-center bg-primary px-4 py-8 pa-md-12">
+  <div class="d-flex flex-column justify-center align-center bg-brown-lighten-5 px-4 py-8 pa-md-12">
     <p class="text-overline text-center">Progressive Metal band from Italy</p>
     <h1 class="text-md-h1 text-h2">Benthos</h1>
 
