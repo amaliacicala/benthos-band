@@ -59,11 +59,9 @@ $heading-font-family: 'Bebas Neue', sans-serif;
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
-  opacity: 0.01;
+  opacity: 0.02;
   z-index: -1;
-  pointer-events: none;
 }
-
 .pulse {
   animation: pulse 0.5s ease;
 }
