@@ -4,7 +4,7 @@ import epkData from '@/data/epkData.json'
 
 <template>
   <h2
-    class="text-body-1 font-weight-bold text-right text-decoration-underline"
+    class="text-body-1 font-weight-bold text-right text-decoration-underline text-dark"
     :style="{ textUnderlineOffset: '4px !important' }"
   >
     band members

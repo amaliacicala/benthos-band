@@ -27,12 +27,60 @@
   },
   "ffoBands": [
     "The Contortionist",
-    "Haken",
     "Leprous",
     "Between the Buried and Me",
-    "Arcane Roots",
-    "Meshuggah",
-    "The Ocean",
-    "Frontierer"
+    "Animals as Leaders",
+    "Arcane Roots"
+  ],
+  "albumConcept": " Praesent a nunc risus. Donec fermentum tincidunt posuere. Ut et tortor sapien. Sed vulputate nisi at diam lobortis ultrices. Donec aliquet erat vitae magna lobortis, nec egestas arcu euismod. Curabitur neque libero, tempor sit amet vehicula vel, porta ac est. Nam eget tincidunt velit. Sed vel vulputate purus.<br><br>In hac habitasse platea dictumst. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue diam sit amet faucibus luctus. Maecenas accumsan nec nisl ut aliquam. Fusce porttitor non felis sit amet ultrices. Maecenas fringilla tortor ut tellus imperdiet porttitor. ",
+  "pressQuotes": [
+    {
+      "quote": "They are one of the true revelations of the day. The band [...] immediately displays exceptional talent, born from the remarkable skills of the musicians involved and an uncommon taste that seamlessly blends modern progressive metal with a decadent post-rock. They create a succession of rich and emotionally impactful sonic nuances. Benthos manage to destabilize and surprise the audience with rhythm and vocal changes in a highly original emotional crescendo. The unreleased songs they present hint at great things for the band's future in the world of music recording.",
+      "author": "Metal Hammer",
+      "details": "Dissonance Festival 2023 Live Report",
+      "link": "https://www-metalhammer-it.translate.goog/live-report/2023/06/11/dissonance-festival-2023-meshuggah-soen-destrage-more-circolo-magnolia-milano-3-giugno-2023/?_x_tr_sch=http&_x_tr_sl=it&_x_tr_tl=en&_x_tr_hl=it&_x_tr_pto=wapp"
+    },
+    {
+      "quote": "The bar is set very high with this album. [...] These are probably such creative minds who walk around with a note and a pen in order to be able to write down all song ideas immediately.",
+      "author": "Time For Metal",
+      "details": "9.5/10",
+      "link": "https://time-for-metal.eu/benthos-ii/"
+    },
+    {
+      "quote": "I've found myself drawn back again and again to these tracks and am sure many of you will feel the same after you give it a go.",
+      "author": "Metal Trenches",
+      "details": "8.7/10",
+      "link": "https://metaltrenches.com/reviews/benthos-ii-album-review-3079"
+    },
+    {
+      "quote": "Benthos set an exclamation point in the international progressive metal scene with II. With a flawless sound, innovative ideas and familiar aspects, the Italians have proven that they can also compete on an international level.",
+      "author": "MoreCore.De",
+      "details": "8/10",
+      "link": "https://www.morecore.de/review/benthos/ii/"
+    },
+    {
+      "quote": "Exploring the outer fringes of musical convention and coming dangerously close to redefining the concept of progressive metal, a bold new player emerges from the Italian peninsula with a short yet gargantuan stylistic excursion of a debut.",
+      "author": "Sonic Perspective",
+      "details": "8.4/10",
+      "link": "https://www.sonicperspectives.com/album-reviews/benthos-ii/"
+    },
+    {
+      "quote": "Benthos represent a high-level band with great potential, certainly attentive to every little detail, as the album cover unmistakably testifies. It is not common to listen to a debut album of this caliber, and this represents an excellent starting point to appreciate an Italian band that has all the elements to continue impressing the listener.",
+      "author": "True Metal",
+      "details": "75/100",
+      "link": "https://www-truemetal-it.translate.goog/recensioni/ii-14?_x_tr_sl=it&_x_tr_tl=en&_x_tr_hl=it&_x_tr_pto=wapp"
+    },
+    {
+      "quote": "I was absolutely stricken when I discovered Benthos. [...] Benthos, if we're all lucky enough, will have a proper chance to bloom into what could be one of the finest bands on the prog metal scene. [...] Honestly 'II' basically fulfills the entire checklist for a record that's not only very relistenable, fresh, and packed, but also highly promising.",
+      "author": "Scene Point Blank",
+      "details": "8.5/10",
+      "link": "https://www.scenepointblank.com/reviews/benthos/ii/"
+    },
+    {
+      "quote": "Curiosity, desire to experiment, deep admiration towards the founders of that genre of metal that goes from progressive to ambient and post rock: these are the ingredients that led to the birth of the debut album by the Milanese band Benthos. And they want to reiterate that they are original by naming the first album 'II'.",
+      "author": "Metal Italia",
+      "details": "7/10",
+      "link": "https://metalitalia-com.translate.goog/album/benthos-ii/?_x_tr_sl=it&_x_tr_tl=en&_x_tr_hl=it&_x_tr_pto=wapp"
+    }
   ]
 }

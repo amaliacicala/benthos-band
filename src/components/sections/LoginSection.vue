@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
-import logo from '@/assets/benthos_logo_new_light.png'
+import logo from '@/assets/logos/benthos_logo_new_light.png'
 
 const username = ref('')
 const password = ref('')

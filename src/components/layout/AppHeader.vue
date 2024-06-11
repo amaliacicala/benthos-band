@@ -4,7 +4,7 @@ import { useDisplay } from 'vuetify'
 import { useRoute, useRouter } from 'vue-router'
 import { fetchNavigation } from '@/api/navigation'
 import type { NavigationItem } from '@/types/Navigation'
-import logo from '@/assets/benthos_logo_new.png'
+import logo from '@/assets/logos/benthos_logo_new.png'
 import AppSideMenu from './AppSideMenu.vue'
 
 const { mobile } = useDisplay()
@@ -53,7 +53,7 @@ onMounted(() => {
           height="80"
           class="d-flex justify-center text-lowercase"
           :class="{ 'active font-weight-bold': isActive(item.link) }"
-          @click="router.push(item.link)"
+          :href="item.link"
         >
           {{ item.name }}
         </v-list-item>
@@ -90,7 +90,7 @@ onMounted(() => {
 }
 .v-app-bar {
   border-bottom: solid 5px;
-  border-image: url('@/assets/pattern.avif') 100 round;
+  border-image: url('@/assets/backgrounds/pattern.avif') 100 round;
 }
 .v-img {
   &:hover {
@@ -118,10 +118,10 @@ onMounted(() => {
 }
 @keyframes animatedBorder {
   from {
-    border-image: url('@/assets/pattern.avif') 80;
+    border-image: url('@/assets/backgrounds/pattern.avif') 80;
   }
   to {
-    border-image: url('@/assets/pattern.avif') 20;
+    border-image: url('@/assets/backgrounds/pattern.avif') 20;
   }
 }
 </style>

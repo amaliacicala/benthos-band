@@ -5,7 +5,7 @@ import MarkdownText from '../atoms/MarkdownText.vue'
 
 <template>
   <h2
-    class="text-body-1 font-weight-bold text-decoration-underline pb-6"
+    class="text-body-1 font-weight-bold text-decoration-underline text-dark pb-6"
     :style="{ textUnderlineOffset: '4px !important' }"
   >
     biography

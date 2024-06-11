@@ -17,26 +17,31 @@ $heading-font-family: 'Bebas Neue', sans-serif;
 .v-card {
   border-radius: 0 !important;
 }
+.v-container {
+  @media (min-width: 1920px) {
+    max-width: 1480px;
+  }
+}
 // custom classes
 .flat-shadow {
   box-shadow: rgb(74 72 61 / 27%) 10px 10px 0px;
 }
 .bg-hero {
   height: 100vh;
-  background-image: url('@/assets/hero_image_desktop.avif');
+  background-image: url('@/assets/backgrounds/hero_image_desktop.avif');
   background-position: center;
   background-size: cover;
   opacity: 0.8;
   animation: animatedBgHero 15s ease-in-out infinite alternate;
 
   @media screen and (max-width: 600px) {
-    background-image: url('@/assets/hero_image_mobile.avif');
+    background-image: url('@/assets/backgrounds/hero_image_mobile.avif');
     opacity: 1;
     animation: none;
   }
 }
 .bg-debris {
-  background-image: url('@/assets/debris-bg.large.avif');
+  background-image: url('@/assets/backgrounds/debris-bg.large.avif');
   background-size: cover;
   animation: animatedBgDebris 30s ease-in-out infinite alternate;
 
@@ -55,11 +60,11 @@ $heading-font-family: 'Bebas Neue', sans-serif;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('@/assets/pattern.avif');
+  background-image: url('@/assets/backgrounds/pattern.avif');
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
-  opacity: 0.02;
+  opacity: 0.022;
   z-index: -1;
 }
 .pulse {

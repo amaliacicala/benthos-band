@@ -2,7 +2,7 @@
   "ii": {
     "overline": "The debut album",
     "title": "Benthos - II",
-    "cover": "src/assets/benthos_ii_cover.jpg",
+    "cover": "src/assets/album_covers/benthos_ii_cover.jpg",
     "links": [
       {
         "name": "Spotify",
@@ -44,7 +44,7 @@
   "debris_essence": {
     "overline": "B-side single",
     "title": "Debris // Essence",
-    "cover": "src/assets/benthos_debris_cover.jpg",
+    "cover": "src/assets/album_covers/benthos_debris_cover.jpg",
     "links": [
       {
         "name": "Spotify",
