@@ -5,6 +5,13 @@ import { fetchNavigation } from '@/api/navigation'
 import type { NavigationItem } from '@/types/Navigation'
 import SocialMediaButtons from '../atoms/SocialMediaButtons.vue'
 
+const props = defineProps({
+  navLinks: {
+    type: Array<NavigationItem>,
+    required: true
+  }
+})
+
 const router = useRouter()
 const route = useRoute()
 
@@ -16,15 +23,27 @@ const isActive = (link: string) => {
   return route.path === link
 }
 
+const handleNavigation = (link: string) => {
+  router.push(link).then(() => {
+    const targetElement = document.getElementById(link.substring(1))
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' })
+    }
+    emits('close')
+  })
+}
+
 onMounted(() => {
-  const data = fetchNavigation()
-  navigation.value = data.navigation
+  navigation.value = fetchNavigation(props.navLinks)
 })
 
-watch([() => route.name], ([newRouteName]) => {
-  if (!newRouteName) return
-  emits('close')
-})
+watch(
+  () => route.fullPath,
+  (newFullPath) => {
+    if (!newFullPath) return
+    emits('close')
+  }
+)
 </script>
 
 <template>
@@ -45,7 +64,7 @@ watch([() => route.name], ([newRouteName]) => {
     height="70"
     class="d-flex justify-center text-lowercase text-h4"
     :class="{ 'active font-weight-bold': isActive(item.link) }"
-    @click="router.push(item.link)"
+    @click="handleNavigation(item.link)"
   >
     {{ item.name }}
   </v-list-item>

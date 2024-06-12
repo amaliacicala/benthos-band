@@ -17,6 +17,7 @@ const playVideo = (index: number) => {
 </script>
 <template>
   <div
+    id="videos"
     class="d-flex flex-column justify-center align-center bg-pattern text-brown-lighten-5 px-4 py-8 pa-md-12"
   >
     <p class="text-overline text-center">From the archive</p>

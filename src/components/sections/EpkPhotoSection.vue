@@ -20,6 +20,7 @@ onMounted(() => {
 
 <template>
   <div
+    id="photos"
     class="d-flex flex-column justify-center align-center bg-brown-lighten-5 text-dark px-4 py-8 pa-md-12"
   >
     <p class="text-overline text-center">From the archive</p>

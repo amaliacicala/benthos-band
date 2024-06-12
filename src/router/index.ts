@@ -53,7 +53,18 @@ const router = createRouter({
     //   name: 'Contacts',
     //   component: HomeView
     // }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else if (to.hash) {
+      return {
+        el: to.hash
+      }
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 
 router.beforeEach((to, from, next) => {
