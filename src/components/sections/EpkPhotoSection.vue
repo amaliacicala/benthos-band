@@ -24,7 +24,8 @@ onMounted(() => {
 
     <v-container class="pt-8">
       <v-carousel
-        height="700px"
+        width="100%"
+        :height="mobile ? '100%' : '700px'"
         show-arrows="hover"
         interval="5000"
         progress="amber-darken-1"
@@ -36,7 +37,7 @@ onMounted(() => {
           v-for="image in images"
           :key="image.id"
           :src="mobile ? image.url_c : image.url_l"
-          cover
+          :cover="mobile ? false : true"
           eager
         />
       </v-carousel>
@@ -47,17 +48,33 @@ onMounted(() => {
 <style lang="scss" scoped>
 :deep(.v-progress-linear) {
   height: 10px !important;
+
+  @media screen and (max-width: 999px) {
+    height: 6px !important;
+  }
 }
 :deep(.v-progress-linear__background) {
   background-color: rgb(var(--v-theme-black)) !important;
 }
-:deep(.v-window__controls button) {
-  background-color: rgb(var(--v-theme-brown-lighten-5));
-  color: rgb(var(--v-theme-brown-darken-2));
-  width: 70px;
-  height: 70px;
-}
-:deep(.v-window__controls .v-btn__content) {
-  font-size: 22px;
+:deep(.v-window__controls) {
+  button {
+    background-color: rgb(var(--v-theme-brown-lighten-5));
+    color: rgb(var(--v-theme-brown-darken-2));
+    width: 70px;
+    height: 70px;
+
+    @media screen and (max-width: 999px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .v-btn__content {
+    font-size: 22px;
+
+    @media screen and (max-width: 999px) {
+      font-size: 16px;
+    }
+  }
 }
 </style>
