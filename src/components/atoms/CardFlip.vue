@@ -112,6 +112,7 @@ onMounted(reportState)
                 :alt="link.name"
                 width="20px"
                 height="20px"
+                eager
               />
               <p class="text-body-2 ml-2">{{ link.name }}</p>
             </div>

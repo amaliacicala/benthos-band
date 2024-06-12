@@ -15,7 +15,7 @@ import cover from '@/assets/album_covers/benthos_from_nothing_cover.avif'
     <v-container class="pt-12">
       <v-row>
         <v-col cols="12" md="6">
-          <v-img :src="cover" alt="Benthos - From Nothing" width="100%" />
+          <v-img :src="cover" alt="Benthos - From Nothing" width="100%" eager />
           <p class="text-caption text-left mt-2">
             Artwork by
             <a

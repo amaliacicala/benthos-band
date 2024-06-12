@@ -40,6 +40,7 @@ onMounted(() => {
           :src="logo"
           :width="120"
           cursor-pointer
+          eager
           alt="Benthos band"
           @click="router.push({ name: 'Homepage' })"
         />
