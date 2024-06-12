@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
-import dragonfly_dissonance_mobile from '@/assets/thumbnails/dragonfly_dissonance_mobile_thumbnail.jpg'
-import dragonfly_clip from '@/assets/thumbnails/dragonfly-clip.webm'
-import dragonfly from '@/assets/thumbnails/dragonfly_thumbnail.jpg'
-import debris from '@/assets/thumbnails/debris_thumbnail.jpg'
-import cartesio from '@/assets/thumbnails/cartesio_thumbnail.jpg'
+import dragonfly_clip from '@/assets/thumbnails/dragonfly_clip.webm'
+import dragonfly_clip_mobile from '@/assets/thumbnails/dragonfly_clip_mobile.webm'
+import dragonfly from '@/assets/thumbnails/dragonfly_thumbnail.avif'
+import debris from '@/assets/thumbnails/debris_thumbnail.avif'
+import cartesio from '@/assets/thumbnails/cartesio_thumbnail.avif'
 
 const { mobile } = useDisplay()
 
@@ -30,19 +30,11 @@ const playVideo = (index: number) => {
           </h3>
 
           <div v-if="!isPlaying[0]" class="video-thumbnail" @click="playVideo(0)">
-            <img
-              v-if="mobile"
-              :src="dragonfly_dissonance_mobile"
-              alt="Thumbnail for Benthos - Talk to Me, Dragonfly! (Official Video)"
-              class="thumbnail-responsive"
-            />
-
             <video
-              v-else
               autoplay
               muted
               loop
-              :src="dragonfly_clip"
+              :src="mobile ? dragonfly_clip_mobile : dragonfly_clip"
               alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
               class="video-responsive"
             />
