@@ -58,7 +58,7 @@ const playVideo = (index: number) => {
       <h3 class="text-body-1 text-center mt-10 mb-4">2021 debut album singles</h3>
 
       <v-row>
-        <v-col cols="12" md="4">
+        <v-col cols="12" sm="4">
           <div v-if="!isPlaying[1]" class="video-thumbnail" @click="playVideo(1)">
             <img
               :src="dragonfly"
@@ -81,7 +81,7 @@ const playVideo = (index: number) => {
           ></iframe>
         </v-col>
 
-        <v-col cols="12" md="4">
+        <v-col cols="12" sm="4">
           <div v-if="!isPlaying[2]" class="video-thumbnail" @click="playVideo(2)">
             <img
               :src="debris"
@@ -100,10 +100,11 @@ const playVideo = (index: number) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
+            :style="{ height: mobile ? '100%' : '315px' }"
           ></iframe>
         </v-col>
 
-        <v-col cols="12" md="4">
+        <v-col cols="12" sm="4">
           <div v-if="!isPlaying[3]" class="video-thumbnail" @click="playVideo(3)">
             <img
               :src="cartesio"
@@ -122,6 +123,7 @@ const playVideo = (index: number) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
+            :style="{ height: mobile ? '100%' : '315px' }"
           ></iframe>
         </v-col>
       </v-row>
@@ -159,7 +161,6 @@ iframe {
 }
 .video-responsive {
   width: 100%;
-  height: 100%;
   position: relative;
 }
 .video-responsive iframe,
