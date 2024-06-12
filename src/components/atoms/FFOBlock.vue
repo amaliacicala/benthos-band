@@ -11,12 +11,14 @@ import epkData from '@/data/epkData.json'
   </h2>
 
   <div class="d-flex justify-end pt-4" style="margin-right: -8px">
-    <v-chip-group column class="w-75 self-end">
+    <v-chip-group column class="w-md-75 self-end">
       <v-chip
         v-for="(band, index) in epkData.ffoBands"
+        :key="index"
         class="bg-amber-lighten-1 text-black text-caption cursor-default"
-        >{{ band }}</v-chip
       >
+        {{ band }}
+      </v-chip>
     </v-chip-group>
   </div>
 </template>
