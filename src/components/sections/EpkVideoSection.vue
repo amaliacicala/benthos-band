@@ -154,6 +154,9 @@ a:hover {
     font-size: 70px;
   }
 }
+iframe {
+  min-height: 280px;
+}
 .video-responsive {
   width: 100%;
   height: 100%;
@@ -166,9 +169,6 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-}
-iframe {
-  min-height: 280px;
 }
 .thumbnail-responsive {
   width: 100%;
