@@ -1,0 +1,63 @@
+<script lang="ts" setup>
+import { onMounted } from 'vue'
+import { useDisplay } from 'vuetify'
+import { storeToRefs } from 'pinia'
+import { usePhotosetsStore } from '@/stores/photosets'
+
+const { mobile } = useDisplay()
+
+const photosetStore = usePhotosetsStore()
+const { images } = storeToRefs(photosetStore)
+const { loadAlbum } = photosetStore
+
+onMounted(() => {
+  loadAlbum(import.meta.env.VITE_FLICKR_EPK_PHOTOSET)
+})
+</script>
+
+<template>
+  <div
+    class="d-flex flex-column justify-center align-center bg-brown-lighten-5 text-dark px-4 py-8 pa-md-12"
+  >
+    <p class="text-overline text-center">From the archive</p>
+    <h1 class="text-md-h1 text-h2">Photos</h1>
+
+    <v-container class="pt-8">
+      <v-carousel
+        height="700px"
+        show-arrows="hover"
+        interval="5000"
+        progress="amber-darken-1"
+        hide-delimiters
+        cycle
+        class="elevation-24"
+      >
+        <v-carousel-item
+          v-for="image in images"
+          :key="image.id"
+          :src="mobile ? image.url_c : image.url_l"
+          cover
+          eager
+        />
+      </v-carousel>
+    </v-container>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+:deep(.v-progress-linear) {
+  height: 10px !important;
+}
+:deep(.v-progress-linear__background) {
+  background-color: rgb(var(--v-theme-black)) !important;
+}
+:deep(.v-window__controls button) {
+  background-color: rgb(var(--v-theme-brown-lighten-5));
+  color: rgb(var(--v-theme-brown-darken-2));
+  width: 70px;
+  height: 70px;
+}
+:deep(.v-window__controls .v-btn__content) {
+  font-size: 22px;
+}
+</style>
