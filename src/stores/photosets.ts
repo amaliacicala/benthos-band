@@ -12,11 +12,14 @@ export const usePhotosetsStore = defineStore({
   actions: {
     async loadAlbum(photosetId: string) {
       try {
-        const data = await fetchPhotoAlbum(photosetId)
+        this.loading = true
 
+        const data = await fetchPhotoAlbum(photosetId)
         this.images = data.photoset.photo
 
-        console.log(data)
+        setTimeout(() => {
+          this.loading = false
+        }, 1000)
       } catch (err) {
         return Promise.reject(err)
       }

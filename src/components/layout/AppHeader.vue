@@ -34,7 +34,7 @@ onMounted(() => {
     class="pa-2 pa-md-0"
     :height="mobile ? 58 : 80"
   >
-    <v-container class="d-flex justify-space-between align-center">
+    <v-container class="d-flex justify-space-between align-center px-4">
       <div>
         <v-img
           :src="logo"

@@ -18,6 +18,10 @@ $heading-font-family: 'Bebas Neue', sans-serif;
   border-radius: 0 !important;
 }
 .v-container {
+  @media (max-width: 999px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   @media (min-width: 1920px) {
     max-width: 1480px;
   }

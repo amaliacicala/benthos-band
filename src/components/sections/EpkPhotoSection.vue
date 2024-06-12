@@ -7,11 +7,14 @@ import { usePhotosetsStore } from '@/stores/photosets'
 const { mobile } = useDisplay()
 
 const photosetStore = usePhotosetsStore()
-const { images } = storeToRefs(photosetStore)
+const { loading, images } = storeToRefs(photosetStore)
 const { loadAlbum } = photosetStore
 
+const photoshoots = import.meta.env.VITE_FLICKR_EPK_PS_PHOTOSET
+const livePhotos = import.meta.env.VITE_FLICKR_EPK_LIVE_PHOTOSET
+
 onMounted(() => {
-  loadAlbum(import.meta.env.VITE_FLICKR_EPK_PHOTOSET)
+  loadAlbum(photoshoots)
 })
 </script>
 
@@ -22,7 +25,18 @@ onMounted(() => {
     <p class="text-overline text-center">From the archive</p>
     <h1 class="text-md-h1 text-h2">Photos</h1>
 
-    <v-container class="pt-8">
+    <p class="text-caption font-weight-bold text-decoration-underline pt-4">select type:</p>
+    <v-chip-group class="text-body-1 text-dark">
+      <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="loadAlbum(photoshoots)">
+        photoshoots
+      </v-chip>
+
+      <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="loadAlbum(livePhotos)">
+        live photos
+      </v-chip>
+    </v-chip-group>
+
+    <v-container class="pt-6 pt-md-8">
       <v-carousel
         width="100%"
         :height="mobile ? '100%' : '700px'"
@@ -32,8 +46,20 @@ onMounted(() => {
         hide-delimiters
         cycle
         class="elevation-24"
+        :style="{ minHeight: mobile ? '230px' : '' }"
       >
+        <div v-if="loading" class="d-flex flex-column h-100 align-center justify-center">
+          <v-progress-circular
+            color="amber-darken-1"
+            :size="mobile ? 50 : 80"
+            :width="mobile ? 4 : 7"
+            class="self-center"
+            indeterminate
+          />
+        </div>
+
         <v-carousel-item
+          v-else
           v-for="image in images"
           :key="image.id"
           :src="mobile ? image.url_c : image.url_l"
