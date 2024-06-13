@@ -17,7 +17,7 @@ const { text, copy, copied, isSupported } = useClipboard({ source })
     contacts
   </h2>
 
-  <v-list class="d-flex flex-column align-end bg-primary pt-6">
+  <v-list class="d-flex flex-column align-end bg-brown-lighten-5 pt-6">
     <v-list-item v-if="isSupported" class="d-flex flex-column pa-0">
       <v-btn
         elevation="0"

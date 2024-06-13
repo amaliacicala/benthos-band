@@ -6,7 +6,10 @@ import FFOBlock from '../atoms/FFOBlock.vue'
 </script>
 
 <template>
-  <div class="d-flex flex-column justify-center align-center bg-brown-lighten-5 px-4 py-8 pa-md-12">
+  <div
+    id="bio"
+    class="d-flex flex-column justify-center align-center bg-brown-lighten-5 px-4 py-8 pa-md-12"
+  >
     <p class="text-overline text-center text-dark">Progressive Metal band from Italy</p>
     <h1 class="text-md-h1 text-h2 text-dark">Benthos</h1>
 
@@ -16,7 +19,7 @@ import FFOBlock from '../atoms/FFOBlock.vue'
           <BiographyBlock />
         </v-col>
 
-        <v-col cols="12" md="4" class="col-sm-10">
+        <v-col id="contacts" cols="12" md="4" class="col-sm-10">
           <BandMembersBlock />
 
           <v-divider class="my-6" inset color="brown-darken-4" />

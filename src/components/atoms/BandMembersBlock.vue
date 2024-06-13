@@ -10,7 +10,7 @@ import epkData from '@/data/epkData.json'
     band members
   </h2>
 
-  <v-list class="d-flex flex-column align-end bg-primary pt-6">
+  <v-list class="d-flex flex-column align-end bg-brown-lighten-5 pt-6">
     <v-list-item
       v-for="(bandMember, index) in epkData.bandMembers"
       :key="index"

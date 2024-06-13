@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Bio",
+    "link": "#bio"
+  },
+  {
+    "name": "Music",
+    "link": "#music"
+  },
+  {
+    "name": "Press Quotes",
+    "link": "#press-quotes"
+  },
+  {
+    "name": "Videos",
+    "link": "#videos"
+  },
+  {
+    "name": "Photos",
+    "link": "#photos"
+  },
+  {
+    "name": "Tour",
+    "link": "#tour-dates"
+  },
+  {
+    "name": "Contacts",
+    "link": "#contacts"
+  }
+]

@@ -7,6 +7,13 @@ import type { NavigationItem } from '@/types/Navigation'
 import logo from '@/assets/logos/benthos_logo_new.png'
 import AppSideMenu from './AppSideMenu.vue'
 
+const props = defineProps({
+  navLinks: {
+    type: Array<NavigationItem>,
+    required: true
+  }
+})
+
 const { mobile } = useDisplay()
 
 const router = useRouter()
@@ -20,8 +27,7 @@ const isActive = (link: string) => {
 }
 
 onMounted(() => {
-  const data = fetchNavigation()
-  navigation.value = data.navigation
+  navigation.value = fetchNavigation(props.navLinks)
 })
 </script>
 
@@ -34,12 +40,13 @@ onMounted(() => {
     class="pa-2 pa-md-0"
     :height="mobile ? 58 : 80"
   >
-    <v-container class="d-flex justify-space-between align-center">
+    <v-container class="d-flex justify-space-between align-center px-4">
       <div>
         <v-img
           :src="logo"
           :width="120"
           cursor-pointer
+          eager
           alt="Benthos band"
           @click="router.push({ name: 'Homepage' })"
         />
@@ -76,7 +83,7 @@ onMounted(() => {
         transition="slide-x-transition"
       >
         <v-card height="100%" class="py-2 px-4 bg-brown-lighten-5" rounded="0">
-          <AppSideMenu @close="showDialog = false" />
+          <AppSideMenu :nav-links="props.navLinks" @close="showDialog = false" />
         </v-card>
       </v-dialog>
     </v-container>
