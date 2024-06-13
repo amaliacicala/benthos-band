@@ -3,23 +3,21 @@ export interface EventData {
   datetime: string
   venue: {
     name: string
-    location: string
     city: string
     country: string
   }
-  offers: [
-    {
-      url: string
-    }?
-  ]
+  url: string
+  offers: Array<{ url: string }>
+  sold_out: boolean
 }
 
 export interface Event {
   name: string
-  date: Date
+  date: Date | string
+  venue: string
   city: string
   country: string
-  venue: string
-  location: string
-  ticketsUrl?: string
+  eventUrl: string
+  ticketsUrl: string
+  sold_out: boolean
 }

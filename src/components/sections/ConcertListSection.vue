@@ -1,47 +1,66 @@
 <script lang="ts" setup>
+import { onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useBandsintownStore } from '@/stores/bandsintown'
+import icon from '@/assets/icons/bandsintown.svg'
+import NoShowsBlock from '@/components/atoms/NoShowsBlock.vue'
 
-const { events } = storeToRefs(useBandsintownStore())
+const bandsintownStore = useBandsintownStore()
+const { fetchEvents } = bandsintownStore
+const { events, noUpcomingShows } = storeToRefs(bandsintownStore)
 
 const formatDate = (date: string | number | Date) => {
-  const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: '2-digit' }
+  const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' }
   return new Date(date).toLocaleDateString('en-US', options)
 }
+
+onMounted(() => {
+  fetchEvents(false)
+})
 </script>
 
 <template>
-  <table
-    class="w-full table-fixed rounded-md bg-black bg-opacity-70 backdrop-blur-sm md:table-fixed lg:table-auto"
+  <div
+    id="bio"
+    class="d-flex flex-column justify-center align-center bg-green-lighten-1 px-4 py-8 pa-md-12"
   >
-    <tbody>
-      <tr
-        v-for="event of events"
-        :key="event.name"
-        class="flex-no-wrap flex border-collapse flex-col border-b border-white/50 last:border-b-0 sm:table-row"
-      >
-        <td class="pt-6 font-semibold md:py-6 md:px-4 lg:p-6">
-          {{ event.name }}
-        </td>
-        <td class="pt-4 md:w-1/5 md:py-6 lg:p-6">
-          {{ formatDate(event.date) }}
-        </td>
-        <td class="md:py-6 lg:py-6">
-          {{ `${event.location}` }}
-        </td>
-        <td class="pt-6 pb-8 md:py-6 lg:w-1/4 lg:p-6">
-          <a
-            :href="event.ticketsUrl"
-            :hidden="!event.ticketsUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-lg border py-2 px-4 font-medium text-white transition-all duration-400 hover:border-cream hover:text-cream"
-          >
-            <FontAwesomeIcon icon="fa-ticket" class="mr-2"></FontAwesomeIcon>
-            Buy tickets
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <p class="text-overline text-center text-dark">Catch us playing live</p>
+    <h1 class="text-md-h1 text-h2 text-dark">Tour Dates</h1>
+
+    <v-chip-group class="text-body-1 text-dark pt-4">
+      <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="fetchEvents(false)">
+        upcoming shows
+      </v-chip>
+
+      <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="fetchEvents(true)">
+        past shows
+      </v-chip>
+    </v-chip-group>
+
+    <v-container class="d-flex flex-column pt-12">
+      <NoShowsBlock v-if="noUpcomingShows" :notify-link="events[0].ticketsUrl" />
+
+      <v-row v-else v-for="(event, index) of events" :key="index">
+        <v-col cols="3">
+          <p v-if="event.city">
+            {{ event.city + ', ' + event.country }}
+          </p>
+        </v-col>
+
+        <v-col cols="5">
+          <p v-if="event.venue">{{ event.venue }}</p>
+        </v-col>
+
+        <v-col>
+          <p v-if="event.date">{{ formatDate(event.date) }}</p>
+        </v-col>
+
+        <v-col>
+          <v-btn :href="event.ticketsUrl ? event.ticketsUrl : event.eventUrl" target="_blank">
+            buy tickets
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
