@@ -16,120 +16,122 @@ const playVideo = (index: number) => {
 }
 </script>
 <template>
-  <div
-    id="videos"
-    class="d-flex flex-column justify-center align-center bg-pattern text-brown-lighten-5 px-4 py-8 pa-md-12"
-  >
-    <p class="text-overline text-center">From the archive</p>
-    <h1 class="text-md-h1 text-h2">Videos</h1>
+  <v-lazy transition="fade-transition">
+    <div
+      id="videos"
+      class="d-flex flex-column justify-center align-center bg-pattern text-brown-lighten-5 px-4 py-8 pa-md-12"
+    >
+      <p class="text-overline text-center">From the archive</p>
+      <h1 class="text-md-h1 text-h2">Videos</h1>
 
-    <v-container class="pt-8">
-      <v-row>
-        <v-col cols="12">
-          <h3 class="text-body-1 text-center mb-4">
-            Talk to Me, Dragonfly - Live at Dissonance Festival 2023
-          </h3>
+      <v-container class="pt-8">
+        <v-row>
+          <v-col cols="12">
+            <h3 class="text-body-1 text-center mb-4">
+              Talk to Me, Dragonfly - Live at Dissonance Festival 2023
+            </h3>
 
-          <div v-if="!isPlaying[0]" class="video-thumbnail" @click="playVideo(0)">
-            <video
-              autoplay
-              muted
-              loop
-              :src="mobile ? dragonfly_clip_mobile : dragonfly_clip"
-              alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+            <div v-if="!isPlaying[0]" class="video-thumbnail" @click="playVideo(0)">
+              <video
+                autoplay
+                muted
+                loop
+                :src="mobile ? dragonfly_clip_mobile : dragonfly_clip"
+                alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+                class="video-responsive"
+              />
+              <v-icon icon="mdi-play-circle" class="play-icon" color="brown-lighten-5" />
+            </div>
+
+            <iframe
+              v-else
               class="video-responsive"
-            />
-            <v-icon icon="mdi-play-circle" class="play-icon" color="brown-lighten-5" />
-          </div>
+              src="https://www.youtube.com/embed/ue1BDz156Z4?autoplay=1&si=KsNdpRai5xPGilx7"
+              alt="Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              :style="{ height: mobile ? '200px' : '550px' }"
+            ></iframe>
+          </v-col>
+        </v-row>
 
-          <iframe
-            v-else
-            class="video-responsive"
-            src="https://www.youtube.com/embed/ue1BDz156Z4?autoplay=1&si=KsNdpRai5xPGilx7"
-            alt="Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            :style="{ height: mobile ? '200px' : '550px' }"
-          ></iframe>
-        </v-col>
-      </v-row>
+        <h3 class="text-body-1 text-center mt-10 mb-4">2021 debut album singles official videos</h3>
 
-      <h3 class="text-body-1 text-center mt-10 mb-4">2021 debut album singles official videos</h3>
+        <v-row>
+          <v-col cols="12" sm="4">
+            <div v-if="!isPlaying[1]" class="video-thumbnail" @click="playVideo(1)">
+              <img
+                :src="dragonfly"
+                alt="Thumbnail for Benthos - Talk to Me, Dragonfly! (Official Video)"
+                class="thumbnail-responsive"
+              />
+              <v-icon icon="mdi-play-circle" class="play-icon" />
+            </div>
 
-      <v-row>
-        <v-col cols="12" sm="4">
-          <div v-if="!isPlaying[1]" class="video-thumbnail" @click="playVideo(1)">
-            <img
-              :src="dragonfly"
-              alt="Thumbnail for Benthos - Talk to Me, Dragonfly! (Official Video)"
+            <iframe
+              v-else
               class="thumbnail-responsive"
-            />
-            <v-icon icon="mdi-play-circle" class="play-icon" />
-          </div>
+              src="https://www.youtube.com/embed/iXOm0oeMGZc?autoplay=1&si=BHKahIdrBgEDgREF"
+              title="Benthos - Talk to Me, Dragonfly! (Official Video)"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              :style="{ height: mobile ? '100%' : '315px' }"
+            ></iframe>
+          </v-col>
 
-          <iframe
-            v-else
-            class="thumbnail-responsive"
-            src="https://www.youtube.com/embed/iXOm0oeMGZc?autoplay=1&si=BHKahIdrBgEDgREF"
-            title="Benthos - Talk to Me, Dragonfly! (Official Video)"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            :style="{ height: mobile ? '100%' : '315px' }"
-          ></iframe>
-        </v-col>
+          <v-col cols="12" sm="4">
+            <div v-if="!isPlaying[2]" class="video-thumbnail" @click="playVideo(2)">
+              <img
+                :src="debris"
+                alt="Thumbnail for Benthos - Debris // Essence (Official Video)"
+                class="thumbnail-responsive"
+              />
+              <v-icon icon="mdi-play-circle" class="play-icon" />
+            </div>
 
-        <v-col cols="12" sm="4">
-          <div v-if="!isPlaying[2]" class="video-thumbnail" @click="playVideo(2)">
-            <img
-              :src="debris"
-              alt="Thumbnail for Benthos - Debris // Essence (Official Video)"
+            <iframe
+              v-else
               class="thumbnail-responsive"
-            />
-            <v-icon icon="mdi-play-circle" class="play-icon" />
-          </div>
+              src="https://www.youtube.com/embed/hzknSmWxw2I?autoplay=1&si=78Hin90JdMkjPtPO"
+              title="Benthos - Debris // Essence (Official Video)"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              :style="{ height: mobile ? '100%' : '315px' }"
+            ></iframe>
+          </v-col>
 
-          <iframe
-            v-else
-            class="thumbnail-responsive"
-            src="https://www.youtube.com/embed/hzknSmWxw2I?autoplay=1&si=78Hin90JdMkjPtPO"
-            title="Benthos - Debris // Essence (Official Video)"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            :style="{ height: mobile ? '100%' : '315px' }"
-          ></iframe>
-        </v-col>
+          <v-col cols="12" sm="4">
+            <div v-if="!isPlaying[3]" class="video-thumbnail" @click="playVideo(3)">
+              <img
+                :src="cartesio"
+                alt="Thumbnail for Benthos - Cartesio (Official Video)"
+                class="thumbnail-responsive"
+              />
+              <v-icon icon="mdi-play-circle" class="play-icon" />
+            </div>
 
-        <v-col cols="12" sm="4">
-          <div v-if="!isPlaying[3]" class="video-thumbnail" @click="playVideo(3)">
-            <img
-              :src="cartesio"
-              alt="Thumbnail for Benthos - Cartesio (Official Video)"
+            <iframe
+              v-else
               class="thumbnail-responsive"
-            />
-            <v-icon icon="mdi-play-circle" class="play-icon" />
-          </div>
-
-          <iframe
-            v-else
-            class="thumbnail-responsive"
-            src="https://www.youtube.com/embed/TQuuQxOuI_k?autoplay=1&si=xkyP0d5y4zm9v_cJ"
-            title="Benthos - Cartesio (Official Video)"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            :style="{ height: mobile ? '100%' : '315px' }"
-          ></iframe>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+              src="https://www.youtube.com/embed/TQuuQxOuI_k?autoplay=1&si=xkyP0d5y4zm9v_cJ"
+              title="Benthos - Cartesio (Official Video)"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              :style="{ height: mobile ? '100%' : '315px' }"
+            ></iframe>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+  </v-lazy>
 </template>
 
 <style lang="scss" scoped>
