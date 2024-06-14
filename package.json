@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@vueuse/core": "^10.11.0",
     "axios": "^1.7.2",
     "crypto-js": "^4.2.0",
     "marked": "^12.0.2",
