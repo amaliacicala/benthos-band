@@ -38,7 +38,7 @@ onMounted(() => {
     scroll-threshold="100"
     color="brown-lighten-5"
     class="pa-2 pa-md-0"
-    :height="mobile ? 58 : 80"
+    :height="mobile ? 58 : 75"
   >
     <v-container class="d-flex justify-space-between align-center px-4">
       <div>

@@ -12,6 +12,11 @@ export const useBandsintownStore = defineStore({
   getters: {
     noUpcomingShows: (state) => {
       return state.events.some((event) => event.name === 'Notify Me')
+    },
+    isPastDate: () => (event: Event) => {
+      const eventDate = new Date(event.date)
+      const currentDate = new Date()
+      return eventDate < currentDate
     }
   },
 
@@ -31,7 +36,7 @@ export const useBandsintownStore = defineStore({
         )
 
         const bandsintownEvents = bandsintownData.data as EventData[]
-        console.log(bandsintownEvents)
+
         this.events = bandsintownEvents.map((e) => ({
           name: e.title,
           date: new Date(e.datetime),
@@ -39,8 +44,7 @@ export const useBandsintownStore = defineStore({
           city: e.venue.city,
           country: e.venue.country,
           eventUrl: e.url,
-          ticketsUrl: e.offers[0]?.url,
-          sold_out: e.sold_out
+          ticketsUrl: e.offers[0]?.url
         }))
 
         // show "Notify Me" if no events are found
@@ -53,8 +57,7 @@ export const useBandsintownStore = defineStore({
               city: '',
               country: '',
               eventUrl: '',
-              ticketsUrl: `https://www.bandsintown.com/a/${import.meta.env.VITE_BANDSINTOWN_ARTIST_ID}?came_from=267&app_id=${import.meta.env.VITE_BANDSINTOWN_APP_ID}&trigger=notify_me`,
-              sold_out: false
+              ticketsUrl: `https://www.bandsintown.com/a/${import.meta.env.VITE_BANDSINTOWN_ARTIST_ID}?came_from=267&app_id=${import.meta.env.VITE_BANDSINTOWN_APP_ID}&trigger=notify_me`
             }
           ]
         }

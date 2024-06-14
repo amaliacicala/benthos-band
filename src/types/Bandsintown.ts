@@ -8,7 +8,6 @@ export interface EventData {
   }
   url: string
   offers: Array<{ url: string }>
-  sold_out: boolean
 }
 
 export interface Event {
@@ -19,5 +18,4 @@ export interface Event {
   country: string
   eventUrl: string
   ticketsUrl: string
-  sold_out: boolean
 }
