@@ -21,13 +21,12 @@ onMounted(() => {
 <template>
   <div
     id="photos"
-    class="d-flex flex-column justify-center align-center bg-brown-lighten-5 text-dark px-4 py-8 pa-md-12"
+    class="d-flex flex-column justify-center align-center bg-paper text-dark px-4 py-8 pa-md-12"
   >
     <p class="text-overline text-center">From the archive</p>
     <h1 class="text-md-h1 text-h2">Photos</h1>
 
-    <p class="text-caption font-weight-bold text-decoration-underline pt-4">select type:</p>
-    <v-chip-group class="text-body-1 text-dark">
+    <v-chip-group class="text-body-1 text-dark pt-4">
       <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="loadAlbum(photoshoots)">
         photoshoots
       </v-chip>

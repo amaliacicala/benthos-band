@@ -7,6 +7,7 @@ import EpkMusicSection from '@/components/sections/EpkMusicSection.vue'
 import PressQuotesSection from '@/components/sections/PressQuotesSection.vue'
 import EpkVideoSection from '@/components/sections/EpkVideoSection.vue'
 import EpkPhotoSection from '@/components/sections/EpkPhotoSection.vue'
+import TourDatesSection from '@/components/sections/TourDatesSection.vue'
 </script>
 
 <template>
@@ -20,4 +21,5 @@ import EpkPhotoSection from '@/components/sections/EpkPhotoSection.vue'
   <PressQuotesSection />
   <EpkVideoSection />
   <EpkPhotoSection />
+  <TourDatesSection />
 </template>

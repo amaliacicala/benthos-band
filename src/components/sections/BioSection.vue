@@ -8,7 +8,7 @@ import FFOBlock from '../atoms/FFOBlock.vue'
 <template>
   <div
     id="bio"
-    class="d-flex flex-column justify-center align-center bg-brown-lighten-5 px-4 py-8 pa-md-12"
+    class="d-flex flex-column justify-center align-center bg-paper text-dark px-4 py-8 pa-md-12"
   >
     <p class="text-overline text-center text-dark">Progressive Metal band from Italy</p>
     <h1 class="text-md-h1 text-h2 text-dark">Benthos</h1>

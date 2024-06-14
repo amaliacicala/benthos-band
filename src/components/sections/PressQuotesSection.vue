@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import epkData from '@/data/epkData.json'
 import { computed } from 'vue'
+import epkData from '@/data/epkData.json'
 
 const quotes = computed(() => {
   const midIndex = Math.ceil(epkData.pressQuotes.length / 2)
@@ -11,7 +11,7 @@ const quotes = computed(() => {
 <template>
   <div
     id="press-quotes"
-    class="d-flex flex-column justify-center align-center bg-green-lighten-1 px-4 py-8 pa-md-12"
+    class="d-flex flex-column justify-center align-center bg-paper-green text-dark px-4 py-8 pa-md-12"
   >
     <p class="text-overline text-center text-dark">Reviews from around the world</p>
     <h1 class="text-md-h1 text-h2 text-dark">Press Quotes</h1>

@@ -29,6 +29,10 @@ $heading-font-family: 'Bebas Neue', sans-serif;
 // custom classes
 .flat-shadow {
   box-shadow: rgb(74 72 61 / 27%) 10px 10px 0px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: rgb(74 72 61 / 27%) 2px 2px 0px;
+  }
 }
 .bg-hero {
   height: 100vh;
@@ -56,20 +60,64 @@ $heading-font-family: 'Bebas Neue', sans-serif;
 .bg-pattern {
   position: relative;
   z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('@/assets/backgrounds/pattern.avif');
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.015;
+    z-index: -1;
+  }
 }
-.bg-pattern::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('@/assets/backgrounds/pattern.avif');
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat;
-  opacity: 0.022;
-  z-index: -1;
+.bg-paper {
+  background-color: rgb(var(--v-theme-brown-lighten-5));
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('@/assets/backgrounds/paper_overlay.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.5;
+    z-index: -1;
+  }
+}
+.bg-paper-green {
+  background-color: rgb(var(--v-theme-green-lighten-1));
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('@/assets/backgrounds/paper_overlay.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.2;
+    z-index: -1;
+  }
+}
+.bg-transparent {
+  background: transparent !important;
 }
 .pulse {
   animation: pulse 0.5s ease;

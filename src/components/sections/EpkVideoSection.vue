@@ -27,7 +27,7 @@ const playVideo = (index: number) => {
       <v-row>
         <v-col cols="12">
           <h3 class="text-body-1 text-center mb-4">
-            2023 Live Performance (Dissonance Festival main stage)
+            Talk to Me, Dragonfly - Live at Dissonance Festival 2023
           </h3>
 
           <div v-if="!isPlaying[0]" class="video-thumbnail" @click="playVideo(0)">
@@ -56,7 +56,7 @@ const playVideo = (index: number) => {
         </v-col>
       </v-row>
 
-      <h3 class="text-body-1 text-center mt-10 mb-4">2021 debut album singles</h3>
+      <h3 class="text-body-1 text-center mt-10 mb-4">2021 debut album singles official videos</h3>
 
       <v-row>
         <v-col cols="12" sm="4">
