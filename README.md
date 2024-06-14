@@ -1,6 +1,8 @@
 # Benthos | Official Website
 
-https://benthos-music.com/
+Live preview available on: https://benthos-band.netlify.app/
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c40ea714-92ae-4fd5-9c77-235083d8a344/deploy-status)](https://app.netlify.com/sites/benthos-band/deploys)
 
 ## Recommended IDE Setup
 
