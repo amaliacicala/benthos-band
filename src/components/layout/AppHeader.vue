@@ -130,5 +130,14 @@ onMounted(() => {
 .v-card {
   border: solid 10px;
   animation: animatedBorder 3s ease-in-out infinite alternate;
+  border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 100 round;
+}
+@keyframes animatedBorder {
+  from {
+    border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 20;
+  }
+  to {
+    border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 5;
+  }
 }
 </style>
