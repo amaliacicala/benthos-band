@@ -8,7 +8,7 @@ import ConcertListBlock from '@/components/atoms/ConcertListBlock.vue'
 
 const bandsintownStore = useBandsintownStore()
 const { fetchEvents } = bandsintownStore
-const { events, noUpcomingShows, isPastDate } = storeToRefs(bandsintownStore)
+const { loading, events, noUpcomingShows, isPastDate } = storeToRefs(bandsintownStore)
 
 onMounted(() => {
   fetchEvents(false)
@@ -33,7 +33,17 @@ onMounted(() => {
       </v-chip>
     </v-chip-group>
 
-    <v-container class="d-flex flex-column pt-12 px-lg-8">
+    <div v-if="loading" class="d-flex flex-column my-16 align-center justify-center">
+      <v-progress-circular
+        color="green-darken-3"
+        :size="mobile ? 50 : 60"
+        :width="mobile ? 4 : 7"
+        class="self-center my-8"
+        indeterminate
+      />
+    </div>
+
+    <v-container v-else class="d-flex flex-column pt-12 px-lg-8">
       <NoShowsBlock v-if="noUpcomingShows" :notify-link="events[0].ticketsUrl" />
 
       <ConcertListBlock v-else :concert-list="events" :past-date="isPastDate" />

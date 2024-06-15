@@ -5,8 +5,8 @@ import type { EventData, Event } from '@/types/Bandsintown'
 export const useBandsintownStore = defineStore({
   id: 'bandsintown',
   state: () => ({
-    events: [] as Event[],
-    loading: false
+    loading: true,
+    events: [] as Event[]
   }),
 
   getters: {
@@ -61,11 +61,11 @@ export const useBandsintownStore = defineStore({
             }
           ]
         }
+
+        this.loading = false
       } catch (error) {
         console.error('Error fetching events:', error)
         return Promise.reject(error)
-      } finally {
-        this.loading = false
       }
     }
   }
