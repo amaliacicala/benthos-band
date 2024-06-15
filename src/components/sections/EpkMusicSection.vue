@@ -48,8 +48,10 @@ const { mdAndDown } = useDisplay()
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1835121567%3Fsecret_token%3Ds-e3ygbkWanpY&color=%23e8b72b&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
             ></iframe>
 
-            <div class="bg-amber-lighten-1 text-dark font-weight-bold pa-4 mt-6">
-              <p class="text-overline">behind the concept</p>
+            <div class="bg-amber-lighten-1 text-dark font-weight-bold pa-4 pb-7 mt-6">
+              <p class="text-overline font-weight-bold" style="font-size: 14px !important">
+                behind the concept
+              </p>
               <MarkdownText
                 :source="epkData.albumConcept"
                 :text-style="'text-body-2'"
