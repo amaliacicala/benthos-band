@@ -4,7 +4,7 @@ import { useDisplay } from 'vuetify'
 import { useRoute, useRouter } from 'vue-router'
 import { fetchNavigation } from '@/api/navigation'
 import type { NavigationItem } from '@/types/Navigation'
-import logo from '@/assets/logos/benthos_logo_new.png'
+import logo from '@/assets/logos/benthos_logo_black.png'
 import AppSideMenu from './AppSideMenu.vue'
 
 const props = defineProps({
@@ -97,7 +97,15 @@ onMounted(() => {
 }
 .v-app-bar {
   border-bottom: solid 5px;
-  border-image: url('@/assets/backgrounds/pattern.avif') 100 round;
+  @media screen and (max-width: 959px) {
+    border-image: url('@/assets/backgrounds/small/pattern-sm.avif') 20 round;
+  }
+  @media screen and (min-width: 960px) and (max-width: 1279px) {
+    border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 40 round;
+  }
+  @media screen and (min-width: 1280px) {
+    border-image: url('@/assets/backgrounds/large/pattern-lg.avif') 50 round;
+  }
 }
 .v-img {
   &:hover {
@@ -122,13 +130,5 @@ onMounted(() => {
 .v-card {
   border: solid 10px;
   animation: animatedBorder 3s ease-in-out infinite alternate;
-}
-@keyframes animatedBorder {
-  from {
-    border-image: url('@/assets/backgrounds/pattern.avif') 80;
-  }
-  to {
-    border-image: url('@/assets/backgrounds/pattern.avif') 20;
-  }
 }
 </style>

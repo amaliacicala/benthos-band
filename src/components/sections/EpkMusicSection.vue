@@ -1,7 +1,11 @@
 <script lang="ts" setup>
+import { useDisplay } from 'vuetify'
 import epkData from '@/data/epkData.json'
 import MarkdownText from '../atoms/MarkdownText.vue'
-import cover from '@/assets/album_covers/benthos_from_nothing_cover.avif'
+import cover_lg from '@/assets/album_covers/large/benthos_fromnothing_cover-lg.avif'
+import cover_sm from '@/assets/album_covers/small/benthos_fromnothing_cover-sm.avif'
+
+const { mdAndDown } = useDisplay()
 </script>
 
 <template>
@@ -16,7 +20,12 @@ import cover from '@/assets/album_covers/benthos_from_nothing_cover.avif'
       <v-container class="pt-12">
         <v-row>
           <v-col cols="12" md="6">
-            <v-img :src="cover" alt="Benthos - From Nothing" width="100%" eager />
+            <v-img
+              :src="mdAndDown ? cover_sm : cover_lg"
+              alt="Benthos - From Nothing"
+              width="100%"
+              eager
+            />
             <p class="text-caption text-left mt-2">
               Artwork by
               <a

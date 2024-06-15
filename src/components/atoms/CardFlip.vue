@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref, watch, onMounted } from 'vue'
+import { useDisplay } from 'vuetify'
 import type { StreamingLink } from '@/types/Streaming'
 
 const props = defineProps({
@@ -7,7 +8,11 @@ const props = defineProps({
     type: Number,
     required: true
   },
-  backgroundImage: {
+  backgroundImageLg: {
+    type: String,
+    required: true
+  },
+  backgroundImageSm: {
     type: String,
     required: true
   },
@@ -28,6 +33,8 @@ const props = defineProps({
     default: false
   }
 })
+
+const { mdAndDown } = useDisplay()
 
 const emit = defineEmits(['reportFlipState'])
 
@@ -76,7 +83,7 @@ onMounted(reportState)
         max-width="300"
         min-height="300"
         max-height="300"
-        :image="props.backgroundImage"
+        :image="mdAndDown ? props.backgroundImageSm : props.backgroundImageLg"
         class="flat-shadow"
         @click="() => handleCardClick(1)"
       />

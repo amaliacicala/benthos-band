@@ -36,25 +36,36 @@ $heading-font-family: 'Bebas Neue', sans-serif;
 }
 .bg-hero {
   height: 100vh;
-  background-image: url('@/assets/backgrounds/hero_image_desktop.avif');
   background-position: center;
   background-size: cover;
   opacity: 0.8;
   animation: animatedBgHero 15s ease-in-out infinite alternate;
 
-  @media screen and (max-width: 600px) {
-    background-image: url('@/assets/backgrounds/hero_image_mobile.avif');
+  @media screen and (max-width: 959px) {
+    background-image: url('@/assets/backgrounds/small/bg_hero-sm.avif');
     opacity: 1;
     animation: none;
   }
+  @media screen and (min-width: 960px) and (max-width: 1279px) {
+    background-image: url('@/assets/backgrounds/medium/bg_hero-md.avif');
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url('@/assets/backgrounds/large/bg_hero-lg.avif');
+  }
 }
 .bg-debris {
-  background-image: url('@/assets/backgrounds/debris-bg.large.avif');
   background-size: cover;
   animation: animatedBgDebris 30s ease-in-out infinite alternate;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 959px) {
+    background-image: url('@/assets/backgrounds/small/bg_debris-sm.avif');
     animation-duration: 60s;
+  }
+  @media screen and (min-width: 960px) and (max-width: 1279px) {
+    background-image: url('@/assets/backgrounds/medium/bg_debris-md.avif');
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url('@/assets/backgrounds/large/bg_debris-lg.avif');
   }
 }
 .bg-pattern {
@@ -68,12 +79,22 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('@/assets/backgrounds/pattern.avif');
     background-size: contain;
     background-position: center;
     background-repeat: repeat;
     opacity: 0.015;
     z-index: -1;
+
+    @media screen and (max-width: 959px) {
+      background-image: url('@/assets/backgrounds/small/pattern-sm.avif');
+      animation-duration: 60s;
+    }
+    @media screen and (min-width: 960px) and (max-width: 1279px) {
+      background-image: url('@/assets/backgrounds/medium/pattern-md.avif');
+    }
+    @media screen and (min-width: 1280px) {
+      background-image: url('@/assets/backgrounds/large/pattern-lg.avif');
+    }
   }
 }
 .bg-paper {
@@ -88,12 +109,22 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('@/assets/backgrounds/paper_overlay.avif');
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
     opacity: 0.5;
     z-index: -1;
+
+    @media screen and (max-width: 959px) {
+      background-image: url('@/assets/backgrounds/small/paper-sm.avif');
+      animation-duration: 60s;
+    }
+    @media screen and (min-width: 960px) and (max-width: 1279px) {
+      background-image: url('@/assets/backgrounds/medium/paper-md.avif');
+    }
+    @media screen and (min-width: 1280px) {
+      background-image: url('@/assets/backgrounds/large/paper-lg.avif');
+    }
   }
 }
 .bg-paper-green {
@@ -108,12 +139,22 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('@/assets/backgrounds/paper_overlay.avif');
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
     opacity: 0.2;
     z-index: -1;
+
+    @media screen and (max-width: 959px) {
+      background-image: url('@/assets/backgrounds/small/paper-sm.avif');
+      animation-duration: 60s;
+    }
+    @media screen and (min-width: 960px) and (max-width: 1279px) {
+      background-image: url('@/assets/backgrounds/medium/paper-md.avif');
+    }
+    @media screen and (min-width: 1280px) {
+      background-image: url('@/assets/backgrounds/large/paper-lg.avif');
+    }
   }
 }
 .bg-transparent {
@@ -138,6 +179,30 @@ $heading-font-family: 'Bebas Neue', sans-serif;
   }
   to {
     background-position: 0% 100%;
+  }
+}
+@keyframes animatedBorder {
+  from {
+    @media screen and (max-width: 959px) {
+      border-image: url('@/assets/backgrounds/small/pattern-sm.avif') 80 round;
+    }
+    @media screen and (min-width: 960px) and (max-width: 1279px) {
+      border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 80 round;
+    }
+    @media screen and (min-width: 1280px) {
+      border-image: url('@/assets/backgrounds/large/pattern-lg.avif') 80 round;
+    }
+  }
+  to {
+    @media screen and (max-width: 959px) {
+      border-image: url('@/assets/backgrounds/small/pattern-sm.avif') 20 round;
+    }
+    @media screen and (min-width: 960px) and (max-width: 1279px) {
+      border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 20 round;
+    }
+    @media screen and (min-width: 1280px) {
+      border-image: url('@/assets/backgrounds/large/pattern-lg.avif') 20 round;
+    }
   }
 }
 @keyframes pulse {
