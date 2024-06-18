@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
 import { storeToRefs } from 'pinia'
 import { usePhotosetsStore } from '@/stores/photosets'
@@ -10,11 +10,18 @@ const photosetStore = usePhotosetsStore()
 const { loading, images } = storeToRefs(photosetStore)
 const { loadAlbum } = photosetStore
 
+const slide = ref(0)
+
 const photoshoots = import.meta.env.VITE_FLICKR_EPK_PS_PHOTOSET
 const livePhotos = import.meta.env.VITE_FLICKR_EPK_LIVE_PHOTOSET
 
+const handleAlbumLoad = (albumId: string) => {
+  slide.value = 0
+  loadAlbum(albumId)
+}
+
 onMounted(() => {
-  loadAlbum(photoshoots)
+  handleAlbumLoad(photoshoots)
 })
 </script>
 
@@ -27,17 +34,18 @@ onMounted(() => {
     <h1 class="text-md-h1 text-h2">Photos</h1>
 
     <v-chip-group class="text-body-1 text-dark pt-4">
-      <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="loadAlbum(photoshoots)">
+      <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="handleAlbumLoad(photoshoots)">
         photoshoots
       </v-chip>
 
-      <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="loadAlbum(livePhotos)">
+      <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="handleAlbumLoad(livePhotos)">
         live photos
       </v-chip>
     </v-chip-group>
 
     <v-container class="pt-6 pt-md-8">
       <v-carousel
+        v-model="slide"
         width="100%"
         :height="mobile ? '100%' : '700px'"
         show-arrows="hover"
