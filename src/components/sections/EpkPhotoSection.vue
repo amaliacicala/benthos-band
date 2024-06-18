@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
 import { storeToRefs } from 'pinia'
 import { usePhotosetsStore } from '@/stores/photosets'
@@ -13,6 +13,8 @@ const { loadAlbum } = photosetStore
 
 const slide = ref(0)
 const downloading = ref<Record<string, boolean>>({})
+
+const isDownloading = computed(() => Object.values(downloading.value).some((status) => status))
 
 const photoshoots = import.meta.env.VITE_FLICKR_EPK_PS_PHOTOSET
 const livePhotos = import.meta.env.VITE_FLICKR_EPK_LIVE_PHOTOSET
@@ -58,7 +60,7 @@ onMounted(() => {
         interval="5000"
         progress="amber-darken-1"
         hide-delimiters
-        cycle
+        :cycle="!isDownloading"
         class="elevation-24"
         :style="{ minHeight: mobile ? '230px' : '' }"
       >
