@@ -1,17 +1,20 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue'
+import { useDisplay } from 'vuetify'
 import { storeToRefs } from 'pinia'
 import { useBandsintownStore } from '@/stores/bandsintown'
 import icon from '@/assets/icons/bandsintown.svg'
 import NoShowsBlock from '@/components/atoms/NoShowsBlock.vue'
 import ConcertListBlock from '@/components/atoms/ConcertListBlock.vue'
 
+const { mobile } = useDisplay()
+
 const bandsintownStore = useBandsintownStore()
-const { fetchEvents } = bandsintownStore
+const { loadEvents } = bandsintownStore
 const { loading, events, noUpcomingShows, isPastDate } = storeToRefs(bandsintownStore)
 
 onMounted(() => {
-  fetchEvents(false)
+  loadEvents(false)
 })
 </script>
 
@@ -24,11 +27,11 @@ onMounted(() => {
     <h1 class="text-md-h1 text-h2 text-dark">Tour Dates</h1>
 
     <v-chip-group class="text-body-1 text-dark pt-4">
-      <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="fetchEvents(false)">
+      <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(false)">
         upcoming shows
       </v-chip>
 
-      <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="fetchEvents(true)">
+      <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(true)">
         past shows
       </v-chip>
     </v-chip-group>
