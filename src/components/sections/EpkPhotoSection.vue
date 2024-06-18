@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
 import { storeToRefs } from 'pinia'
 import { usePhotosetsStore } from '@/stores/photosets'
+import { downloadImage } from '@/api/photosets'
 
 const { mobile } = useDisplay()
 
@@ -11,6 +12,7 @@ const { loading, images } = storeToRefs(photosetStore)
 const { loadAlbum } = photosetStore
 
 const slide = ref(0)
+const downloading = ref<Record<string, boolean>>({})
 
 const photoshoots = import.meta.env.VITE_FLICKR_EPK_PS_PHOTOSET
 const livePhotos = import.meta.env.VITE_FLICKR_EPK_LIVE_PHOTOSET
@@ -18,6 +20,10 @@ const livePhotos = import.meta.env.VITE_FLICKR_EPK_LIVE_PHOTOSET
 const handleAlbumLoad = (albumId: string) => {
   slide.value = 0
   loadAlbum(albumId)
+}
+
+const handleDownload = (url: string, imageId: string) => {
+  downloadImage(url, imageId, downloading)
 }
 
 onMounted(() => {
@@ -73,7 +79,32 @@ onMounted(() => {
           :src="mobile ? image.url_c : image.url_l"
           :cover="mobile ? false : true"
           eager
-        />
+        >
+          <v-btn
+            @click="() => handleDownload(image.url_o, image.id)"
+            rounded="0"
+            color="brown-lighten-5"
+            class="position-absolute right-0 bottom-0"
+            :width="mobile ? '35%' : '230px'"
+            :height="mobile ? '35px' : '45px'"
+          >
+            <template v-if="downloading[image.id]">
+              <v-progress-circular
+                color="amber-darken-1"
+                :size="24"
+                :width="4"
+                indeterminate
+                class="mr-4"
+              />
+              {{ mobile ? '' : 'downloading...' }}
+            </template>
+
+            <template v-else>
+              <v-icon icon="mdi-download" class="mr-2" />
+              {{ mobile ? 'download' : 'download hd photo' }}
+            </template>
+          </v-btn>
+        </v-carousel-item>
       </v-carousel>
     </v-container>
   </div>
