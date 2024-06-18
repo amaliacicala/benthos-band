@@ -20,3 +20,27 @@ export const fetchPhotoAlbum = async (photosetId: string) => {
     return Promise.reject(err.response ? err.response.data : err)
   }
 }
+
+export const downloadImage = async (url: string, imageId: string, downloading: any) => {
+  downloading.value[imageId] = true
+  try {
+    const response = await axios.get(url, {
+      responseType: 'blob'
+    })
+
+    const urlBlob = window.URL.createObjectURL(new Blob([response.data]))
+    const link = document.createElement('a')
+
+    link.href = urlBlob
+    link.setAttribute('download', 'benthos.jpg')
+
+    document.body.appendChild(link)
+
+    link.click()
+    link.remove()
+  } catch (err) {
+    console.error('Error downloading the image:', err)
+  } finally {
+    downloading.value[imageId] = false
+  }
+}
