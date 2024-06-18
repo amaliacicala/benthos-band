@@ -20,7 +20,7 @@ const quotes = computed(() => {
       <v-row>
         <v-col cols="12" md="6" v-for="(column, colIndex) in quotes" :key="colIndex">
           <div v-for="(quote, index) in column" :key="index" class="d-flex flex-column px-4 pb-8">
-            <span class="text-body-1 bg-brown-lighten-5 font-weight-bold mb-1">
+            <span class="text-body-1 bg-brown-lighten-5 font-weight-bold mb-3">
               <a :href="quote.link" target="_blank" ref="noopener noreferrer"> {{ quote.author }}</a
               >{{ quote.details ? ', ' + quote.details : '' }}
             </span>
