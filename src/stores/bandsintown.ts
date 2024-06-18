@@ -1,5 +1,5 @@
-import axios from 'axios'
 import { defineStore } from 'pinia'
+import { fetchEvents } from '@/api/bandsintown'
 import type { EventData, Event } from '@/types/Bandsintown'
 
 export const useBandsintownStore = defineStore({
@@ -21,31 +21,23 @@ export const useBandsintownStore = defineStore({
   },
 
   actions: {
-    async fetchEvents(showPastEvents = false) {
+    async loadEvents(showPastEvents = false) {
       try {
         this.loading = true
 
-        const bandsintownData = await axios.get(
-          `https://rest.bandsintown.com/artists/id_${import.meta.env.VITE_BANDSINTOWN_ARTIST_ID}/events`,
-          {
-            params: {
-              app_id: import.meta.env.VITE_BANDSINTOWN_APP_ID,
-              date: showPastEvents ? 'past' : 'upcoming'
-            }
-          }
-        )
+        const bandsintownEvents = await fetchEvents(showPastEvents)
 
-        const bandsintownEvents = bandsintownData.data as EventData[]
-
-        this.events = bandsintownEvents.map((e) => ({
-          name: e.title,
-          date: new Date(e.datetime),
-          venue: e.venue.name,
-          city: e.venue.city,
-          country: e.venue.country,
-          eventUrl: e.url,
-          ticketsUrl: e.offers[0]?.url
-        }))
+        this.events = bandsintownEvents
+          .map((e: EventData) => ({
+            name: e.title,
+            date: new Date(e.datetime),
+            venue: e.venue.name,
+            city: e.venue.city,
+            country: e.venue.country,
+            eventUrl: e.url,
+            ticketsUrl: e.offers[0]?.url
+          }))
+          .sort((a: any, b: any) => b.date.getTime() - a.date.getTime()) // sort the events from most recent to oldest
 
         // show "Notify Me" if no events are found
         if (this.events.length === 0) {
@@ -63,9 +55,9 @@ export const useBandsintownStore = defineStore({
         }
 
         this.loading = false
-      } catch (error) {
-        console.error('Error fetching events:', error)
-        return Promise.reject(error)
+      } catch (err) {
+        console.error('Error fetching events:', err)
+        return Promise.reject(err)
       }
     }
   }

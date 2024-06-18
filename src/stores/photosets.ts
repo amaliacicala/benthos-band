@@ -21,6 +21,7 @@ export const usePhotosetsStore = defineStore({
           this.loading = false
         }, 1000)
       } catch (err) {
+        console.error('Error fetching photos:', err)
         return Promise.reject(err)
       }
     }
