@@ -45,7 +45,7 @@ const { mdAndDown } = useDisplay()
               scrolling="no"
               frameborder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1835121567%3Fsecret_token%3Ds-e3ygbkWanpY&color=%23e8b72b&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1842516447%3Fsecret_token%3Ds-hXcsHitcMeV&color=%23e8b72b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
             ></iframe>
 
             <div class="bg-amber-lighten-1 text-dark font-weight-bold pa-4 pb-7 mt-6">
