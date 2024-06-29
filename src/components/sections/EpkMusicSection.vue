@@ -58,7 +58,7 @@ const playVideo = (index: number) => {
           </v-col>
         </v-row>
 
-        <v-row class="mt-12">
+        <v-row class="mt-md-12">
           <v-col cols="12" md="6">
             <div class="rounded bg-amber-lighten-1 text-dark font-weight-bold py-4 px-6 pb-7">
               <p class="text-overline font-weight-bold" style="font-size: 16px !important">
@@ -103,12 +103,12 @@ const playVideo = (index: number) => {
           <v-col cols="12" class="d-flex flex-column justify-center align-center">
             <p class="text-h4">tracklist</p>
 
-            <p class="text-body-1 text-center mt-2">
+            <p class="text-body-2 text-md-body-1 text-center mt-2">
               <template v-for="(track, index) in epkData.albumTrackList">
                 <span v-if="index > 0"> // </span>
-                <span> {{ (index + 1).toString().padStart(2, '0') }}. </span>
+                <span style="opacity: 0.5"> {{ (index + 1).toString().padStart(2, '0') }}. </span>
                 <span class="font-weight-bold">{{ track.songTitle }}</span>
-                <span> ({{ track.length }}) </span>
+                <span style="opacity: 0.5"> ({{ track.length }}) </span>
               </template>
             </p>
           </v-col>
