@@ -15,6 +15,7 @@ const playVideo = (index: number) => {
   isPlaying.value[index] = true
 }
 </script>
+
 <template>
   <v-lazy transition="fade-transition">
     <div
