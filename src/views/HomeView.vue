@@ -3,6 +3,7 @@ import navigation from '../data/navigation.json'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import MusicSection from '@/components/sections/MusicSection.vue'
+import TourDatesSection from '@/components/sections/TourDatesSection.vue'
 </script>
 
 <template>
@@ -12,4 +13,5 @@ import MusicSection from '@/components/sections/MusicSection.vue'
 
   <HeroSection />
   <MusicSection />
+  <TourDatesSection />
 </template>

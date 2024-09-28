@@ -237,10 +237,10 @@
   resolved "https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@vitejs/plugin-vue@^5.0.4":
-  version "5.0.4"
-  resolved "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-5.0.4.tgz"
-  integrity sha512-WS3hevEszI6CEVEx28F8RjTX97k3KsrcY6kvTg7+Whm5y3oYvcqzVeGCU3hxSAn4uY2CLCkeokkGKpoctccilQ==
+"@vitejs/plugin-vue@^5.1.4":
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-5.1.4.tgz"
+  integrity sha512-N2XSI2n3sQqp5w7Y/AN/L2XDjBIRGqXko+eDp42sydYSBeJuSm5a1sLf8zakmo8u7tA8NmBgoDLA1HeOESjp9A==
 
 "@volar/language-core@~2.2.0", "@volar/language-core@2.2.1":
   version "2.2.1"
@@ -1552,10 +1552,10 @@ util-deprecate@^1.0.2:
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
-vite-plugin-vuetify@^2.0.3, vite-plugin-vuetify@>=1.0.0:
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/vite-plugin-vuetify/-/vite-plugin-vuetify-2.0.3.tgz"
-  integrity sha512-HbYajgGgb/noaVKNRhnnXIiQZrNXfNIeanUGAwXgOxL6h/KULS40Uf51Kyz8hNmdegF+DwjgXXI/8J1PNS83xw==
+vite-plugin-vuetify@^2.0.4, vite-plugin-vuetify@>=1.0.0:
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/vite-plugin-vuetify/-/vite-plugin-vuetify-2.0.4.tgz"
+  integrity sha512-A4cliYUoP/u4AWSRVRvAPKgpgR987Pss7LpFa7s1GvOe8WjgDq92Rt3eVXrvgxGCWvZsPKziVqfHHdCMqeDhfw==
   dependencies:
     "@vuetify/loader-shared" "^2.0.3"
     debug "^4.3.3"
