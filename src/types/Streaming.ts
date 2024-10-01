@@ -1,6 +1,7 @@
 export interface Album {
   overline: string
   title: string
+  releaseDate: string
   cover: string
   coverLg: string
   coverSm: string

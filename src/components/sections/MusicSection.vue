@@ -37,8 +37,8 @@ onMounted(() => {
     :style="{ gap: mobile ? '24px' : '48px' }"
   >
     <div v-if="albums.length" class="text-center">
-      <p class="text-overline">{{ albums[0].overline }}</p>
-      <h1 class="text-md-h1 text-h2">{{ albums[0].title }}</h1>
+      <p class="text-overline">Benthos Catalogue</p>
+      <h1 class="text-md-h1 text-h2">Past Releases</h1>
     </div>
 
     <div v-if="mobile" class="d-flex justify-center align-center w-100 mb-6">
@@ -66,6 +66,7 @@ onMounted(() => {
         :background-image-sm="album.coverSm"
         :overline="album.overline"
         :title="album.title"
+        :release-date="album.releaseDate"
         :links="album.links"
         :flip="flipCards"
         @reportFlipState="reportFlipState"

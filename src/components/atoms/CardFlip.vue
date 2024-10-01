@@ -24,6 +24,10 @@ const props = defineProps({
     type: String,
     required: true
   },
+  releaseDate: {
+    type: String,
+    required: true
+  },
   links: {
     type: Array<StreamingLink>,
     required: true
@@ -103,6 +107,7 @@ onMounted(reportState)
           <div class="d-flex flex-column align-center text-green-darken-4 pb-4 text-center">
             <p class="text-overline">{{ props.overline }}</p>
             <p class="text-md-h3 text-h4">{{ props.title }}</p>
+            <p class="text-overline">{{ props.releaseDate }}</p>
           </div>
           <v-btn
             v-for="(link, index) in props.links"
