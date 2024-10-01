@@ -21,8 +21,7 @@ const router = createRouter({
     {
       path: '/login',
       name: 'Login',
-      component: LoginView,
-      props: (route) => ({ redirect: route.query.redirect || '/epk' })
+      component: LoginView
     },
     {
       path: '/epk',

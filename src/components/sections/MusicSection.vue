@@ -10,11 +10,6 @@ const { mobile } = useDisplay()
 const albums = ref<Album[]>([])
 const flipCards = ref(false)
 
-onMounted(() => {
-  const data = fetchStreamingLinks()
-  albums.value = Object.values(data) as Album[]
-})
-
 const cardFlips = ref<number[]>([])
 
 const handleStreamClick = () => {
@@ -29,22 +24,33 @@ const handleStreamClick = () => {
 const reportFlipState = (index: number, flipState: number) => {
   cardFlips.value[index] = flipState
 }
+
+onMounted(() => {
+  const data = fetchStreamingLinks()
+  albums.value = Object.values(data) as Album[]
+})
 </script>
 
 <template>
   <div
-    class="d-flex flex-column align-center bg-debris bg-red-darken-4 pt-16 px-16 pb-16 pb-md-4"
-    :style="{ gap: '48px' }"
+    class="d-flex flex-column align-center bg-debris bg-red-darken-4 py-16 px-10 px-md-16"
+    :style="{ gap: mobile ? '24px' : '48px' }"
   >
     <div v-if="albums.length" class="text-center">
       <p class="text-overline">{{ albums[0].overline }}</p>
       <h1 class="text-md-h1 text-h2">{{ albums[0].title }}</h1>
-      <h2
-        class="text-body-1 text-decoration-underline"
-        :style="{ textUnderlineOffset: '4px !important' }"
+    </div>
+
+    <div v-if="mobile" class="d-flex justify-center align-center w-100 mb-6">
+      <v-btn
+        variant="outlined"
+        :height="50"
+        :width="150"
+        class="rounded-pill mr-4"
+        @click="handleStreamClick"
+        >Stream</v-btn
       >
-        out now
-      </h2>
+      <v-btn :height="50" :width="150" class="rounded-pill bg-green-lighten-2">Buy</v-btn>
     </div>
 
     <div
@@ -66,21 +72,17 @@ const reportFlipState = (index: number, flipState: number) => {
       />
     </div>
 
-    <div class="d-flex flex-column align-center w-100">
-      <v-btn size="x-large" class="mb-4 w-md-25 w-100" @click="handleStreamClick">Stream</v-btn>
-      <v-btn size="x-large" class="w-md-25 w-100">Buy</v-btn>
+    <div v-if="!mobile" class="d-flex flex-column align-center w-100 mt-6 mt-md-8">
+      <v-btn
+        variant="outlined"
+        size="x-large"
+        :height="60"
+        class="rounded-pill mb-6 w-25"
+        @click="handleStreamClick"
+        >Stream</v-btn
+      >
+      <v-btn size="x-large" :height="60" class="rounded-pill bg-green-lighten-2 w-25">Buy</v-btn>
     </div>
-
-    <iframe
-      v-if="!mobile"
-      style="border-radius: 12px"
-      src="https://open.spotify.com/embed/playlist/7avBMe93BdNzoSuCUdXATW?utm_source=generator&theme=0"
-      width="30%"
-      height="200"
-      frameBorder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-    />
   </div>
 </template>
 

@@ -2,15 +2,6 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 import '@mdi/font/css/materialdesignicons.css'
-import type { ThemeDefinition } from 'vuetify'
-
-const lightTheme: ThemeDefinition = {
-  variables: {
-    'high-emphasis-opacity': 1,
-    'medium-emphasis-opacity': 0.74,
-    'disabled-opacity': 0.5
-  }
-}
 
 export default createVuetify({
   theme: {
@@ -25,7 +16,9 @@ export default createVuetify({
           dark: '#1f211e',
           grey: '#797979',
           background: '#111111',
-          'red-darken-4': '#2c1615',
+          'red-darken-4': '#8f2732',
+          'red-darken-3': '#2c1615',
+          'red-darken-2': '#97323d',
           'red-lighten-1': '#d27d70',
           'red-lighten-2': '#97574e',
           'red-lighten-3': '#f7bdab',

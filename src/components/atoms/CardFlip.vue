@@ -79,10 +79,10 @@ onMounted(reportState)
   <v-window v-model="cardFlip" class="flat-shadow">
     <v-window-item>
       <v-card
-        min-width="300"
-        max-width="300"
-        min-height="300"
-        max-height="300"
+        :min-width="mdAndDown ? 300 : 400"
+        :max-width="mdAndDown ? 300 : 400"
+        :min-height="mdAndDown ? 300 : 400"
+        :max-height="mdAndDown ? 300 : 400"
         :image="mdAndDown ? props.backgroundImageSm : props.backgroundImageLg"
         class="flat-shadow"
         @click="() => handleCardClick(1)"
@@ -91,18 +91,18 @@ onMounted(reportState)
     <v-window-item>
       <transition name="pulse">
         <v-card
-          min-width="300"
-          max-width="300"
-          min-height="300"
-          max-height="300"
+          :min-width="mdAndDown ? 300 : 400"
+          :max-width="mdAndDown ? 300 : 400"
+          :min-height="mdAndDown ? 300 : 400"
+          :max-height="mdAndDown ? 300 : 400"
           color="green-lighten-1"
           :class="['py-4 px-8', { pulse: pulseClass }]"
           style="overflow-y: scroll"
           @click="() => handleCardClick(0)"
         >
-          <div class="d-flex flex-column align-center text-green-darken-4 pb-4">
+          <div class="d-flex flex-column align-center text-green-darken-4 pb-4 text-center">
             <p class="text-overline">{{ props.overline }}</p>
-            <p class="text-h4">{{ props.title }}</p>
+            <p class="text-md-h3 text-h4">{{ props.title }}</p>
           </div>
           <v-btn
             v-for="(link, index) in props.links"
@@ -110,7 +110,7 @@ onMounted(reportState)
             :href="link.link"
             flat
             style="border-radius: 8px"
-            class="d-flex outlined py-5 mb-2"
+            class="d-flex outlined py-6 py-md-7 mb-2"
             target="_blank"
           >
             <div class="d-flex align-center">

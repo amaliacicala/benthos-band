@@ -51,7 +51,7 @@
       {
         "name": "Spotify",
         "icon": "spotify",
-        "link": "https://open.spotify.com/track/3kRBJAl3B1FVFI6PQEJxAw?si=Xl8KCd1UT0WCX7d1hj8UQg&utm_medium=share&utm_source=linktree"
+        "link": "https://open.spotify.com/album/5jjtGMErjR5QPY0tTtTWIC?si=19csq1FcSkCaeR9Kg10pUA"
       },
       {
         "name": "Apple Music",
@@ -82,6 +82,49 @@
         "name": "Deezer",
         "icon": "deezer",
         "link": "https://www.deezer.com/track/1564501592"
+      }
+    ]
+  },
+  "dragonfly_live": {
+    "overline": "Live at Dissonance Festival",
+    "title": "Talk to Me, Dragonfly!",
+    "coverLg": "src/assets/album_covers/large/benthos_dissonance_cover-lg.avif",
+    "coverSm": "src/assets/album_covers/small/benthos_dissonance_cover-sm.avif",
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": "https://open.spotify.com/album/5N8Sujic3j3c81bEW2cfSj?si=ACRZ1z-pQmii4Ro6upVuXw"
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": "https://music.apple.com/it/album/talk-to-me-dragonfly-live-at-dissonance-festival/1708967129?i=1708967135&at=1000lHKX&ct=linktree_http&itsct=lt_m&itscg=30200&ls=1"
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": "https://music.amazon.com/albums/B0CJS36JQ7?trackAsin=B0CJS31VJN"
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": "https://listen.tidal.com/album/318267958/track/318267959"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://www.youtube.com/watch?v=ue1BDz156Z4"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": "https://music.youtube.com/watch?v=ue1BDz156Z4"
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": "https://www.deezer.com/track/2471713781"
       }
     ]
   }

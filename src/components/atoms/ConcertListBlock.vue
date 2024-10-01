@@ -18,12 +18,6 @@ const formatDate = (date: string | number | Date) => {
     day: 'numeric',
     year: 'numeric'
   }
-  const optionsWeekdayTime: Intl.DateTimeFormatOptions = {
-    weekday: 'short',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false
-  }
 
   const dateObj = new Date(date)
   const datePart = dateObj.toLocaleDateString('en-US', optionsDate)
@@ -75,7 +69,7 @@ const formatDate = (date: string | number | Date) => {
         size="large"
         variant="outlined"
         class="bg-brown-lighten-5 flat-shadow"
-        :disabled="props.pastDate(event)"
+        :disabled="props.pastDate"
       >
         buy tickets
       </v-btn>

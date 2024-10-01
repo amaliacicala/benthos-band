@@ -6,7 +6,7 @@ import SocialMediaButtons from '../atoms/SocialMediaButtons.vue'
 
 const source = ref(epkData.contacts.email)
 
-const { text, copy, copied, isSupported } = useClipboard({ source })
+const { copy, copied, isSupported } = useClipboard({ source })
 </script>
 
 <template>

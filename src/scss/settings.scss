@@ -42,15 +42,15 @@ $heading-font-family: 'Bebas Neue', sans-serif;
   animation: animatedBgHero 15s ease-in-out infinite alternate;
 
   @media screen and (max-width: 959px) {
-    background-image: url('@/assets/backgrounds/small/bg_hero-sm.avif');
+    background-image: url('@/assets/backgrounds/small/bg_hero_fossil-sm.avif');
     opacity: 1;
     animation: none;
   }
   @media screen and (min-width: 960px) and (max-width: 1279px) {
-    background-image: url('@/assets/backgrounds/medium/bg_hero-md.avif');
+    background-image: url('@/assets/backgrounds/medium/bg_hero_fossil-md.avif');
   }
   @media screen and (min-width: 1280px) {
-    background-image: url('@/assets/backgrounds/large/bg_hero-lg.avif');
+    background-image: url('@/assets/backgrounds/large/bg_hero_fossil-lg.avif');
   }
 }
 .bg-debris {

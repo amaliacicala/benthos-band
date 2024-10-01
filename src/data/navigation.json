@@ -4,20 +4,20 @@
     "link": "/"
   },
   {
-    "name": "Music",
-    "link": "/music"
-  },
-  {
-    "name": "Media",
-    "link": "/media"
+    "name": "Merch",
+    "link": "/shop-merch"
   },
   {
     "name": "Tour",
     "link": "/tour-dates"
   },
   {
-    "name": "Merch",
-    "link": "/shop-merch"
+    "name": "Music",
+    "link": "/music"
+  },
+  {
+    "name": "Media",
+    "link": "/media"
   },
   {
     "name": "About",
