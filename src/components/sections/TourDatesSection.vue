@@ -21,7 +21,7 @@ onMounted(() => {
 <template>
   <div
     id="tour-dates"
-    class="d-flex flex-column justify-center align-center bg-paper-green text-dark px-4 py-8 pa-md-12"
+    class="d-flex flex-column justify-center align-center bg-paper-green text-dark px-4 pt-8 pb-12 pa-md-12"
   >
     <p class="text-overline text-center text-dark">Catch us playing live</p>
     <h1 class="text-md-h1 text-h2 text-dark">Tour Dates</h1>
@@ -55,7 +55,7 @@ onMounted(() => {
         <v-btn
           href="https://www.bandsintown.com/a/1419641-benthos"
           target="_blank"
-          size="x-large"
+          size="large"
           color="green-darken-3"
           class="mt-6 text-primary flat-shadow"
         >

@@ -21,7 +21,7 @@ const props = defineProps({
     <v-btn
       :href="props.notifyLink"
       target="_blank"
-      size="x-large"
+      size="large"
       color="green-darken-3"
       class="mt-8 text-primary flat-shadow"
     >

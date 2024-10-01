@@ -96,7 +96,7 @@ onMounted(() => {
   font-size: 32px;
 }
 .v-app-bar {
-  border-bottom: solid 5px;
+  border-bottom: solid 3px;
   @media screen and (max-width: 959px) {
     border-image: url('@/assets/backgrounds/small/pattern-sm.avif') 20 round;
   }

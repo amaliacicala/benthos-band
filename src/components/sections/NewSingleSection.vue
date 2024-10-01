@@ -41,15 +41,27 @@ const { mobile, mdAndDown } = useDisplay()
       <h1 class="text-md-h1 text-h2">{{ props.title }}</h1>
     </div>
 
-    <v-btn
-      variant="outlined"
-      class="text-body-2 text-md-body-1 w-md-25 w-75"
-      :size="mobile ? 'large' : 'x-large'"
-      :href="props.fanLink"
-      target="_blank"
-    >
-      Stream now
-    </v-btn>
+    <div class="d-flex justify-center align-center w-100">
+      <v-btn
+        variant="outlined"
+        class="text-body-2 text-md-body-1 mr-4 w-50 w-md-25"
+        :size="mobile ? 'large' : 'x-large'"
+        :href="props.videoLink"
+        target="_blank"
+      >
+        Watch video
+      </v-btn>
+
+      <v-btn
+        variant="outlined"
+        class="text-body-2 text-md-body-1 w-50 w-md-25"
+        :size="mobile ? 'large' : 'x-large'"
+        :href="props.fanLink"
+        target="_blank"
+      >
+        Stream song
+      </v-btn>
+    </div>
 
     <div class="d-flex" :style="{ gap: mobile ? '' : '24px' }">
       <v-btn
