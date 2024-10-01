@@ -3,6 +3,7 @@ import navigation from '../data/navigation.json'
 import fossilStreamingLinks from '@/data/fossilStreamingLinks.json'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
+import MerchSection from '@/components/sections/MerchSection.vue'
 import MusicSection from '@/components/sections/MusicSection.vue'
 import NewSingleSection from '@/components/sections/NewSingleSection.vue'
 import TourDatesSection from '@/components/sections/TourDatesSection.vue'
@@ -22,6 +23,7 @@ import TourDatesSection from '@/components/sections/TourDatesSection.vue'
       :single-links="fossilStreamingLinks"
       :video-link="'https://www.youtube.com/@BENTHOS'"
     />
+    <MerchSection />
     <MusicSection />
     <TourDatesSection />
   </v-main>

@@ -14,7 +14,7 @@ const props = defineProps({
     class="d-flex flex-column align-self-center justify-center align-center text-center w-100 w-lg-75 pa-8"
     style="border: solid 1px #343221; border-radius: 8px"
   >
-    <p class="text-h3 text-green-darken-3">Sorry, no upcoming shows for the moment.</p>
+    <p class="text-h4 text-green-darken-3">Sorry, no upcoming shows for the moment.</p>
     <p class="text-body-1 mt-6 mt-md-2">
       But you can be the first to know when we're back on stage.
     </p>

@@ -83,10 +83,10 @@ onMounted(reportState)
   <v-window v-model="cardFlip" class="flat-shadow">
     <v-window-item>
       <v-card
-        :min-width="mdAndDown ? 300 : 400"
-        :max-width="mdAndDown ? 300 : 400"
-        :min-height="mdAndDown ? 300 : 400"
-        :max-height="mdAndDown ? 300 : 400"
+        :min-width="mdAndDown ? 300 : 350"
+        :max-width="mdAndDown ? 300 : 350"
+        :min-height="mdAndDown ? 300 : 350"
+        :max-height="mdAndDown ? 300 : 350"
         :image="mdAndDown ? props.backgroundImageSm : props.backgroundImageLg"
         class="flat-shadow"
         @click="() => handleCardClick(1)"
@@ -95,10 +95,10 @@ onMounted(reportState)
     <v-window-item>
       <transition name="pulse">
         <v-card
-          :min-width="mdAndDown ? 300 : 400"
-          :max-width="mdAndDown ? 300 : 400"
-          :min-height="mdAndDown ? 300 : 400"
-          :max-height="mdAndDown ? 300 : 400"
+          :min-width="mdAndDown ? 300 : 350"
+          :max-width="mdAndDown ? 300 : 350"
+          :min-height="mdAndDown ? 300 : 350"
+          :max-height="mdAndDown ? 300 : 350"
           color="green-lighten-1"
           :class="['py-4 px-8', { pulse: pulseClass }]"
           style="overflow-y: scroll"
