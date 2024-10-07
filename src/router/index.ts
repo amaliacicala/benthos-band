@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import { useAuthStore } from '@/stores/auth'
+import { useAuthStore } from '@/stores/auth'
 import HomeView from '@/views/HomeView.vue'
 import LoginView from '@/views/LoginView.vue'
 import EpkView from '@/views/EpkView.vue'
@@ -73,17 +73,17 @@ const router = createRouter({
   }
 })
 
-// router.beforeEach((to, from, next) => {
-//   const authStore = useAuthStore()
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore()
 
-//   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
-//     next({
-//       path: '/login',
-//       query: { redirect: to.fullPath }
-//     })
-//   } else {
-//     next()
-//   }
-// })
+  if (to.meta.requiresAuth && !authStore.isAuthenticated) {
+    next({
+      path: '/login',
+      query: { redirect: to.fullPath }
+    })
+  } else {
+    next()
+  }
+})
 
 export default router
