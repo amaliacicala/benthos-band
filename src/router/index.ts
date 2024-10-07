@@ -21,43 +21,51 @@ const router = createRouter({
     {
       path: '/login',
       name: 'Login',
-      component: LoginView
+      component: LoginView,
+      meta: { title: 'Login' }
     },
+
     {
       path: '/epk',
       name: 'Electronic Press Kit',
       component: EpkView,
-      meta: { requiresAuth: true }
+      meta: { title: 'Electronic Press Kit', requiresAuth: true }
     },
     {
       path: '/music',
       name: 'Music',
-      component: MusicView
+      component: MusicView,
+      meta: { title: 'Music' }
     },
     {
       path: '/media',
       name: 'Media',
-      component: MediaView
+      component: MediaView,
+      meta: { title: 'Media' }
     },
     {
       path: '/tour-dates',
       name: 'Tour',
-      component: TourDatesView
+      component: TourDatesView,
+      meta: { title: 'Tour Dates' }
     },
     {
       path: '/shop-merch',
       name: 'Merch',
-      component: MerchView
+      component: MerchView,
+      meta: { title: 'Shop Merch' }
     },
     {
       path: '/about',
       name: 'About',
-      component: AboutView
+      component: AboutView,
+      meta: { title: 'About' }
     },
     {
       path: '/contacts',
       name: 'Contacts',
-      component: ContactsView
+      component: ContactsView,
+      meta: { title: 'Contacts' }
     }
   ],
   scrollBehavior(to, from, savedPosition) {
@@ -75,6 +83,12 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore()
+
+  if (to.meta.title) {
+    document.title = `Benthos - ${to.meta.title} | Official Website | Progressive Metal band from Italy`
+  } else {
+    document.title = 'Benthos | Official Website | Progressive Metal band from Italy'
+  }
 
   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
     next({
