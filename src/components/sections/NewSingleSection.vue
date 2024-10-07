@@ -35,62 +35,64 @@ const { mobile, mdAndDown } = useDisplay()
 </script>
 
 <template>
-  <div class="d-flex flex-column align-center py-16 px-10 px-md-16" :style="{ gap: '24px' }">
-    <div class="text-center text-brown-lighten-5">
-      <p class="text-overline">{{ props.overline }}</p>
-      <h1 class="text-md-h1 text-h2">{{ props.title }}</h1>
+  <v-lazy transition="fade-transition">
+    <div class="d-flex flex-column align-center py-16 px-10 px-md-16" :style="{ gap: '24px' }">
+      <div class="text-center text-brown-lighten-5">
+        <p class="text-overline">{{ props.overline }}</p>
+        <h1 class="text-md-h1 text-h2">{{ props.title }}</h1>
+      </div>
+
+      <div class="d-flex justify-center align-center w-100">
+        <v-btn
+          variant="outlined"
+          class="text-body-2 text-md-body-1 mr-4 w-50 w-md-25"
+          :size="mobile ? 'large' : 'x-large'"
+          :href="props.videoLink"
+          target="_blank"
+        >
+          Watch video
+        </v-btn>
+
+        <v-btn
+          variant="outlined"
+          class="text-body-2 text-md-body-1 w-50 w-md-25"
+          :size="mobile ? 'large' : 'x-large'"
+          :href="props.fanLink"
+          target="_blank"
+        >
+          Stream song
+        </v-btn>
+      </div>
+
+      <div class="d-flex" :style="{ gap: mobile ? '' : '24px' }">
+        <v-btn
+          v-for="(service, index) in singleLinks"
+          icon
+          variant="text"
+          class="text-dark hover"
+          :key="index"
+          :href="service.link"
+          target="_blank"
+        >
+          <v-img :src="`src/assets/icons/white/${service.name}.png`" :width="mobile ? 30 : 40" />
+        </v-btn>
+      </div>
+
+      <a :href="props.videoLink" class="video-thumbnail" target="_blank">
+        <video
+          autoplay
+          muted
+          loop
+          :src="mdAndDown ? dragonfly_clip_sm : dragonfly_clip_lg"
+          alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+          class="video-responsive"
+        />
+        <v-icon icon="mdi-play-circle" class="play-icon" color="brown-lighten-5" />
+      </a>
+
+      <v-img :src="insideout_logo" :width="mobile ? 100 : 150" alt="InsideOut Music" />
     </div>
-
-    <div class="d-flex justify-center align-center w-100">
-      <v-btn
-        variant="outlined"
-        class="text-body-2 text-md-body-1 mr-4 w-50 w-md-25"
-        :size="mobile ? 'large' : 'x-large'"
-        :href="props.videoLink"
-        target="_blank"
-      >
-        Watch video
-      </v-btn>
-
-      <v-btn
-        variant="outlined"
-        class="text-body-2 text-md-body-1 w-50 w-md-25"
-        :size="mobile ? 'large' : 'x-large'"
-        :href="props.fanLink"
-        target="_blank"
-      >
-        Stream song
-      </v-btn>
-    </div>
-
-    <div class="d-flex" :style="{ gap: mobile ? '' : '24px' }">
-      <v-btn
-        v-for="(service, index) in singleLinks"
-        icon
-        variant="text"
-        class="text-dark hover"
-        :key="index"
-        :href="service.link"
-        target="_blank"
-      >
-        <v-img :src="`src/assets/icons/white/${service.name}.png`" :width="mobile ? 30 : 40" />
-      </v-btn>
-    </div>
-
-    <a :href="props.videoLink" class="video-thumbnail" target="_blank">
-      <video
-        autoplay
-        muted
-        loop
-        :src="mdAndDown ? dragonfly_clip_sm : dragonfly_clip_lg"
-        alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
-        class="video-responsive"
-      />
-      <v-icon icon="mdi-play-circle" class="play-icon" color="brown-lighten-5" />
-    </a>
-
-    <v-img :src="insideout_logo" :width="mobile ? 100 : 150" alt="InsideOut Music" />
-  </div>
+  </v-lazy>
 </template>
 
 <style lang="scss" scoped>

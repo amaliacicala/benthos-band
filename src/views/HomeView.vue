@@ -17,7 +17,7 @@ import TourDatesSection from '@/components/sections/TourDatesSection.vue'
   <v-main class="pa-0">
     <HeroSection />
     <NewSingleSection
-      :overline="'The new single'"
+      :overline="'The brand new single'"
       :title="'Fossil'"
       :fan-link="'#'"
       :single-links="fossilStreamingLinks"
