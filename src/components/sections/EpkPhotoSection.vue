@@ -34,25 +34,30 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-lazy transition="fade-transition">
-    <div
-      id="photos"
-      class="d-flex flex-column justify-center align-center bg-paper text-dark px-4 py-8 pa-md-12"
-    >
-      <p class="text-overline text-center">From the archive</p>
-      <h1 class="text-md-h1 text-h2">Photos</h1>
+  <div
+    id="photos"
+    class="d-flex flex-column justify-center align-center bg-paper text-dark px-4 py-8 pa-md-12"
+  >
+    <v-container>
+      <div class="d-flex flex-column align-center">
+        <p class="text-overline text-center">From the archive</p>
+        <h1 class="text-md-h1 text-h2">Photos</h1>
 
-      <v-chip-group class="text-body-1 text-dark pt-4">
-        <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="handleAlbumLoad(photoshoots)">
-          photoshoots
-        </v-chip>
+        <v-chip-group class="text-body-1 text-dark pt-4">
+          <v-chip
+            class="bg-amber-lighten-1 py-6 px-6 px-md-8"
+            @click="handleAlbumLoad(photoshoots)"
+          >
+            photoshoots
+          </v-chip>
 
-        <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="handleAlbumLoad(livePhotos)">
-          live photos
-        </v-chip>
-      </v-chip-group>
+          <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="handleAlbumLoad(livePhotos)">
+            live photos
+          </v-chip>
+        </v-chip-group>
+      </div>
 
-      <v-container class="pt-6 pt-md-8">
+      <div class="pt-6 pt-md-8">
         <v-carousel
           v-model="slide"
           width="100%"
@@ -109,9 +114,9 @@ onMounted(() => {
             </v-btn>
           </v-carousel-item>
         </v-carousel>
-      </v-container>
-    </div>
-  </v-lazy>
+      </div>
+    </v-container>
+  </div>
 </template>
 
 <style lang="scss" scoped>

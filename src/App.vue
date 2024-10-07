@@ -1,13 +1,22 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import AppFooter from './components/layout/AppFooter.vue'
+import { RouterView, useRoute } from 'vue-router'
+import { computed } from 'vue'
+import AppHeader from '@/components/layout/AppHeader.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
+
+const route = useRoute()
+
+const isLogin = computed(() => route.path === '/login')
 </script>
 
 <template>
   <v-app>
-    <RouterView />
-    <!-- // add v-container and v-main to views -->
+    <AppHeader v-if="!isLogin" />
 
-    <AppFooter />
+    <v-main>
+      <RouterView />
+    </v-main>
+
+    <AppFooter v-if="!isLogin" />
   </v-app>
 </template>

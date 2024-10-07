@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import epkData from '@/data/epkData.json'
-import MarkdownText from '../atoms/MarkdownText.vue'
+import MarkdownText from '@/components/atoms/MarkdownText.vue'
 </script>
 
 <template>

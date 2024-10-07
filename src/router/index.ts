@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { useAuthStore } from '../stores/auth'
-import HomeView from '../views/HomeView.vue'
-import LoginView from '../views/LoginView.vue'
-import EpkView from '../views/EpkView.vue'
-import MusicView from '../views/MusicView.vue'
-import MediaView from '../views/MediaView.vue'
-import TourDatesView from '../views/TourDatesView.vue'
-import MerchView from '../views/MerchView.vue'
-import AboutView from '../views/AboutView.vue'
-import ContactsView from '../views/ContactsView.vue'
+// import { useAuthStore } from '@/stores/auth'
+import HomeView from '@/views/HomeView.vue'
+import LoginView from '@/views/LoginView.vue'
+import EpkView from '@/views/EpkView.vue'
+import MusicView from '@/views/MusicView.vue'
+import MediaView from '@/views/MediaView.vue'
+import TourDatesView from '@/views/TourDatesView.vue'
+import MerchView from '@/views/MerchView.vue'
+import AboutView from '@/views/AboutView.vue'
+import ContactsView from '@/views/ContactsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -73,17 +73,17 @@ const router = createRouter({
   }
 })
 
-router.beforeEach((to, from, next) => {
-  const authStore = useAuthStore()
+// router.beforeEach((to, from, next) => {
+//   const authStore = useAuthStore()
 
-  if (to.meta.requiresAuth && !authStore.isAuthenticated) {
-    next({
-      path: '/login',
-      query: { redirect: to.fullPath }
-    })
-  } else {
-    next()
-  }
-})
+//   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
+//     next({
+//       path: '/login',
+//       query: { redirect: to.fullPath }
+//     })
+//   } else {
+//     next()
+//   }
+// })
 
 export default router
