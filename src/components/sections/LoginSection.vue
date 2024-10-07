@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import logo from '@/assets/logos/benthos_logo_white.png'
 
@@ -8,11 +8,13 @@ const username = ref('')
 const password = ref('')
 
 const router = useRouter()
+const route = useRoute()
+
 const authStore = useAuthStore()
 
 const handleLogin = () => {
   if (authStore.login(username.value, password.value)) {
-    router.push('/')
+    router.push(route.query.redirect as string)
   } else {
     alert(
       'Invalid credentials. Please try again. \n\nIf the error persists, contact benthos.milano@gmail.com.'
