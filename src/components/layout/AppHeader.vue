@@ -1,33 +1,39 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { useDisplay } from 'vuetify'
+import { ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { fetchNavigation } from '@/api/navigation'
-import type { NavigationItem } from '@/types/Navigation'
+import { useDisplay } from 'vuetify'
+import defaultNavigation from '@/data/navigation.json'
+import epkNavigation from '@/data/epkNavigation.json'
 import logo from '@/assets/logos/benthos_logo_black.png'
-import AppSideMenu from './AppSideMenu.vue'
-
-const props = defineProps({
-  navLinks: {
-    type: Array<NavigationItem>,
-    required: true
-  }
-})
+import AppSideMenu from '@/components/layout/AppSideMenu.vue'
 
 const { mobile } = useDisplay()
 
 const router = useRouter()
 const route = useRoute()
 
-const navigation = ref<Array<NavigationItem>>([])
+const navigation = ref(defaultNavigation)
+
 const showDialog = ref(false)
 
 const isActive = (link: string) => {
   return route.path === link
 }
 
+const updateNavigationLinks = () => {
+  if (route.path === '/epk') {
+    navigation.value = epkNavigation
+  } else {
+    navigation.value = defaultNavigation
+  }
+}
+
+watch(route, () => {
+  updateNavigationLinks()
+})
+
 onMounted(() => {
-  navigation.value = fetchNavigation(props.navLinks)
+  updateNavigationLinks()
 })
 </script>
 
@@ -47,7 +53,7 @@ onMounted(() => {
           :width="120"
           cursor-pointer
           eager
-          alt="Benthos band"
+          alt="Benthos band logo"
           @click="router.push({ name: 'Homepage' })"
         />
       </div>
@@ -60,7 +66,11 @@ onMounted(() => {
           height="80"
           class="d-flex justify-center text-lowercase"
           :class="{ 'active font-weight-bold': isActive(item.link) }"
-          :href="item.link"
+          @click="
+            route.path === '/epk'
+              ? router.push({ path: '/epk', hash: item.link })
+              : router.push({ name: item.name })
+          "
         >
           {{ item.name }}
         </v-list-item>
@@ -83,7 +93,7 @@ onMounted(() => {
         transition="slide-x-transition"
       >
         <v-card height="100%" class="py-2 px-4 bg-brown-lighten-5" rounded="0">
-          <AppSideMenu :nav-links="props.navLinks" @close="showDialog = false" />
+          <AppSideMenu :nav-links="navigation" @close="showDialog = false" />
         </v-card>
       </v-dialog>
     </v-container>

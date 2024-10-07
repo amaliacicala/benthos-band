@@ -3,7 +3,7 @@ import { ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { fetchNavigation } from '@/api/navigation'
 import type { NavigationItem } from '@/types/Navigation'
-import SocialMediaButtons from '../atoms/SocialMediaButtons.vue'
+import SocialMediaButtons from '@/components/atoms/SocialMediaButtons.vue'
 
 const props = defineProps({
   navLinks: {

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
 import hero_lg from '@/assets/backgrounds/large/bg_hero_fossil-lg.avif'
-import hero_sm from '@/assets/backgrounds/small/bg_hero_fossil-sm.avif'
 
 const { mobile } = useDisplay()
 </script>

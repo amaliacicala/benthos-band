@@ -19,23 +19,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-lazy transition="fade-transition">
-    <div
-      id="tour-dates"
-      class="d-flex flex-column justify-center align-center bg-paper-green text-dark px-4 pt-8 pb-12 pa-md-12"
-    >
-      <p class="text-overline text-center text-dark">Catch us playing live</p>
-      <h1 class="text-md-h1 text-h2 text-dark">Tour Dates</h1>
+  <div
+    id="tour-dates"
+    class="d-flex flex-column justify-center align-center bg-paper-green text-dark px-4 pt-8 pb-12 pa-md-12"
+  >
+    <v-container>
+      <div class="d-flex flex-column align-center">
+        <p class="text-overline text-dark">Catch us playing live</p>
+        <h1 class="text-md-h1 text-h2 text-dark">Tour Dates</h1>
 
-      <v-chip-group class="text-body-1 text-dark pt-4">
-        <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(false)">
-          upcoming shows
-        </v-chip>
+        <v-chip-group class="text-body-1 text-dark pt-4">
+          <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(false)">
+            upcoming shows
+          </v-chip>
 
-        <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(true)">
-          past shows
-        </v-chip>
-      </v-chip-group>
+          <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(true)">
+            past shows
+          </v-chip>
+        </v-chip-group>
+      </div>
 
       <div v-if="loading" class="d-flex flex-column my-16 align-center justify-center">
         <v-progress-circular
@@ -47,7 +49,7 @@ onMounted(() => {
         />
       </div>
 
-      <v-container v-else class="d-flex flex-column pt-12 px-lg-8">
+      <div v-else class="d-flex flex-column pt-12 px-lg-8">
         <NoShowsBlock v-if="noUpcomingShows" :notify-link="events[0].ticketsUrl" />
 
         <ConcertListBlock v-else :concert-list="events" :past-date="isPastDate" />
@@ -64,7 +66,7 @@ onMounted(() => {
             View past dates
           </v-btn>
         </v-row>
-      </v-container>
-    </div>
-  </v-lazy>
+      </div>
+    </v-container>
+  </div>
 </template>

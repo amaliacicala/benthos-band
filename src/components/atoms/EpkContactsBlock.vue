@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import epkData from '@/data/epkData.json'
-import SocialMediaButtons from '../atoms/SocialMediaButtons.vue'
+import SocialMediaButtons from '@/components/atoms/SocialMediaButtons.vue'
 
 const source = ref(epkData.contacts.email)
 
