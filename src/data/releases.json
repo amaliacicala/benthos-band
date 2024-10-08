@@ -1,10 +1,32 @@
 {
   "ii": {
     "overline": "The debut album",
-    "title": "Benthos - II",
+    "releaseType": "Full-length album",
+    "title": "II",
     "releaseDate": "April 23, 2021",
     "coverLg": "src/assets/album_covers/large/benthos_ii_cover-lg.avif",
     "coverSm": "src/assets/album_covers/small/benthos_ii_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "Cartesio",
+        "length": "3:55",
+        "video": "https://www.youtube.com/watch?v=TQuuQxOuI_k"
+      },
+      { "title": "Back and Forth", "length": "4:24" },
+      {
+        "title": "Talk to Me, Dragonfly!",
+        "length": "4:47",
+        "video": "https://www.youtube.com/watch?v=iXOm0oeMGZc"
+      },
+      { "title": "Facing the Deep", "length": "2:19" },
+      {
+        "title": "Debris // Essence",
+        "length": "4:11",
+        "video": "https://www.youtube.com/watch?v=hzknSmWxw2I"
+      },
+      { "title": "II", "length": "5:40" },
+      { "title": "Dissolving Flowers", "length": "6:45" }
+    ],
     "links": [
       {
         "name": "Spotify",
@@ -45,10 +67,18 @@
   },
   "debris_essence": {
     "overline": "B-side single",
+    "releaseType": "Alternate version",
     "title": "Debris // Essence",
     "releaseDate": "January 14, 2022",
     "coverLg": "src/assets/album_covers/large/benthos_debris_cover-lg.avif",
     "coverSm": "src/assets/album_covers/small/benthos_debris_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "Debris // Essence (B-Side)",
+        "length": "4:48",
+        "video": "https://www.youtube.com/watch?v=1tVxbYR59Gc"
+      }
+    ],
     "links": [
       {
         "name": "Spotify",
@@ -90,9 +120,17 @@
   "dragonfly_live": {
     "overline": "Live at Dissonance Festival",
     "title": "Talk to Me, Dragonfly!",
+    "releaseType": "Live version",
     "releaseDate": "October 20, 2023",
     "coverLg": "src/assets/album_covers/large/benthos_dissonance_cover-lg.avif",
     "coverSm": "src/assets/album_covers/small/benthos_dissonance_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "Talk to Me, Dragonfly! (Live at Dissonance Festival)",
+        "length": "5:43",
+        "video": "https://www.youtube.com/watch?v=ue1BDz156Z4"
+      }
+    ],
     "links": [
       {
         "name": "Spotify",
