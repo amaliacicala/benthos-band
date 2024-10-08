@@ -48,7 +48,7 @@ onMounted(() => {
       variant="outlined"
       class="text-body-2 text-md-body-1 bg-green-lighten-2 w-50 w-md-25"
       size="large"
-      @click="router.push({ path: 'Merch' })"
+      @click="router.push({ name: 'Merch' })"
     >
       Buy
     </v-btn>
