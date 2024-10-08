@@ -18,5 +18,5 @@ import TourDatesSection from '@/components/sections/TourDatesSection.vue'
   />
   <MerchSection />
   <MusicSection />
-  <TourDatesSection />
+  <TourDatesSection :show-header="true" class="bg-paper-green" />
 </template>

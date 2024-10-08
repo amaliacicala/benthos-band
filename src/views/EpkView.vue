@@ -15,5 +15,5 @@ import TourDatesSection from '@/components/sections/TourDatesSection.vue'
   <PressQuotesSection />
   <EpkVideoSection />
   <EpkPhotoSection />
-  <TourDatesSection />
+  <TourDatesSection class="bg-paper-green" />
 </template>

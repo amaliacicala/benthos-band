@@ -3,6 +3,7 @@ import { onMounted, ref, computed } from 'vue'
 import { useDisplay } from 'vuetify'
 import { storeToRefs } from 'pinia'
 import { useBigcartelStore } from '@/stores/bigcartel'
+import PageHeader from '@/components/layout/PageHeader.vue'
 import MerchItemsCard from '@/components/atoms/MerchItemsCard.vue'
 
 const { mobile } = useDisplay()
@@ -56,6 +57,8 @@ onMounted(() => {
 <template>
   <div :class="[mobile ? 'bg-red-darken-1' : 'bg-red', 'py-16 h-100']">
     <v-container>
+      <PageHeader :title="'Merchandise'" />
+
       <v-row class="d-flex align-end px-4 px-md-0">
         <v-col cols="12" md="4" class="py-0">
           <v-checkbox v-model="showAvailableOnly" hide-details label="show available only" />
