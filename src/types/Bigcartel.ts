@@ -15,6 +15,7 @@ export interface Product {
   primary_image_url: string
   on_sale: boolean
   status: string
+  category_names: [string]
 }
 
 export interface Merch {
@@ -26,4 +27,5 @@ export interface Merch {
   imageUrl: string
   onSale: boolean
   status: string
+  category: string
 }

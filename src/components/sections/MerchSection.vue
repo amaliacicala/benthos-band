@@ -1,23 +1,21 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 import { storeToRefs } from 'pinia'
 import { useBigcartelStore } from '@/stores/bigcartel'
 import bg_lg from '@/assets/backgrounds/large/bg_red-lg.avif'
 import bg_sm from '@/assets/backgrounds/small/bg_red-sm.avif'
+import MerchItemsCard from '@/components/atoms/MerchItemsCard.vue'
 
 const bigcartelStore = useBigcartelStore()
 const { loading, merch } = storeToRefs(bigcartelStore)
 
+const router = useRouter()
+
 const { mobile } = useDisplay()
 
 const model = ref(0)
-
-const navigateToUrl = (url: string) => {
-  if (url) {
-    window.open(url, '_blank')
-  }
-}
 
 onMounted(() => {
   bigcartelStore.loadMerch()
@@ -26,9 +24,9 @@ onMounted(() => {
 
 <template>
   <v-lazy transition="fade-transition">
-    <v-parallax :src="mobile ? bg_sm : bg_lg" :style="{ maxHeight: '760px' }">
+    <v-parallax :src="mobile ? bg_sm : bg_lg" :style="{ maxHeight: '860px' }">
       <v-container>
-        <div class="d-flex flex-column align-center py-16" :style="{ gap: '24px' }">
+        <div class="d-flex flex-column align-center pt-16" :style="{ gap: '24px' }">
           <div class="text-center">
             <p class="text-overline">Supporter 101</p>
             <h1 class="text-md-h1 text-h2">Merchandise</h1>
@@ -51,57 +49,20 @@ onMounted(() => {
             :style="{ maxWidth: '100%', gap: '24px' }"
           >
             <v-slide-group-item v-for="(item, index) in merch" :key="index">
-              <v-card
-                elevation="0"
-                class="d-flex flex-column align-center justify-space-between py-md-4 mx-md-2 cursor-pointer w-100"
-                @click="navigateToUrl(item.url)"
-              >
-                <v-chip
-                  v-if="item.onSale"
-                  variant="elevated"
-                  class="bg-green-lighten-2 text-black text-overline font-weight-bold"
-                >
-                  On sale
-                </v-chip>
-                <v-chip
-                  v-if="item.status === 'sold_out'"
-                  variant="elevated"
-                  class="bg-black text-primary text-overline"
-                >
-                  Sold out
-                </v-chip>
-
-                <v-img
-                  :src="item.imageUrl"
-                  :alt="item.description"
-                  :width="mobile ? 200 : 300"
-                  class="mb-4"
-                  :style="{ opacity: item.status === 'sold_out' ? 0.8 : 1 }"
-                />
-
-                <div
-                  class="d-flex flex-column justify-space-between text-primary text-center w-75 card-bottom"
-                >
-                  <h2
-                    class="text-body-1 text-uppercase"
-                    :style="{ opacity: item.status === 'sold_out' ? 0.8 : 1, height: '80px' }"
-                  >
-                    {{ item.name }}
-                  </h2>
-
-                  <h3
-                    class="text-h5"
-                    :style="{
-                      opacity: item.status === 'sold_out' ? 0.6 : 0.8,
-                      textDecoration: item.status === 'sold_out' ? 'line-through' : ''
-                    }"
-                  >
-                    {{ item.price }}
-                  </h3>
-                </div>
-              </v-card>
+              <MerchItemsCard :merch="[item]" />
             </v-slide-group-item>
           </v-slide-group>
+        </div>
+
+        <div class="d-flex justify-center py-8">
+          <v-btn
+            variant="outlined"
+            class="text-body-2 text-md-body-1 mr-4 w-50 w-md-25"
+            :size="mobile ? 'large' : 'x-large'"
+            @click="router.push({ name: 'Merch' })"
+          >
+            Shop Merch
+          </v-btn>
         </div>
       </v-container>
     </v-parallax>
@@ -112,8 +73,5 @@ onMounted(() => {
 :deep(.mdi) {
   font-size: 40px !important;
   color: rgb(var(--v-theme-primary)) !important;
-}
-.v-card {
-  background-color: transparent;
 }
 </style>

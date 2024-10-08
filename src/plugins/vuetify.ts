@@ -19,6 +19,7 @@ export default createVuetify({
           'red-darken-4': '#8f2732',
           'red-darken-3': '#2c1615',
           'red-darken-2': '#97323d',
+          'red-darken-1': '#45151c',
           'red-lighten-1': '#d27d70',
           'red-lighten-2': '#97574e',
           'red-lighten-3': '#f7bdab',

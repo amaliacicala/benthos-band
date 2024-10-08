@@ -89,9 +89,11 @@ onMounted(reportState)
         :max-height="mdAndDown ? 300 : 350"
         :image="mdAndDown ? props.backgroundImageSm : props.backgroundImageLg"
         class="flat-shadow"
+        :rounded="0"
         @click="() => handleCardClick(1)"
       />
     </v-window-item>
+
     <v-window-item>
       <transition name="pulse">
         <v-card
@@ -100,6 +102,7 @@ onMounted(reportState)
           :min-height="mdAndDown ? 300 : 350"
           :max-height="mdAndDown ? 300 : 350"
           color="green-lighten-1"
+          :rounded="0"
           :class="['py-4 px-8', { pulse: pulseClass }]"
           style="overflow-y: scroll"
           @click="() => handleCardClick(0)"
@@ -109,6 +112,7 @@ onMounted(reportState)
             <p class="text-md-h3 text-h4">{{ props.title }}</p>
             <p class="text-overline">{{ props.releaseDate }}</p>
           </div>
+
           <v-btn
             v-for="(link, index) in props.links"
             :key="index"

@@ -37,7 +37,7 @@ onMounted(() => {
 <template>
   <v-lazy transition="fade-transition">
     <div
-      class="d-flex flex-column align-center bg-debris bg-red-darken-4 py-16 px-8 px-md-16"
+      class="d-flex flex-column align-center bg-debris bg-red-darken-4 py-16 px-8"
       :style="{ gap: mobile ? '24px' : '48px' }"
     >
       <v-container>
@@ -46,29 +46,26 @@ onMounted(() => {
           <h1 class="text-md-h1 text-h2">Past Releases</h1>
         </div>
 
-        <div v-if="mobile" class="d-flex justify-center align-center w-100 mb-6">
+        <div v-if="mobile" class="d-flex justify-center align-center w-100 mb-12">
           <v-btn
             variant="outlined"
-            :height="50"
-            :width="150"
-            class="rounded-pill mr-4"
+            class="text-body-2 text-md-body-1 mr-4 w-50 w-md-25"
+            size="large"
             @click="handleStreamClick"
-            >Stream</v-btn
           >
+            Stream
+          </v-btn>
           <v-btn
-            :height="50"
-            :width="150"
-            class="rounded-pill bg-green-lighten-2"
+            variant="outlined"
+            class="text-body-2 text-md-body-1 bg-green-lighten-2 w-50 w-md-25"
+            size="large"
             @click="router.push({ path: 'Merch' })"
-            >Buy</v-btn
           >
+            Buy
+          </v-btn>
         </div>
 
-        <div
-          v-if="albums.length"
-          class="d-flex flex-md-row flex-column"
-          :style="{ gap: mobile ? '60px' : '80px' }"
-        >
+        <div v-if="albums.length" class="d-flex flex-md-row flex-column" :style="{ gap: '60px' }">
           <CardFlip
             v-for="(album, index) in albums"
             :key="album.title"
@@ -84,22 +81,22 @@ onMounted(() => {
           />
         </div>
 
-        <div v-if="!mobile" class="d-flex flex-column align-center w-100 mt-6 mt-md-8">
+        <div v-if="!mobile" class="d-flex flex-column align-center w-100 pt-8 mt-md-8">
           <v-btn
             variant="outlined"
             size="x-large"
-            :height="60"
-            class="rounded-pill mb-6 w-25"
+            class="text-body-2 text-md-body-1 mb-6 w-25"
             @click="handleStreamClick"
-            >Stream</v-btn
           >
+            Stream
+          </v-btn>
           <v-btn
             size="x-large"
-            :height="60"
-            class="rounded-pill bg-green-lighten-2 w-25"
-            @click="router.push({ path: 'Merch' })"
-            >Buy</v-btn
+            class="text-body-2 text-md-body-1 bg-green-lighten-2 w-25"
+            @click="router.push({ name: 'Merch' })"
           >
+            Buy
+          </v-btn>
         </div>
       </v-container>
     </div>

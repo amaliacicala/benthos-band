@@ -40,9 +40,9 @@ onMounted(() => {
 <template>
   <v-app-bar
     elevation="0"
-    scroll-behavior="hide"
-    scroll-threshold="100"
     color="brown-lighten-5"
+    :scroll-behavior="route.path === '/' ? 'hide' : 'none'"
+    scroll-threshold="100"
     class="pa-2 pa-md-0"
     :height="mobile ? 58 : 75"
   >

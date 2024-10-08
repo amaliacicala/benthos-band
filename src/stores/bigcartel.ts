@@ -28,7 +28,8 @@ export const useBigcartelStore = defineStore({
           url: e.attributes.url,
           imageUrl: e.attributes.primary_image_url,
           status: e.attributes.status,
-          onSale: e.attributes.on_sale
+          onSale: e.attributes.on_sale,
+          category: e.attributes.category_names
         }))
 
         this.loading = false
