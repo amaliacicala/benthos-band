@@ -63,7 +63,7 @@ watch(
     link
     height="70"
     class="d-flex justify-center text-lowercase text-h4"
-    :class="{ 'active font-weight-bold': isActive(item.link) }"
+    :class="{ 'active ': isActive(item.link) }"
     @click="handleNavigation(item.link)"
   >
     {{ item.name }}

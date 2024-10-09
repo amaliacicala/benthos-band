@@ -54,7 +54,11 @@ onMounted(() => {
     </v-btn>
   </div>
 
-  <div v-if="releases.length" class="d-flex flex-md-row flex-column" :style="{ gap: '60px' }">
+  <div
+    v-if="releases.length"
+    class="d-flex flex-md-row flex-column align-center justify-center"
+    :style="{ gap: '60px' }"
+  >
     <CardFlip
       v-for="(release, index) in releases"
       :key="release.title"

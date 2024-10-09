@@ -38,7 +38,7 @@ const props = defineProps({
   }
 })
 
-const { mdAndDown } = useDisplay()
+const { sm, md, mdAndDown } = useDisplay()
 
 const emit = defineEmits(['reportFlipState'])
 
@@ -83,10 +83,10 @@ onMounted(reportState)
   <v-window v-model="cardFlip" class="flat-shadow">
     <v-window-item>
       <v-card
-        :min-width="mdAndDown ? 300 : 350"
-        :max-width="mdAndDown ? 300 : 350"
-        :min-height="mdAndDown ? 300 : 350"
-        :max-height="mdAndDown ? 300 : 350"
+        :min-width="sm ? 300 : md ? 250 : 350"
+        :max-width="sm ? 300 : md ? 250 : 350"
+        :min-height="sm ? 300 : md ? 250 : 350"
+        :max-height="sm ? 300 : md ? 250 : 350"
         :image="mdAndDown ? props.backgroundImageSm : props.backgroundImageLg"
         class="flat-shadow"
         :rounded="0"
@@ -97,19 +97,19 @@ onMounted(reportState)
     <v-window-item>
       <transition name="pulse">
         <v-card
-          :min-width="mdAndDown ? 300 : 350"
-          :max-width="mdAndDown ? 300 : 350"
-          :min-height="mdAndDown ? 300 : 350"
-          :max-height="mdAndDown ? 300 : 350"
+          :min-width="sm ? 300 : md ? 250 : 350"
+          :max-width="sm ? 300 : md ? 250 : 350"
+          :min-height="sm ? 300 : md ? 250 : 350"
+          :max-height="sm ? 300 : md ? 250 : 350"
           color="green-lighten-1"
           :rounded="0"
-          :class="['py-4 px-8', { pulse: pulseClass }]"
+          :class="['py-4 px-6 px-md-4 px-lg-8', { pulse: pulseClass }]"
           style="overflow-y: scroll"
           @click="() => handleCardClick(0)"
         >
           <div class="d-flex flex-column align-center text-green-darken-4 pb-4 text-center">
             <p class="text-overline">{{ props.overline }}</p>
-            <p class="text-md-h3 text-h4">{{ props.title }}</p>
+            <p class="text-lg-h3 text-md-h4 text-h4">{{ props.title }}</p>
             <p class="text-overline">{{ props.releaseDate }}</p>
           </div>
 
