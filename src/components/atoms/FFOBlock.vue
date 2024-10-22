@@ -15,7 +15,7 @@ import epkData from '@/data/epkData.json'
       <v-chip
         v-for="(band, index) in epkData.ffoBands"
         :key="index"
-        class="bg-amber-lighten-1 text-black text-caption cursor-default"
+        class="bg-amber-lighten-1 text-dark text-caption cursor-default"
       >
         {{ band }}
       </v-chip>

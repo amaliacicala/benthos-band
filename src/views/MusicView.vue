@@ -14,7 +14,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-black py-16 h-100">
+  <div class="bg-dark py-16 h-100">
     <v-container>
       <PageHeader :title="'Music Catalogue'" />
 

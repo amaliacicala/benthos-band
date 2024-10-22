@@ -80,7 +80,7 @@ onMounted(() => {
         id="appsidemenu-activator"
         icon="mdi-menu"
         variant="text"
-        color="black"
+        color="dark"
         class="d-flex d-md-none"
       />
       <v-dialog

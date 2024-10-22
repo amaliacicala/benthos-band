@@ -1,11 +1,18 @@
 <script lang="ts" setup>
 import epkData from '@/data/epkData.json'
 import MarkdownText from '@/components/atoms/MarkdownText.vue'
+
+const props = defineProps({
+  textColor: {
+    type: String,
+    default: 'text-dark'
+  }
+})
 </script>
 
 <template>
   <h2
-    class="text-body-1 font-weight-bold text-decoration-underline text-dark pb-6"
+    :class="[props.textColor, 'text-body-1 font-weight-bold text-decoration-underline pb-6']"
     :style="{ textUnderlineOffset: '4px !important' }"
   >
     biography
@@ -13,10 +20,9 @@ import MarkdownText from '@/components/atoms/MarkdownText.vue'
 
   <MarkdownText
     :source="epkData.bio"
-    class="col-6"
+    :class="[props.textColor, 'col-6']"
     :style="{
-      fontFamily: 'Open Sans, sans-serif',
-      fontSize: '18px !important'
+      fontFamily: 'Open Sans, sans-serif'
     }"
   />
 </template>

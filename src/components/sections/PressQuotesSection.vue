@@ -2,6 +2,13 @@
 import { computed } from 'vue'
 import epkData from '@/data/epkData.json'
 
+const props = defineProps({
+  bgColor: {
+    type: String,
+    default: 'bg-paper-green'
+  }
+})
+
 const quotes = computed(() => {
   const midIndex = Math.ceil(epkData.pressQuotes.length / 2)
   return [epkData.pressQuotes.slice(0, midIndex), epkData.pressQuotes.slice(midIndex)]
@@ -11,7 +18,10 @@ const quotes = computed(() => {
 <template>
   <div
     id="press-quotes"
-    class="d-flex flex-column justify-center align-center bg-paper-green text-dark px-4 py-8 pa-md-12"
+    :class="[
+      props.bgColor,
+      'd-flex flex-column justify-center align-center text-dark px-4 py-8 pa-md-12'
+    ]"
   >
     <v-container>
       <div class="d-flex flex-column align-center">
@@ -28,8 +38,7 @@ const quotes = computed(() => {
             </span>
             <span
               :style="{
-                fontFamily: 'Open Sans, sans-serif',
-                fontSize: '18px !important'
+                fontFamily: 'Open Sans, sans-serif'
               }"
             >
               <v-icon icon="mdi-format-quote-open" />

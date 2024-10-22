@@ -51,7 +51,7 @@ watch(
     icon="mdi-close"
     :rounded="0"
     variant="text"
-    color="black"
+    color="dark"
     class="d-flex ml-auto px-4"
     width="24px"
     @click="$emit('close')"

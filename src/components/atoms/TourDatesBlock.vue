@@ -41,7 +41,7 @@ onMounted(() => {
     />
   </div>
 
-  <div v-else class="d-flex flex-column text-black pt-6 pt-md-12 px-lg-8">
+  <div v-else class="d-flex flex-column text-dark pt-6 pt-md-12 px-lg-8">
     <NoShowsBlock v-if="noUpcomingShows" :notify-link="events[0].ticketsUrl" />
 
     <ConcertListBlock v-else :concert-list="events" :past-date="isPastDate" />

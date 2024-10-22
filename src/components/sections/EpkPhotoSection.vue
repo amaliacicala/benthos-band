@@ -128,7 +128,7 @@ onMounted(() => {
   }
 }
 :deep(.v-progress-linear__background) {
-  background-color: rgb(var(--v-theme-black)) !important;
+  background-color: rgb(var(--v-theme-dark)) !important;
 }
 :deep(.v-window__controls) {
   button {

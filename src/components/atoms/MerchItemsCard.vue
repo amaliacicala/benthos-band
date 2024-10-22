@@ -29,7 +29,7 @@ const navigateToUrl = (url: string) => {
     <v-chip
       v-if="item.onSale"
       variant="elevated"
-      class="bg-green-lighten-2 text-black text-overline font-weight-bold"
+      class="bg-green-lighten-2 text-dark text-overline font-weight-bold"
     >
       On sale
     </v-chip>
@@ -37,7 +37,7 @@ const navigateToUrl = (url: string) => {
     <v-chip
       v-if="item.status === 'sold_out'"
       variant="elevated"
-      class="bg-black text-primary text-overline"
+      class="bg-dark text-primary text-overline"
     >
       Sold out
     </v-chip>

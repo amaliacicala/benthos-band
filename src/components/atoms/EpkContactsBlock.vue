@@ -23,7 +23,7 @@ const { copy, copied, isSupported } = useClipboard({ source })
         elevation="0"
         size="large"
         color="red-lighten-1"
-        class="text-body-2 text-black rounded-lg px-4 py-1"
+        class="text-body-2 text-dark rounded-lg px-4 py-1"
         @click="copy(source)"
       >
         <span class="font-weight-light">{{ epkData.contacts.email }}</span>
@@ -33,7 +33,7 @@ const { copy, copied, isSupported } = useClipboard({ source })
       </p>
     </v-list-item>
 
-    <v-list-item v-else class="bg-red-lighten-1 text-body-2 text-black rounded-lg">
+    <v-list-item v-else class="bg-red-lighten-1 text-body-2 text-dark rounded-lg">
       <p>{{ epkData.contacts.email }}</p>
     </v-list-item>
   </v-list>

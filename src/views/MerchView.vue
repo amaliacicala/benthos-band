@@ -90,7 +90,7 @@ onMounted(() => {
       </v-row>
 
       <div v-if="loading" class="d-flex align-center justify-center my-16">
-        <v-progress-circular color="primary" size="50" indeterminate />
+        <v-progress-circular color="brown-lighten-5" size="50" indeterminate />
       </div>
 
       <div

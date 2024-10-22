@@ -16,10 +16,10 @@ const { copy: copyThree, copied: copiedThree } = useClipboard()
 <template>
   <div class="bg-paper-green py-16 h-100">
     <v-container class="d-flex flex-column justify-center px-6">
-      <PageHeader :title="'Contacts'" :color="'black'" />
+      <PageHeader :title="'Contacts'" :color="'dark'" />
 
       <v-list
-        class="d-flex flex-column justify-center align-center align-self-center bg-transparent text-black pt-2 w-100 w-lg-75 h-100"
+        class="d-flex flex-column justify-center align-center align-self-center bg-transparent text-dark pt-2 w-100 w-lg-75 h-100"
       >
         <v-list-item class="text-center pa-0 w-100 w-sm-50">
           <h2
@@ -35,7 +35,7 @@ const { copy: copyThree, copied: copiedThree } = useClipboard()
             v-if="!copiedOne"
             :class="[
               isSupported ? 'cursor-pointer' : '',
-              'text-body-2 text-black border-rounded py-2 px-4'
+              'text-body-2 text-dark border-rounded py-2 px-4'
             ]"
             @click="isSupported ? copyOne(sourceOne) : ''"
           >
@@ -62,7 +62,7 @@ const { copy: copyThree, copied: copiedThree } = useClipboard()
             v-if="!copiedTwo"
             :class="[
               isSupported ? 'cursor-pointer' : '',
-              'text-body-2 text-black border-rounded py-2 px-4'
+              'text-body-2 text-dark border-rounded py-2 px-4'
             ]"
             @click="isSupported ? copyTwo(sourceTwo) : ''"
           >
@@ -87,7 +87,7 @@ const { copy: copyThree, copied: copiedThree } = useClipboard()
             v-if="!copiedThree"
             :class="[
               isSupported ? 'cursor-pointer' : '',
-              'text-body-2 text-black border-rounded py-2  px-4'
+              'text-body-2 text-dark border-rounded py-2  px-4'
             ]"
             @click="isSupported ? copyThree(sourceThree) : ''"
           >

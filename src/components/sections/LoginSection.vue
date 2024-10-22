@@ -39,7 +39,7 @@ const isLoginDisabled = computed(() => {
           variant="outlined"
           required
           autofocus
-          bg-color="black"
+          bg-color="dark"
           base-color="amber-darken-1"
         />
 
@@ -49,7 +49,7 @@ const isLoginDisabled = computed(() => {
           type="password"
           variant="outlined"
           required
-          bg-color="black"
+          bg-color="dark"
           base-color="amber-darken-1"
         />
 

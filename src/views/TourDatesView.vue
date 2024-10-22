@@ -6,7 +6,7 @@ import TourDatesBlock from '@/components/atoms/TourDatesBlock.vue'
 <template>
   <div class="bg-paper-green py-16 h-100">
     <v-container class="px-6">
-      <PageHeader :title="'Tour Dates'" :color="'black'" />
+      <PageHeader :title="'Tour Dates'" :color="'dark'" />
 
       <TourDatesBlock />
     </v-container>
