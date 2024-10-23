@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { useDisplay } from 'vuetify'
 import epkData from '@/data/epkData.json'
-import about_img from '@/assets/backgrounds/large/about_img-lg.jpg'
-import about_img_sm from '@/assets/backgrounds/small/about_img-sm.jpg'
 import PageHeader from '@/components/layout/PageHeader.vue'
 import BiographyBlock from '@/components/atoms/BiographyBlock.vue'
+import about_img from '@/assets/backgrounds/large/about_img-lg.avif'
+import about_img_sm from '@/assets/backgrounds/small/about_img-sm.avif'
 
 const { mobile } = useDisplay()
 </script>
