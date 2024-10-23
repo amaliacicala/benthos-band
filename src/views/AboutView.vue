@@ -15,8 +15,10 @@ const { mobile } = useDisplay()
       <PageHeader :title="'About'" :color="'brown-lighten-5'" />
     </v-container>
 
-    <v-parallax v-if="mobile" :src="about_img_sm" position="top" height="15rem" />
-    <v-parallax v-else :src="about_img" height="23rem" position="top" />
+    <v-fade-transition appear>
+      <v-parallax v-if="mobile" :src="about_img_sm" position="top" height="15rem" />
+      <v-parallax v-else :src="about_img" height="23rem" position="top" />
+    </v-fade-transition>
 
     <v-container class="px-8">
       <v-row class="d-flex justify-center">

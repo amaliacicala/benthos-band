@@ -6,9 +6,11 @@ const { mobile } = useDisplay()
 </script>
 
 <template>
-  <v-parallax v-if="!mobile" :src="hero_lg">
-    <div class="w-100 h-screen" />
-  </v-parallax>
+  <v-fade-transition appear>
+    <v-parallax v-if="!mobile" :src="hero_lg">
+      <div class="w-100 h-screen" />
+    </v-parallax>
 
-  <div v-else class="bg-hero w-100" />
+    <div v-else class="bg-hero w-100" />
+  </v-fade-transition>
 </template>

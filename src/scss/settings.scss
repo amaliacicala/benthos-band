@@ -202,6 +202,9 @@ $heading-font-family: 'Bebas Neue', sans-serif;
 }
 
 // animations
+.fade-transition-enter-active {
+  transition: all 1s ease !important;
+}
 @keyframes animatedBgHero {
   from {
     background-size: 100%;
