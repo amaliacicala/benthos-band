@@ -19,17 +19,19 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="d-flex flex-column align-center">
-    <v-chip-group class="text-body-1 text-dark pt-0">
-      <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(false)">
-        upcoming shows
-      </v-chip>
+  <v-fade-transition appear>
+    <div class="d-flex flex-column align-center">
+      <v-chip-group class="text-body-1 text-dark pt-0">
+        <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(false)">
+          upcoming shows
+        </v-chip>
 
-      <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(true)">
-        past shows
-      </v-chip>
-    </v-chip-group>
-  </div>
+        <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(true)">
+          past shows
+        </v-chip>
+      </v-chip-group>
+    </div>
+  </v-fade-transition>
 
   <div v-if="loading" class="d-flex flex-column my-16 align-center justify-center">
     <v-progress-circular
@@ -42,21 +44,23 @@ onMounted(() => {
   </div>
 
   <div v-else class="d-flex flex-column text-dark pt-6 pt-md-12 px-lg-8">
-    <NoShowsBlock v-if="noUpcomingShows" :notify-link="events[0].ticketsUrl" />
+    <v-fade-transition appear>
+      <NoShowsBlock v-if="noUpcomingShows" :notify-link="events[0].ticketsUrl" />
 
-    <ConcertListBlock v-else :concert-list="events" :past-date="isPastDate" />
+      <ConcertListBlock v-else :concert-list="events" :past-date="isPastDate" />
 
-    <v-row v-if="!noUpcomingShows" class="justify-center mt-8">
-      <v-btn
-        href="https://www.bandsintown.com/a/1419641-benthos"
-        target="_blank"
-        size="large"
-        color="green-darken-3"
-        class="mt-6 text-primary flat-shadow"
-      >
-        <img :src="icon" width="22px" class="mr-3" />
-        View more past dates
-      </v-btn>
-    </v-row>
+      <v-row v-if="!noUpcomingShows" class="justify-center mt-8">
+        <v-btn
+          href="https://www.bandsintown.com/a/1419641-benthos"
+          target="_blank"
+          size="large"
+          color="green-darken-3"
+          class="mt-6 text-primary flat-shadow"
+        >
+          <img :src="icon" width="22px" class="mr-3" />
+          View more past dates
+        </v-btn>
+      </v-row>
+    </v-fade-transition>
   </div>
 </template>

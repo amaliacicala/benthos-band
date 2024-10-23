@@ -18,17 +18,19 @@ onMounted(() => {
     <v-container>
       <PageHeader :title="'Music Catalogue'" />
 
-      <div v-if="releases.length > 0">
-        <ReleaseBlock :release="releases[0]" />
+      <v-fade-transition appear>
+        <div v-if="releases.length > 0">
+          <ReleaseBlock :release="releases[0]" />
 
-        <v-divider color="primary" class="border-opacity-25 my-12" />
+          <v-divider color="primary" class="border-opacity-25 my-12" />
 
-        <ReleaseBlock :release="releases[1]" />
+          <ReleaseBlock :release="releases[1]" />
 
-        <v-divider color="primary" class="border-opacity-25 my-12" />
+          <v-divider color="primary" class="border-opacity-25 my-12" />
 
-        <ReleaseBlock :release="releases[2]" />
-      </div>
+          <ReleaseBlock :release="releases[2]" />
+        </div>
+      </v-fade-transition>
     </v-container>
   </div>
 </template>

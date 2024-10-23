@@ -21,29 +21,31 @@ const { mobile } = useDisplay()
     </v-fade-transition>
 
     <v-container class="px-8">
-      <v-row class="d-flex justify-center">
-        <v-col cols="12" md="8" class="mt-6 text-center">
-          <BiographyBlock :text-color="'text-brown-lighten-5'" />
-        </v-col>
-      </v-row>
+      <v-fade-transition appear>
+        <v-row class="d-flex justify-center">
+          <v-col cols="12" md="8" class="mt-6 text-center">
+            <BiographyBlock :text-color="'text-brown-lighten-5'" />
+          </v-col>
+        </v-row>
 
-      <v-row class="d-flex justify-center mt-8">
-        <v-col cols="12" sm="6" class="text-center">
-          <h2
-            class="text-body-1 font-weight-bold text-decoration-underline text-brown-lighten-5 pb-6"
-            :style="{ textUnderlineOffset: '4px !important' }"
-          >
-            band members
-          </h2>
-          <v-list-item
-            v-for="(bandMember, index) in epkData.bandMembers"
-            :key="index"
-            class="bg-brown-lighten-5 text-body-2 rounded-lg py-4 mb-2"
-          >
-            <p>{{ bandMember.name }} - {{ bandMember.instrument }}</p>
-          </v-list-item>
-        </v-col>
-      </v-row>
+        <v-row class="d-flex justify-center mt-8">
+          <v-col cols="12" sm="6" class="text-center">
+            <h2
+              class="text-body-1 font-weight-bold text-decoration-underline text-brown-lighten-5 pb-6"
+              :style="{ textUnderlineOffset: '4px !important' }"
+            >
+              band members
+            </h2>
+            <v-list-item
+              v-for="(bandMember, index) in epkData.bandMembers"
+              :key="index"
+              class="bg-brown-lighten-5 text-body-2 rounded-lg py-4 mb-2"
+            >
+              <p>{{ bandMember.name }} - {{ bandMember.instrument }}</p>
+            </v-list-item>
+          </v-col>
+        </v-row>
+      </v-fade-transition>
     </v-container>
   </div>
 </template>

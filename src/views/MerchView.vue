@@ -58,49 +58,53 @@ onMounted(() => {
   <div :class="[mobile ? 'bg-red-darken-1' : 'bg-red', 'py-16 h-100']">
     <v-container>
       <PageHeader :title="'Merchandise'" />
-
-      <v-row class="d-flex align-end px-4 px-md-0">
-        <v-col cols="12" md="4" class="py-0">
-          <v-checkbox v-model="showAvailableOnly" hide-details label="show available only" />
-        </v-col>
-
-        <v-col cols="12" md="4">
-          <v-select
-            v-model="selectedCategory"
-            hide-details
-            :items="['all', 'Apparel', 'Music']"
-            label="Filter by Category"
-          />
-        </v-col>
-
-        <v-col cols="12" md="4">
-          <v-select
-            v-model="sortBy"
-            hide-details
-            :items="['Price: Low to High', 'Price: High to Low']"
-            label="Sort by Price"
-          />
-        </v-col>
-      </v-row>
-
-      <v-row class="mt-8 mb-4 my-md-8 mx-4 mx-md-4 justify-end font-weight-bold">
-        <p>
-          {{ filteredMerch.length + ' ' + (filteredMerch.length === 1 ? 'product' : 'products') }}
-        </p>
-      </v-row>
-
-      <div v-if="loading" class="d-flex align-center justify-center my-16">
-        <v-progress-circular color="brown-lighten-5" size="50" indeterminate />
-      </div>
-
-      <div
-        v-else
-        class="d-flex justify-center flex-wrap"
-        :style="{ gap: mobile ? '18px' : '32px' }"
-      >
-        <MerchItemsCard :merch="filteredMerch" />
-      </div>
     </v-container>
+
+    <v-fade-transition appear>
+      <v-container>
+        <v-row class="d-flex align-end px-4 px-md-0">
+          <v-col cols="12" md="4" class="py-0">
+            <v-checkbox v-model="showAvailableOnly" hide-details label="show available only" />
+          </v-col>
+
+          <v-col cols="12" md="4">
+            <v-select
+              v-model="selectedCategory"
+              hide-details
+              :items="['all', 'Apparel', 'Music']"
+              label="Filter by Category"
+            />
+          </v-col>
+
+          <v-col cols="12" md="4">
+            <v-select
+              v-model="sortBy"
+              hide-details
+              :items="['Price: Low to High', 'Price: High to Low']"
+              label="Sort by Price"
+            />
+          </v-col>
+        </v-row>
+
+        <v-row class="mt-8 mb-4 my-md-8 mx-4 mx-md-4 justify-end font-weight-bold">
+          <p>
+            {{ filteredMerch.length + ' ' + (filteredMerch.length === 1 ? 'product' : 'products') }}
+          </p>
+        </v-row>
+
+        <div v-if="loading" class="d-flex align-center justify-center my-16">
+          <v-progress-circular color="brown-lighten-5" size="50" indeterminate />
+        </div>
+
+        <div
+          v-else
+          class="d-flex justify-center flex-wrap"
+          :style="{ gap: mobile ? '18px' : '32px' }"
+        >
+          <MerchItemsCard :merch="filteredMerch" />
+        </div>
+      </v-container>
+    </v-fade-transition>
   </div>
 </template>
 
