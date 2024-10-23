@@ -1,56 +1,4 @@
 {
-  "fossil": {
-    "overline": "The latest single",
-    "releaseType": "Single",
-    "title": "Fossil",
-    "releaseDate": "November 12, 2024",
-    "coverLg": "src/assets/album_covers/large/benthos_fossil_cover-lg.avif",
-    "coverSm": "src/assets/album_covers/small/benthos_fossil_cover-sm.avif",
-    "setlist": [
-      {
-        "title": "Fossil",
-        "length": "06:30",
-        "video": "https://www.youtube.com/watch?v=TQuuQxOuI_k"
-      }
-    ],
-    "links": [
-      {
-        "name": "Spotify",
-        "icon": "spotify",
-        "link": "https://open.spotify.com/album/5jLm0U00y9utdjUPT88B1l?si=INDVdUr1Sti7OM-Fr-4LPg"
-      },
-      {
-        "name": "Apple Music",
-        "icon": "apple_music",
-        "link": "https://geo.music.apple.com/it/album/_/1545065439?app=music&at=1000lHKX&ct=linktree_http&itscg=30200&itsct=lt_m&ls=1&mt=1"
-      },
-      {
-        "name": "Amazon Music",
-        "icon": "amazon_music",
-        "link": "https://music.amazon.com/albums/B08QRBWC4M"
-      },
-      {
-        "name": "TIDAL",
-        "icon": "tidal",
-        "link": "https://listen.tidal.com/album/166359206"
-      },
-      {
-        "name": "YouTube",
-        "icon": "youtube",
-        "link": "https://www.youtube.com/playlist?list=OLAK5uy_nOJ6EOxnGqt6Ieu9IOmYU73EivJwY8FeQ"
-      },
-      {
-        "name": "YouTube Music",
-        "icon": "youtube_music",
-        "link": "https://music.youtube.com/playlist?list=OLAK5uy_nOJ6EOxnGqt6Ieu9IOmYU73EivJwY8FeQ"
-      },
-      {
-        "name": "Deezer",
-        "icon": "deezer",
-        "link": "https://www.deezer.com/album/193593432"
-      }
-    ]
-  },
   "ii": {
     "overline": "The debut album",
     "releaseType": "Full-length album",
@@ -218,6 +166,58 @@
         "name": "Deezer",
         "icon": "deezer",
         "link": "https://www.deezer.com/track/2471713781"
+      }
+    ]
+  },
+  "fossil": {
+    "overline": "The latest single",
+    "releaseType": "Single",
+    "title": "Fossil",
+    "releaseDate": "November 12, 2024",
+    "coverLg": "src/assets/album_covers/large/benthos_fossil_cover-lg.avif",
+    "coverSm": "src/assets/album_covers/small/benthos_fossil_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "Fossil",
+        "length": "06:30",
+        "video": "https://www.youtube.com/watch?v=TQuuQxOuI_k"
+      }
+    ],
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": "https://open.spotify.com/album/5jLm0U00y9utdjUPT88B1l?si=INDVdUr1Sti7OM-Fr-4LPg"
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": "https://geo.music.apple.com/it/album/_/1545065439?app=music&at=1000lHKX&ct=linktree_http&itscg=30200&itsct=lt_m&ls=1&mt=1"
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": "https://music.amazon.com/albums/B08QRBWC4M"
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": "https://listen.tidal.com/album/166359206"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://www.youtube.com/playlist?list=OLAK5uy_nOJ6EOxnGqt6Ieu9IOmYU73EivJwY8FeQ"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": "https://music.youtube.com/playlist?list=OLAK5uy_nOJ6EOxnGqt6Ieu9IOmYU73EivJwY8FeQ"
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": "https://www.deezer.com/album/193593432"
       }
     ]
   }
