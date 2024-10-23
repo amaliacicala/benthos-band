@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Fossil (Official Video)",
+    "releaseDate": "Released on November 12th, 2024",
+    "url": "#",
+    "coverLg": "src/assets/thumbnails/large/dragonfly_clip-lg.webm",
+    "coverSm": "src/assets/thumbnails/small/dragonfly_clip-sm.webm"
+  },
+  {
+    "title": "Talk to Me, Dragonfly! (Live at Dissonance Festival 2023)",
+    "releaseDate": "Released on July 28th, 2023",
+    "url": "https://youtu.be/ue1BDz156Z4?feature=shared",
+    "coverLg": "src/assets/thumbnails/large/dragonfly_clip-lg.webm",
+    "coverSm": "src/assets/thumbnails/small/dragonfly_clip-sm.webm"
+  },
+  {
+    "title": "Talk to Me, Dragonfly! (Official Video)",
+    "releaseDate": "Released on April 26th, 2021",
+    "url": "https://youtu.be/iXOm0oeMGZc?feature=shared",
+    "coverLg": "src/assets/thumbnails/large/dragonfly_thumbnail-lg.avif",
+    "coverSm": "src/assets/thumbnails/small/dragonfly_thumbnail-sm.avif"
+  },
+  {
+    "title": "Cartesio (Official Video)",
+    "releaseDate": "Released on March 15th, 2021",
+    "url": "https://youtu.be/TQuuQxOuI_k?feature=shared",
+    "coverLg": "src/assets/thumbnails/large/cartesio_thumbnail-lg.avif",
+    "coverSm": "src/assets/thumbnails/small/cartesio_thumbnail-sm.avif"
+  },
+  {
+    "title": "Debris // Essence (Official Video)",
+    "releaseDate": "Released on February 2nd, 2021",
+    "url": "https://youtu.be/hzknSmWxw2I?feature=shared",
+    "coverLg": "src/assets/thumbnails/large/debris_thumbnail-lg.avif",
+    "coverSm": "src/assets/thumbnails/small/debris_thumbnail-sm.avif"
+  }
+]
