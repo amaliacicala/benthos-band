@@ -20,15 +20,15 @@ onMounted(() => {
 
       <v-fade-transition appear>
         <div v-if="releases.length > 0">
-          <ReleaseBlock :release="releases[0]" />
+          <div v-for="(release, index) in releases" :key="index">
+            <ReleaseBlock :release="release" />
 
-          <v-divider color="primary" class="border-opacity-25 my-12" />
-
-          <ReleaseBlock :release="releases[1]" />
-
-          <v-divider color="primary" class="border-opacity-25 my-12" />
-
-          <ReleaseBlock :release="releases[2]" />
+            <v-divider
+              v-if="index !== releases.length - 1"
+              color="primary"
+              class="border-opacity-25 my-12"
+            />
+          </div>
         </div>
       </v-fade-transition>
     </v-container>

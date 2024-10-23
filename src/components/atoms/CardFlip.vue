@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
 import type { StreamingLink } from '@/types/Streaming'
 
@@ -38,12 +38,18 @@ const props = defineProps({
   }
 })
 
-const { sm, md, mdAndDown } = useDisplay()
+const { xs, sm, md, mdAndDown } = useDisplay()
 
 const emit = defineEmits(['reportFlipState'])
 
 const cardFlip = ref(0)
 const pulseClass = ref(false)
+
+const cardSize = computed(() => {
+  if (sm.value || xs.value) return 300
+  if (md.value) return 250
+  return 350
+})
 
 const reportState = () => {
   emit('reportFlipState', props.index, cardFlip.value)
@@ -83,10 +89,10 @@ onMounted(reportState)
   <v-window v-model="cardFlip" class="flat-shadow">
     <v-window-item>
       <v-card
-        :min-width="sm ? 300 : md ? 250 : 350"
-        :max-width="sm ? 300 : md ? 250 : 350"
-        :min-height="sm ? 300 : md ? 250 : 350"
-        :max-height="sm ? 300 : md ? 250 : 350"
+        :min-width="cardSize"
+        :max-width="cardSize"
+        :min-height="cardSize"
+        :max-height="cardSize"
         :image="mdAndDown ? props.backgroundImageSm : props.backgroundImageLg"
         class="flat-shadow"
         :rounded="0"
@@ -97,10 +103,10 @@ onMounted(reportState)
     <v-window-item>
       <transition name="pulse">
         <v-card
-          :min-width="sm ? 300 : md ? 250 : 350"
-          :max-width="sm ? 300 : md ? 250 : 350"
-          :min-height="sm ? 300 : md ? 250 : 350"
-          :max-height="sm ? 300 : md ? 250 : 350"
+          :min-width="cardSize"
+          :max-width="cardSize"
+          :min-height="cardSize"
+          :max-height="cardSize"
           color="green-lighten-1"
           :rounded="0"
           :class="['py-4 px-6 px-md-4 px-lg-8', { pulse: pulseClass }]"

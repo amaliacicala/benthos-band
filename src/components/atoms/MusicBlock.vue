@@ -7,7 +7,6 @@ import type { Release } from '@/types/Streaming'
 import CardFlip from '@/components/atoms/CardFlip.vue'
 
 const router = useRouter()
-
 const { mobile } = useDisplay()
 
 const releases = ref<Release[]>([])
@@ -30,7 +29,11 @@ const reportFlipState = (index: number, flipState: number) => {
 
 onMounted(() => {
   const data = fetchStreamingLinks()
-  releases.value = Object.values(data) as Release[]
+
+  // filter music released before 2024"
+  releases.value = (Object.values(data) as Release[]).filter(
+    (release) => !release.releaseDate.includes('2024')
+  )
 })
 </script>
 
