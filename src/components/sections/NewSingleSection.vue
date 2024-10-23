@@ -88,7 +88,12 @@ const { mobile, mdAndDown } = useDisplay()
           <v-icon icon="mdi-play-circle" class="play-icon" color="brown-lighten-5" />
         </a>
 
-        <v-img :src="insideout_logo" :width="mobile ? 100 : 150" alt="InsideOut Music" />
+        <footer class="d-flex flex-column justify-center align-center">
+          <p class="text-overline mb-2" :style="{ fontSize: !mobile ? '16px !important' : '' }">
+            Out November 12th, 2024
+          </p>
+          <v-img :src="insideout_logo" :width="mobile ? 100 : 150" alt="InsideOut Music" />
+        </footer>
       </div>
     </v-container>
   </v-lazy>
