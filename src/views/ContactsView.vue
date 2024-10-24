@@ -52,7 +52,7 @@ const { copy: copyThree, copied: copiedThree } = useClipboard()
             <v-divider class="border-opacity-25 mt-10 mb-5" />
           </v-list-item>
 
-          <v-list-item class="text-center pa-0 w-100 w-sm-50">
+          <!-- <v-list-item class="text-center pa-0 w-100 w-sm-50">
             <h2
               class="text-overline font-weight-bold mb-4 mb-md-0"
               :style="{ fontSize: '16px !important' }"
@@ -80,7 +80,7 @@ const { copy: copyThree, copied: copiedThree } = useClipboard()
             </span>
 
             <v-divider class="border-opacity-25 mt-10 mb-5" />
-          </v-list-item>
+          </v-list-item> -->
 
           <v-list-item class="text-center pa-0 w-100 w-sm-50">
             <h2
