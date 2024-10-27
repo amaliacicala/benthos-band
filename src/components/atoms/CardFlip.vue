@@ -138,7 +138,7 @@ onMounted(reportState)
               />
               <p class="text-body-2 ml-2">{{ link.name }}</p>
             </div>
-            <v-icon icon="mdi-open-in-new" color="grey" />
+            <v-icon icon="fas fa-arrow-up-right-from-square" color="grey" />
           </v-btn>
         </v-card>
       </transition>

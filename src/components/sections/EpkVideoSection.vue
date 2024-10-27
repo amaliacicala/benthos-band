@@ -42,7 +42,7 @@ const playVideo = (index: number) => {
               alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
               class="video-responsive"
             />
-            <v-icon icon="mdi-play-circle" class="play-icon" color="brown-lighten-5" />
+            <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
           </div>
 
           <iframe
@@ -69,7 +69,7 @@ const playVideo = (index: number) => {
               alt="Thumbnail for Benthos - Talk to Me, Dragonfly! (Official Video)"
               class="thumbnail-responsive"
             />
-            <v-icon icon="mdi-play-circle" class="play-icon" />
+            <v-icon icon="fas fa-circle-play" class="play-icon" />
           </div>
 
           <iframe
@@ -92,7 +92,7 @@ const playVideo = (index: number) => {
               alt="Thumbnail for Benthos - Debris // Essence (Official Video)"
               class="thumbnail-responsive"
             />
-            <v-icon icon="mdi-play-circle" class="play-icon" />
+            <v-icon icon="fas fa-circle-play" class="play-icon" />
           </div>
 
           <iframe
@@ -115,7 +115,7 @@ const playVideo = (index: number) => {
               alt="Thumbnail for Benthos - Cartesio (Official Video)"
               class="thumbnail-responsive"
             />
-            <v-icon icon="mdi-play-circle" class="play-icon" />
+            <v-icon icon="fas fa-circle-play" class="play-icon" />
           </div>
 
           <iframe
@@ -154,10 +154,10 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   filter: drop-shadow(0 0 15px rgb(var(--v-theme-dark)));
-  font-size: 64px;
+  font-size: 48px;
   transition: all 0.2s ease-in-out;
   &:hover {
-    font-size: 70px;
+    font-size: 54px;
   }
 }
 iframe {

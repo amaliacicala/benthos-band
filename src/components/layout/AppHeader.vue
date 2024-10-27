@@ -78,7 +78,8 @@ onMounted(() => {
 
       <v-app-bar-nav-icon
         id="appsidemenu-activator"
-        icon="mdi-menu"
+        icon="fas fa-bars"
+        size="32px"
         variant="text"
         color="dark"
         class="d-flex d-md-none"
@@ -101,10 +102,6 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-:deep(.mdi-menu::before) {
-  content: '\F035C';
-  font-size: 32px;
-}
 .v-app-bar {
   border-bottom: solid 3px;
   @media screen and (max-width: 959px) {

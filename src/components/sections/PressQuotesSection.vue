@@ -41,9 +41,9 @@ const quotes = computed(() => {
                 fontFamily: 'Open Sans, sans-serif'
               }"
             >
-              <v-icon icon="mdi-format-quote-open" />
+              <v-icon icon="fa fa-quote-left" size="18px" />
               {{ quote.quote }}
-              <v-icon icon="mdi-format-quote-close" />
+              <v-icon icon="fa fa-quote-right" size="18px" />
             </span>
 
             <v-divider v-if="index !== column.length - 1" class="mt-6" color="brown-darken-4" />

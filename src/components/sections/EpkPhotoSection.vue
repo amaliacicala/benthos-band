@@ -108,7 +108,7 @@ onMounted(() => {
               </template>
 
               <template v-else>
-                <v-icon icon="mdi-download" class="mr-2" />
+                <v-icon icon="fa fa-file-arrow-down" class="mr-2" />
                 {{ mobile ? 'download' : 'download hd photo' }}
               </template>
             </v-btn>

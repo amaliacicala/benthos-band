@@ -83,7 +83,7 @@ const playVideo = (index: number) => {
               class="thumbnail-responsive"
               height="100%"
             />
-            <v-icon icon="mdi-play-circle" class="play-icon" color="white" />
+            <v-icon icon="fas fa-circle-play" class="play-icon" color="white" />
           </div>
 
           <iframe
@@ -138,10 +138,10 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   filter: drop-shadow(0 0 15px rgb(var(--v-theme-dark)));
-  font-size: 64px;
+  font-size: 48px;
   transition: all 0.2s ease-in-out;
   &:hover {
-    font-size: 70px;
+    font-size: 54px;
   }
 }
 iframe {

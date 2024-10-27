@@ -50,7 +50,7 @@ const { mobile, mdAndDown } = useDisplay()
             <span class="font-weight-bold">{{ track.title }}</span>
             <span style="opacity: 0.5">{{ ` (${track.length})` }}</span>
             <v-btn v-if="track.video" icon variant="text" :href="track.video" target="_blank">
-              <v-icon icon="mdi-youtube" />
+              <v-icon icon="fab fa-youtube" />
             </v-btn>
           </v-list-item>
         </v-list>

@@ -1,6 +1,8 @@
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
-import { aliases, mdi } from 'vuetify/iconsets/mdi'
+import { aliases, fa } from 'vuetify/iconsets/fa'
+import { mdi } from 'vuetify/iconsets/mdi'
+import '@fortawesome/fontawesome-free/css/all.css'
 import '@mdi/font/css/materialdesignicons.css'
 
 export default createVuetify({
@@ -45,9 +47,10 @@ export default createVuetify({
     }
   },
   icons: {
-    defaultSet: 'mdi',
+    defaultSet: 'fa',
     aliases,
     sets: {
+      fa,
       mdi
     }
   },

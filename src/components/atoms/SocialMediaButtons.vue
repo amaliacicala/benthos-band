@@ -19,6 +19,6 @@ const props = defineProps({
     :href="social.link"
     target="_blank"
   >
-    <v-icon :icon="`mdi-${social.name}`" />
+    <v-icon :icon="`fab fa-${social.name}`" />
   </v-btn>
 </template>

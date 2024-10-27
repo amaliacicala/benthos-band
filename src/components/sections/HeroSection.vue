@@ -48,7 +48,7 @@ onUnmounted(() => {
         ]"
       >
         <span class="text-body-1">explore</span>
-        <v-icon icon="mdi-arrow-down" color="brown-lighten-5" size="24" class="ml-2" />
+        <v-icon icon="fa fa-arrow-down" color="brown-lighten-5" size="18" class="ml-2" />
       </div>
     </v-parallax>
 
@@ -62,7 +62,7 @@ onUnmounted(() => {
         ]"
       >
         <span class="text-body-1">explore</span>
-        <v-icon icon="mdi-arrow-down" color="brown-lighten-5" size="20" class="ml-2" />
+        <v-icon icon="fa fa-arrow-down" color="brown-lighten-5" size="18" class="ml-2" />
       </div>
     </div>
   </v-fade-transition>

@@ -48,11 +48,12 @@ watch(
 
 <template>
   <v-btn
-    icon="mdi-close"
+    icon="fa fa-xmark"
     :rounded="0"
     variant="text"
     color="dark"
     class="d-flex ml-auto px-4"
+    :style="{ fontSize: '20px' }"
     width="24px"
     @click="$emit('close')"
   />
@@ -87,8 +88,5 @@ watch(
     text-underline-offset: 2px !important;
     text-decoration-style: dotted !important;
   }
-}
-:deep(.mdi-close::before) {
-  font-size: 32px !important;
 }
 </style>
