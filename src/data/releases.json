@@ -1,31 +1,17 @@
 {
-  "ii": {
-    "overline": "The debut album",
-    "releaseType": "Full-length album",
-    "title": "II",
-    "releaseDate": "April 23, 2021",
-    "coverLg": "src/assets/album_covers/large/benthos_ii_cover-lg.avif",
-    "coverSm": "src/assets/album_covers/small/benthos_ii_cover-sm.avif",
+  "fossil": {
+    "overline": "The latest single",
+    "releaseType": "Single",
+    "title": "Fossil",
+    "releaseDate": "November 12, 2024",
+    "coverLg": "src/assets/album_covers/large/benthos_fossil_cover-lg.avif",
+    "coverSm": "src/assets/album_covers/small/benthos_fossil_cover-sm.avif",
     "setlist": [
       {
-        "title": "Cartesio",
-        "length": "03:55",
+        "title": "Fossil",
+        "length": "06:30",
         "video": "https://www.youtube.com/watch?v=TQuuQxOuI_k"
-      },
-      { "title": "Back and Forth", "length": "04:24" },
-      {
-        "title": "Talk to Me, Dragonfly!",
-        "length": "04:47",
-        "video": "https://www.youtube.com/watch?v=iXOm0oeMGZc"
-      },
-      { "title": "Facing the Deep", "length": "02:19" },
-      {
-        "title": "Debris // Essence",
-        "length": "04:11",
-        "video": "https://www.youtube.com/watch?v=hzknSmWxw2I"
-      },
-      { "title": "II", "length": "05:40" },
-      { "title": "Dissolving Flowers", "length": "06:45" }
+      }
     ],
     "links": [
       {
@@ -62,58 +48,6 @@
         "name": "Deezer",
         "icon": "deezer",
         "link": "https://www.deezer.com/album/193593432"
-      }
-    ]
-  },
-  "debris_essence": {
-    "overline": "B-side single",
-    "releaseType": "Alternate version",
-    "title": "Debris // Essence",
-    "releaseDate": "January 14, 2022",
-    "coverLg": "src/assets/album_covers/large/benthos_debris_cover-lg.avif",
-    "coverSm": "src/assets/album_covers/small/benthos_debris_cover-sm.avif",
-    "setlist": [
-      {
-        "title": "Debris // Essence (B-Side)",
-        "length": "04:48",
-        "video": "https://www.youtube.com/watch?v=1tVxbYR59Gc"
-      }
-    ],
-    "links": [
-      {
-        "name": "Spotify",
-        "icon": "spotify",
-        "link": "https://open.spotify.com/album/5jjtGMErjR5QPY0tTtTWIC?si=19csq1FcSkCaeR9Kg10pUA"
-      },
-      {
-        "name": "Apple Music",
-        "icon": "apple_music",
-        "link": "https://geo.music.apple.com/it/album/_/1597024043?app=music&at=1000lHKX&ct=linktree_http&i=1597024048&itscg=30200&itsct=lt_m&ls=1&mt=1"
-      },
-      {
-        "name": "Amazon Music",
-        "icon": "amazon_music",
-        "link": "https://music.amazon.com/albums/B09MH3THK9?trackAsin=B09MHB9JYX"
-      },
-      {
-        "name": "TIDAL",
-        "icon": "tidal",
-        "link": "https://listen.tidal.com/track/206390485"
-      },
-      {
-        "name": "YouTube",
-        "icon": "youtube",
-        "link": "https://www.youtube.com/watch?v=1tVxbYR59Gc"
-      },
-      {
-        "name": "YouTube Music",
-        "icon": "youtube_music",
-        "link": "https://music.youtube.com/watch?v=co4wC-fTtr8"
-      },
-      {
-        "name": "Deezer",
-        "icon": "deezer",
-        "link": "https://www.deezer.com/track/1564501592"
       }
     ]
   },
@@ -169,19 +103,85 @@
       }
     ]
   },
-  "fossil": {
-    "overline": "The latest single",
-    "releaseType": "Single",
-    "title": "Fossil",
-    "releaseDate": "November 12, 2024",
-    "coverLg": "src/assets/album_covers/large/benthos_fossil_cover-lg.avif",
-    "coverSm": "src/assets/album_covers/small/benthos_fossil_cover-sm.avif",
+  "debris_essence": {
+    "overline": "B-side single",
+    "releaseType": "Alternate version",
+    "title": "Debris // Essence",
+    "releaseDate": "January 14, 2022",
+    "coverLg": "src/assets/album_covers/large/benthos_debris_cover-lg.avif",
+    "coverSm": "src/assets/album_covers/small/benthos_debris_cover-sm.avif",
     "setlist": [
       {
-        "title": "Fossil",
-        "length": "06:30",
-        "video": "https://www.youtube.com/watch?v=TQuuQxOuI_k"
+        "title": "Debris // Essence (B-Side)",
+        "length": "04:48",
+        "video": "https://www.youtube.com/watch?v=1tVxbYR59Gc"
       }
+    ],
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": "https://open.spotify.com/album/5jjtGMErjR5QPY0tTtTWIC?si=19csq1FcSkCaeR9Kg10pUA"
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": "https://geo.music.apple.com/it/album/_/1597024043?app=music&at=1000lHKX&ct=linktree_http&i=1597024048&itscg=30200&itsct=lt_m&ls=1&mt=1"
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": "https://music.amazon.com/albums/B09MH3THK9?trackAsin=B09MHB9JYX"
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": "https://listen.tidal.com/track/206390485"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://www.youtube.com/watch?v=1tVxbYR59Gc"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": "https://music.youtube.com/watch?v=co4wC-fTtr8"
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": "https://www.deezer.com/track/1564501592"
+      }
+    ]
+  },
+  "ii": {
+    "overline": "The debut album",
+    "releaseType": "Full-length album",
+    "title": "II",
+    "releaseDate": "April 23, 2021",
+    "coverLg": "src/assets/album_covers/large/benthos_ii_cover-lg.avif",
+    "coverSm": "src/assets/album_covers/small/benthos_ii_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "Cartesio",
+        "length": "03:55",
+        "video": "https://www.youtube.com/watch?v=TQuuQxOuI_k"
+      },
+      { "title": "Back and Forth", "length": "04:24" },
+      {
+        "title": "Talk to Me, Dragonfly!",
+        "length": "04:47",
+        "video": "https://www.youtube.com/watch?v=iXOm0oeMGZc"
+      },
+      { "title": "Facing the Deep", "length": "02:19" },
+      {
+        "title": "Debris // Essence",
+        "length": "04:11",
+        "video": "https://www.youtube.com/watch?v=hzknSmWxw2I"
+      },
+      { "title": "II", "length": "05:40" },
+      { "title": "Dissolving Flowers", "length": "06:45" }
     ],
     "links": [
       {
