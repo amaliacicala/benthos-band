@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
+import fossil_clip_lg from '@/assets/thumbnails/large/fossil_clip-lg.webm'
+import fossil_clip_sm from '@/assets/thumbnails/small/fossil_clip-sm.webm'
 import dragonfly_clip_lg from '@/assets/thumbnails/large/dragonfly_clip-lg.webm'
 import dragonfly_clip_sm from '@/assets/thumbnails/small/dragonfly_clip-sm.webm'
 import dragonfly from '@/assets/thumbnails/medium/dragonfly_thumbnail.avif'
@@ -19,7 +21,7 @@ const playVideo = (index: number) => {
 <template>
   <div
     id="videos"
-    class="d-flex flex-column justify-center align-center bg-pattern text-brown-lighten-5 px-4 py-8 pa-md-12"
+    class="d-flex flex-column justify-center align-center bg-black-grain text-brown-lighten-5 px-4 py-8 pa-md-12"
   >
     <v-container>
       <div class="d-flex flex-column align-center">
@@ -27,11 +29,45 @@ const playVideo = (index: number) => {
         <h1 class="text-md-h1 text-h2">Videos</h1>
       </div>
 
+      <!-- Fossil -->
       <v-row class="pt-8">
         <v-col cols="12">
-          <h3 class="text-body-1 text-center mb-4">
-            Talk to Me, Dragonfly - Live at Dissonance Festival 2023
-          </h3>
+          <div class="text-center mb-4">
+            <h3 class="text-body-1 font-weight-bold">Benthos - Fossil (Official Video)</h3>
+            <p class="text-overline text-center">Released on November, 12th 2024</p>
+          </div>
+
+          <div class="d-flex flex-column align-center">
+            <a
+              href="https://www.youtube.com/watch?v=vtXFiFwSIy0"
+              class="video-thumbnail"
+              target="_blank"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
+                alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+                class="video-responsive"
+              />
+              <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
+            </a>
+          </div>
+        </v-col>
+      </v-row>
+
+      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
+
+      <!-- Talk to Me, Dragonfly! Live at Dissonance-->
+      <v-row class="pt-8">
+        <v-col cols="12">
+          <div class="text-center mb-4">
+            <h3 class="text-body-1 font-weight-bold">
+              Benthos - Talk to Me, Dragonfly! (Live at Dissonance Festival)
+            </h3>
+            <p class="text-overline text-center">Released on July, 28th 2023</p>
+          </div>
 
           <div v-if="!isPlaying[0]" class="video-thumbnail" @click="playVideo(0)">
             <video
@@ -59,7 +95,11 @@ const playVideo = (index: number) => {
         </v-col>
       </v-row>
 
-      <h3 class="text-body-1 text-center mt-10 mb-4">2021 debut album singles official videos</h3>
+      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
+
+      <h3 class="text-body-1 font-weight-bold text-center mb-8">
+        2021 Debut Album Singles and Official Videos
+      </h3>
 
       <v-row>
         <v-col cols="12" sm="4">

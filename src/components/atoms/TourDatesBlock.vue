@@ -7,6 +7,21 @@ import icon from '@/assets/icons/bandsintown.svg'
 import NoShowsBlock from '@/components/atoms/NoShowsBlock.vue'
 import ConcertListBlock from '@/components/atoms/ConcertListBlock.vue'
 
+const props = defineProps({
+  primaryColor: {
+    type: String,
+    default: 'red-darken-2'
+  },
+  secondaryColor: {
+    type: String,
+    default: 'red-lighten-2'
+  },
+  textColor: {
+    type: String,
+    default: 'brown-lighten-5'
+  }
+})
+
 const { mobile } = useDisplay()
 
 const bandsintownStore = useBandsintownStore()
@@ -21,12 +36,20 @@ onMounted(() => {
 <template>
   <v-fade-transition appear>
     <div class="d-flex flex-column align-center">
-      <v-chip-group class="text-body-1 text-dark pt-0">
-        <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(false)">
+      <v-chip-group class="text-body-1 pt-0">
+        <v-chip
+          variant="text"
+          :class="`bg-${props.primaryColor} text-${props.textColor} py-6 px-6 px-md-8`"
+          @click="loadEvents(false)"
+        >
           upcoming shows
         </v-chip>
 
-        <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="loadEvents(true)">
+        <v-chip
+          variant="text"
+          :class="`bg-${props.primaryColor}  text-${props.textColor} py-6 px-6 px-md-8`"
+          @click="loadEvents(true)"
+        >
           past shows
         </v-chip>
       </v-chip-group>
@@ -35,7 +58,7 @@ onMounted(() => {
 
   <div v-if="loading" class="d-flex flex-column my-16 align-center justify-center">
     <v-progress-circular
-      color="green-darken-3"
+      color="brown-lighten-5"
       :size="mobile ? 50 : 60"
       :width="mobile ? 4 : 7"
       class="self-center my-8"
@@ -43,19 +66,30 @@ onMounted(() => {
     />
   </div>
 
-  <div v-else class="d-flex flex-column text-dark pt-6 pt-md-12 px-lg-8">
+  <div v-else class="d-flex flex-column text-dark pt-6 pt-md-12 px-lg-8 pb-16">
     <v-fade-transition appear>
-      <NoShowsBlock v-if="noUpcomingShows" :notify-link="events[0].ticketsUrl" />
+      <NoShowsBlock
+        v-if="noUpcomingShows"
+        :notify-link="events[0].ticketsUrl"
+        :primary-color="props.primaryColor"
+        :secondary-color="props.secondaryColor"
+        :text-color="props.textColor"
+      />
 
-      <ConcertListBlock v-else :concert-list="events" :past-date="isPastDate" />
+      <ConcertListBlock
+        v-else
+        :concert-list="events"
+        :past-date="isPastDate"
+        :primary-color="props.primaryColor"
+      />
 
       <v-row v-if="!noUpcomingShows" class="justify-center mt-8">
         <v-btn
           href="https://www.bandsintown.com/a/1419641-benthos"
           target="_blank"
           size="large"
-          color="green-darken-3"
-          class="mt-6 text-primary flat-shadow"
+          color="red-darken-2"
+          class="mt-6 text-brown-lighten-5 flat-shadow"
         >
           <img :src="icon" width="22px" class="mr-3" />
           View more past dates

@@ -7,14 +7,17 @@ const { mdAndDown } = useDisplay()
 </script>
 
 <template>
-  <div class="bg-dark py-16 h-100">
-    <v-container class="d-flex flex-column justify-center text-brown-lighten-5 px-6">
-      <PageHeader :title="'Media'" :color="'brown-lighten-5'" />
+  <div class="bg-paper py-16 h-100 mb-8">
+    <v-container class="d-flex flex-column justify-center text-dark px-6">
+      <PageHeader :title="'Media'" :color="'dark'" />
 
       <section v-for="(item, index) in media" :key="index" class="d-flex flex-column">
         <v-fade-transition appear>
           <div>
-            <h3 class="text-body-1 text-center" :style="{ fontSize: '18px !important' }">
+            <h3
+              class="text-body-1 text-center font-weight-bold"
+              :style="{ fontSize: '18px !important' }"
+            >
               {{ 'Benthos - ' + item.title }}
             </h3>
             <p class="text-overline text-center opacity-70 mt-2 mb-8">{{ item.releaseDate }}</p>
@@ -29,7 +32,7 @@ const { mdAndDown } = useDisplay()
               loop
               :src="mdAndDown ? item.coverSm : item.coverLg"
               :alt="`Thumbnail for Benthos - ${item.title}`"
-              class="video-responsive opacity-50 rounded-lg flat-shadow"
+              class="video-responsive opacity-90 rounded-lg flat-shadow"
             />
             <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
           </a>
@@ -37,7 +40,7 @@ const { mdAndDown } = useDisplay()
 
         <v-divider
           v-if="index !== media.length - 1"
-          color="brown-lighten-5"
+          color="dark"
           class="border-opacity-25 mt-12 pb-12"
         />
       </section>

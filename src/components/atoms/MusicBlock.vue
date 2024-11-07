@@ -41,6 +41,7 @@ onMounted(() => {
   <div v-if="mobile" class="d-flex justify-center align-center w-100 mb-12">
     <v-btn
       variant="outlined"
+      color="red-darken-2"
       class="text-body-2 text-md-body-1 mr-4 w-50 w-md-25"
       size="large"
       @click="handleStreamClick"
@@ -48,8 +49,7 @@ onMounted(() => {
       Stream
     </v-btn>
     <v-btn
-      variant="outlined"
-      class="text-body-2 text-md-body-1 bg-green-lighten-2 w-50 w-md-25"
+      class="text-body-2 text-md-body-1 bg-red-darken-2 text-brown-lighten-5 w-50 w-md-25"
       size="large"
       @click="router.push({ name: 'Merch' })"
     >
@@ -81,6 +81,7 @@ onMounted(() => {
     <v-btn
       variant="outlined"
       size="x-large"
+      color="red-darken-2"
       class="text-body-2 text-md-body-1 mb-6 w-25"
       @click="handleStreamClick"
     >
@@ -88,7 +89,7 @@ onMounted(() => {
     </v-btn>
     <v-btn
       size="x-large"
-      class="text-body-2 text-md-body-1 bg-green-lighten-2 w-25"
+      class="text-body-2 text-md-body-1 bg-red-darken-2 w-25"
       @click="router.push({ name: 'Merch' })"
     >
       Buy

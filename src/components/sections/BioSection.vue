@@ -18,7 +18,7 @@ import FFOBlock from '@/components/atoms/FFOBlock.vue'
 
       <v-row class="pt-12">
         <v-col cols="12" md="8">
-          <BiographyBlock />
+          <BiographyBlock :bio="'longBio'" />
         </v-col>
 
         <v-col id="contacts" cols="12" md="4" class="col-sm-10">

@@ -55,9 +55,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div :class="[mobile ? 'bg-red-darken-1' : 'bg-red', 'py-16 h-100']">
+  <div class="bg-red py-16 h-100">
     <v-container>
-      <PageHeader :title="'Merchandise'" />
+      <PageHeader :title="'Merchandise'" :color="'brown-lighten-5'" />
     </v-container>
 
     <v-fade-transition appear>

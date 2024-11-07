@@ -9,6 +9,10 @@ const props = defineProps({
   pastDate: {
     type: Boolean,
     required: true
+  },
+  primaryColor: {
+    type: String,
+    default: 'red-darken-2'
   }
 })
 
@@ -32,17 +36,20 @@ const formatDate = (date: string | number | Date) => {
     v-for="(event, index) of props.concertList"
     :key="index"
     class="align-center py-2"
-    style="min-height: 85px; border-bottom: solid 1px #aab5a1"
+    :style="{
+      minHeight: '85px',
+      borderBottom: index === props.concertList.length - 1 ? '' : 'solid 1px #bd776e5a'
+    }"
   >
     <v-col cols="6" md="2" lg="2">
       <p
         v-if="event.date"
-        class="text-uppercase"
+        :class="`text-${props.primaryColor} text-uppercase`"
         style="font-size: 16px !important; font-weight: 700 !important"
       >
         {{ formatDate(event.date).datePart }}
       </p>
-      <p v-if="event.date" class="text-body-2 mt-1">
+      <p v-if="event.date" class="text-brown-lighten-5 opacity-40 text-body-2 mt-1">
         {{ formatDate(event.date).weekdayTimePart }}
       </p>
     </v-col>
@@ -50,7 +57,7 @@ const formatDate = (date: string | number | Date) => {
     <v-col cols="6" md="4" lg="3">
       <p
         v-if="event.city"
-        class="text-h5 text-right text-md-left text-green-darken-3 font-weight-bold"
+        class="text-h5 text-right text-md-left text-brown-lighten-5 font-weight-bold"
         style="font-size: 28px !important"
       >
         {{ event.city + ', ' + event.country }}
@@ -58,17 +65,16 @@ const formatDate = (date: string | number | Date) => {
     </v-col>
 
     <v-col cols="6" md="3" lg="4">
-      <p v-if="event.venue">{{ event.venue }}</p>
+      <p v-if="event.venue" class="text-brown-lighten-5">{{ event.venue }}</p>
     </v-col>
 
     <v-col cols="6" md="3" lg="3" class="d-flex justify-end">
       <v-btn
         :href="event.ticketsUrl ? event.ticketsUrl : event.eventUrl"
         target="_blank"
-        color="green-darken-3"
         size="large"
-        variant="outlined"
-        class="bg-brown-lighten-5 flat-shadow"
+        variant="plain"
+        :class="`bg-${props.primaryColor} text-brown-lighten-5 flat-shadow`"
         :disabled="props.pastDate"
       >
         buy tickets

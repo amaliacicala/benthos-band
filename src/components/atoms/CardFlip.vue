@@ -107,13 +107,13 @@ onMounted(reportState)
           :max-width="cardSize"
           :min-height="cardSize"
           :max-height="cardSize"
-          color="green-lighten-1"
+          color="brown-lighten-5"
           :rounded="0"
           :class="['py-4 px-6 px-md-4 px-lg-8', { pulse: pulseClass }]"
           style="overflow-y: scroll"
           @click="() => handleCardClick(0)"
         >
-          <div class="d-flex flex-column align-center text-green-darken-4 pb-4 text-center">
+          <div class="d-flex flex-column align-center text-dark pb-4 text-center">
             <p class="text-overline">{{ props.overline }}</p>
             <p class="text-lg-h3 text-md-h4 text-h4">{{ props.title }}</p>
             <p class="text-overline">{{ props.releaseDate }}</p>
@@ -125,7 +125,7 @@ onMounted(reportState)
             :href="link.link"
             flat
             style="border-radius: 8px"
-            class="d-flex outlined py-6 py-md-7 mb-2"
+            class="d-flex bg-brown-lighten-5 outlined py-6 py-md-7 mb-2"
             target="_blank"
           >
             <div class="d-flex align-center">
@@ -135,10 +135,11 @@ onMounted(reportState)
                 width="20px"
                 height="20px"
                 eager
+                style="filter: saturate(0%)"
               />
               <p class="text-body-2 ml-2">{{ link.name }}</p>
             </div>
-            <v-icon icon="fas fa-arrow-up-right-from-square" color="grey" />
+            <v-icon icon="fas fa-arrow-up-right-from-square" color="dark" />
           </v-btn>
         </v-card>
       </transition>
@@ -147,14 +148,22 @@ onMounted(reportState)
 </template>
 
 <style lang="scss" scoped>
-.bg-green-lighten-1 {
-  color: rgb(var(--v-green-lighten-1)) !important;
-}
 .outlined {
-  border: solid 1px rgb(var(--v-theme-grey));
+  border: solid 1px #97323e8a;
+}
+:deep(.v-card__overlay) {
+  display: none;
 }
 :deep(.v-btn__content) {
   width: 100%;
   justify-content: space-between;
+}
+:deep(.v-img__img.v-img__img--cover) {
+  filter: saturate(60%) brightness(80%);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    filter: none;
+  }
 }
 </style>

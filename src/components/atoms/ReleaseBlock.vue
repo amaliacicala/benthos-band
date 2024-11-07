@@ -12,13 +12,13 @@ const { mobile, mdAndDown } = useDisplay()
 </script>
 
 <template>
-  <v-main class="bg-dark text-primary w-100 pt-3 pb-6 px-6 px-md-0">
+  <v-main class="bg-transparent text-primary w-100 pt-3 pb-6 px-6 px-md-0">
     <v-row :style="{ minHeight: mdAndDown ? '' : '400px', minWidth: mdAndDown ? '' : '400px' }">
       <v-col
         cols="12"
         md="12"
         lg="4"
-        class="d-flex justify-center justify-lg-start bg-dark pb-md-8 pb-lg-0"
+        class="d-flex justify-center justify-lg-start bg-transparent pb-md-8 pb-lg-0"
       >
         <v-card
           :min-width="mdAndDown ? 300 : 350"
@@ -32,15 +32,15 @@ const { mobile, mdAndDown } = useDisplay()
         />
       </v-col>
 
-      <v-col cols="12" md="6" lg="6" class="text-primary bg-dark pr-md-12">
+      <v-col cols="12" md="6" lg="6" class="text-primary bg-transparent pr-md-12">
         <h2 class="text-h3 text-center text-md-left text-md-h">{{ release.title }}</h2>
 
-        <div v-if="mobile" class="text-green-lighten-2 text-center text-md-right py-4">
+        <div v-if="mobile" class="text-center text-md-right py-4 opacity-80">
           <p class="text-overline">{{ release.releaseType }}</p>
           <p class="text-overline">{{ release.releaseDate }}</p>
         </div>
 
-        <v-list class="text-primary bg-dark pa-0 mt-2">
+        <v-list class="text-primary bg-transparent pa-0 mt-2">
           <v-list-item
             v-for="(track, index) in release.setlist"
             :key="index"
@@ -60,7 +60,7 @@ const { mobile, mdAndDown } = useDisplay()
         cols="12"
         md="6"
         lg="2"
-        class="d-flex flex-column justify-space-between bg-dark pa-0 pa-md-3"
+        class="d-flex flex-column justify-space-between bg-transparent pa-0 pa-md-3"
       >
         <div v-if="!mobile" class="text-primary text-center text-md-right pr-0 pr-md-4">
           <p class="text-overline">{{ release.releaseType }}</p>

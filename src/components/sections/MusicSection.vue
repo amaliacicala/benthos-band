@@ -8,7 +8,7 @@ const { mobile } = useDisplay()
 <template>
   <v-lazy transition="fade-transition">
     <div
-      class="d-flex flex-column align-center bg-debris bg-red-darken-4 py-16 px-8"
+      class="d-flex flex-column align-center bg-black-grain py-16 px-8"
       :style="{ gap: mobile ? '24px' : '48px' }"
     >
       <v-container>

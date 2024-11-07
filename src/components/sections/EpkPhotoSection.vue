@@ -36,7 +36,7 @@ onMounted(() => {
 <template>
   <div
     id="photos"
-    class="d-flex flex-column justify-center align-center bg-paper text-dark px-4 py-8 pa-md-12"
+    class="d-flex flex-column justify-center align-center bg-paper-green text-dark px-4 py-8 pa-md-12"
   >
     <v-container>
       <div class="d-flex flex-column align-center">
@@ -45,26 +45,26 @@ onMounted(() => {
 
         <v-chip-group class="text-body-1 text-dark pt-4">
           <v-chip
-            class="bg-amber-lighten-1 py-6 px-6 px-md-8"
+            class="bg-green-lighten-2 py-6 px-6 px-md-8"
             @click="handleAlbumLoad(photoshoots)"
           >
             photoshoots
           </v-chip>
 
-          <v-chip class="bg-amber-lighten-1 py-6 px-6 px-md-8" @click="handleAlbumLoad(livePhotos)">
+          <v-chip class="bg-green-lighten-2 py-6 px-6 px-md-8" @click="handleAlbumLoad(livePhotos)">
             live photos
           </v-chip>
         </v-chip-group>
       </div>
 
-      <div class="pt-6 pt-md-8">
+      <div class="pt-6 pt-md-8 pb-8">
         <v-carousel
           v-model="slide"
           width="100%"
           :height="mobile ? '100%' : '700px'"
           show-arrows="hover"
           interval="5000"
-          progress="amber-darken-1"
+          progress="green-darken-3"
           hide-delimiters
           :cycle="!isDownloading"
           class="elevation-24"
@@ -72,7 +72,7 @@ onMounted(() => {
         >
           <div v-if="loading" class="d-flex flex-column h-100 align-center justify-center">
             <v-progress-circular
-              color="amber-darken-1"
+              color="green-darken-3"
               :size="mobile ? 50 : 80"
               :width="mobile ? 4 : 7"
               class="self-center"
@@ -109,7 +109,7 @@ onMounted(() => {
 
               <template v-else>
                 <v-icon icon="fa fa-file-arrow-down" class="mr-2" />
-                {{ mobile ? 'download' : 'download hd photo' }}
+                {{ mobile ? 'download' : 'download hi-res' }}
               </template>
             </v-btn>
           </v-carousel-item>
@@ -132,7 +132,7 @@ onMounted(() => {
 }
 :deep(.v-window__controls) {
   button {
-    background-color: rgb(var(--v-theme-brown-lighten-5));
+    background-color: rgb(var(--v-theme-green-lighten-2));
     color: rgb(var(--v-theme-brown-darken-2));
     width: 70px;
     height: 70px;

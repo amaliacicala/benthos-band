@@ -19,7 +19,7 @@ const playVideo = (index: number) => {
 <template>
   <div
     id="music"
-    class="d-flex flex-column justify-center align-center bg-pattern text-brown-lighten-5 px-4 py-8 pa-md-12"
+    class="d-flex flex-column justify-center align-center bg-black-texture text-brown-lighten-5 px-4 py-8 pa-md-12"
   >
     <v-container>
       <div class="d-flex flex-column align-center">

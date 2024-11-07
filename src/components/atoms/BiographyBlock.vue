@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { computed } from 'vue'
 import epkData from '@/data/epkData.json'
 import MarkdownText from '@/components/atoms/MarkdownText.vue'
 
@@ -6,7 +7,16 @@ const props = defineProps({
   textColor: {
     type: String,
     default: 'text-dark'
+  },
+  bio: {
+    type: String,
+    required: true
   }
+})
+
+const bioContent = computed(() => {
+  const content = epkData[props.bio as keyof typeof epkData]
+  return typeof content === 'string' ? content : ''
 })
 </script>
 
@@ -19,7 +29,7 @@ const props = defineProps({
   </h2>
 
   <MarkdownText
-    :source="epkData.bio"
+    :source="bioContent"
     :class="[props.textColor, 'col-6']"
     :style="{
       fontFamily: 'Open Sans, sans-serif'
