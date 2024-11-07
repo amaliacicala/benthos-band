@@ -1,9 +1,9 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
 import type { SingleStreamingLink } from '@/types/Streaming'
-import insideout_logo from '@/assets/logos/insideout_logo_white.png'
-import fossil_clip_lg from '@/assets/thumbnails/large/fossil_clip-lg.webm'
-import fossil_clip_sm from '@/assets/thumbnails/small/fossil_clip-sm.webm'
+import dragonfly_clip_lg from '@/assets/thumbnails/large/dragonfly_clip-lg.webm'
+import dragonfly_clip_sm from '@/assets/thumbnails/small/dragonfly_clip-sm.webm'
 
 const props = defineProps({
   overline: {
@@ -18,10 +18,7 @@ const props = defineProps({
     type: String,
     required: true
   },
-  singleLinks: {
-    type: Array<SingleStreamingLink>,
-    required: true
-  },
+
   videoLink: {
     type: String,
     required: true
@@ -29,14 +26,20 @@ const props = defineProps({
 })
 
 const { mobile, mdAndDown } = useDisplay()
+
+const isPlaying = ref([false])
+
+const playVideo = (index: number) => {
+  isPlaying.value[index] = true
+}
 </script>
 
 <template>
-  <div class="bg-black-grain">
+  <div class="bg-red">
     <v-lazy transition="fade-transition">
       <v-container>
         <div class="d-flex flex-column align-center py-16 px-10 px-md-16" :style="{ gap: '24px' }">
-          <div class="text-center text-brown-lighten-5">
+          <div class="text-center">
             <p class="text-overline">{{ props.overline }}</p>
             <h1 class="text-md-h1 text-h2">{{ props.title }}</h1>
           </div>
@@ -63,41 +66,29 @@ const { mobile, mdAndDown } = useDisplay()
             </v-btn>
           </div>
 
-          <div class="d-flex py-4" :style="{ gap: mobile ? '' : '24px' }">
-            <v-btn
-              v-for="(service, index) in singleLinks"
-              icon
-              variant="text"
-              class="text-dark hover"
-              :key="index"
-              :href="service.link"
-              target="_blank"
-            >
-              <v-img
-                :src="`src/assets/icons/white/${service.name}.png`"
-                :width="mobile ? 30 : 40"
-              />
-            </v-btn>
-          </div>
-
-          <a :href="props.videoLink" class="video-thumbnail" target="_blank">
+          <div v-if="!isPlaying[0]" class="video-thumbnail pt-8" @click="playVideo(0)">
             <video
               autoplay
               muted
               loop
-              :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
+              :src="mdAndDown ? dragonfly_clip_sm : dragonfly_clip_lg"
               alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
               class="video-responsive"
             />
             <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
-          </a>
+          </div>
 
-          <footer class="d-flex flex-column justify-center align-center">
-            <!-- <p class="text-overline mb-2" :style="{ fontSize: !mobile ? '16px !important' : '' }">
-            Out November 12th, 2024
-          </p> -->
-            <v-img :src="insideout_logo" :width="150" alt="InsideOut Music" />
-          </footer>
+          <iframe
+            v-else
+            class="video-responsive"
+            src="https://www.youtube.com/embed/ue1BDz156Z4?autoplay=1&si=KsNdpRai5xPGilx7"
+            alt="Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            :style="{ height: mobile ? '200px' : '550px' }"
+          ></iframe>
         </div>
       </v-container>
     </v-lazy>
@@ -112,14 +103,7 @@ const { mobile, mdAndDown } = useDisplay()
     opacity: 0.6;
   }
 }
-a:link,
-a:visited,
-a:active {
-  color: rgb(var(--v-theme-red-darken-2)) !important;
-}
-a:hover {
-  color: rgb(var(--v-theme-red-darken-2)) !important;
-}
+
 .video-thumbnail {
   position: relative;
   cursor: pointer;

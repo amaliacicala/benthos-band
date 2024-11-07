@@ -1,8 +1,17 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useDisplay } from 'vuetify'
-import hero_lg from '@/assets/backgrounds/large/bg_hero_fossil-lg.avif'
-import hero_sm from '@/assets/backgrounds/small/bg_hero_fossil-sm.avif'
+
+const props = defineProps({
+  heroLg: {
+    type: String,
+    required: true
+  },
+  heroSm: {
+    type: String,
+    required: true
+  }
+})
 
 const { mobile } = useDisplay()
 
@@ -38,7 +47,7 @@ onUnmounted(() => {
 
 <template>
   <v-fade-transition appear>
-    <v-parallax v-if="!mobile" :src="hero_lg" :height="heroHeight" class="position-relative">
+    <v-parallax v-if="!mobile" :src="props.heroLg" :height="heroHeight" class="position-relative">
       <div class="w-100 h-100" />
 
       <div
@@ -53,7 +62,7 @@ onUnmounted(() => {
     </v-parallax>
 
     <div v-else class="position-relative w-100">
-      <v-img :src="hero_sm" alt="Benthos" />
+      <v-img :src="props.heroSm" alt="Benthos" />
 
       <div
         :class="[

@@ -6,20 +6,28 @@ const { mobile } = useDisplay()
 </script>
 
 <template>
-  <v-footer absolute app class="d-flex align-center bg-dark text-primary text-body-2 px-12">
+  <v-footer absolute app class="d-flex align-center bg-black text-body-2 px-12">
     <v-container>
-      <v-row class="bg-dark">
-        <v-col cols="12" md="3" class="d-flex align-center justify-center justify-md-start py-0">
+      <v-row class="bg-black">
+        <v-col
+          cols="12"
+          md="3"
+          class="d-flex align-center justify-center justify-md-start text-brown-lighten-5 py-0"
+        >
           <p class="pt-2 pt-md-0" :style="{ fontSize: '12px' }">
             Benthos © {{ new Date().getFullYear() }}
           </p>
         </v-col>
 
         <v-col cols="12" md="6" class="d-flex align-center justify-center py-0">
-          <SocialMediaButtons :color="'text-primary'" />
+          <SocialMediaButtons :color="'text-brown-lighten-5'" />
         </v-col>
 
-        <v-col cols="12" md="3" class="d-flex align-center justify-center justify-md-end py-0 pl-0">
+        <v-col
+          cols="12"
+          md="3"
+          class="d-flex align-center justify-center justify-md-end text-brown-lighten-5 py-0 pl-0"
+        >
           <p :style="{ fontSize: mobile ? '10px' : '12px' }">website by Amalia Cicala</p>
         </v-col>
       </v-row>

@@ -8,16 +8,16 @@
     "link": "/shop-merch"
   },
   {
-    "name": "Tour",
-    "link": "/tour-dates"
-  },
-  {
     "name": "Music",
     "link": "/music"
   },
   {
     "name": "Media",
     "link": "/media"
+  },
+  {
+    "name": "Tour",
+    "link": "/tour-dates"
   },
   {
     "name": "About",

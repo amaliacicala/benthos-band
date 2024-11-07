@@ -4,17 +4,15 @@ import { useClipboard } from '@vueuse/core'
 import PageHeader from '@/components/layout/PageHeader.vue'
 
 const sourceOne = ref('benthos@amaliacicala.com')
-const sourceTwo = ref('anabel.schmitt@centurymedia.de')
-const sourceThree = ref('benthos.milano@gmail.com')
+const sourceTwo = ref('benthos.milano@gmail.com')
 
 const { isSupported } = useClipboard()
 const { copy: copyOne, copied: copiedOne } = useClipboard()
 const { copy: copyTwo, copied: copiedTwo } = useClipboard()
-const { copy: copyThree, copied: copiedThree } = useClipboard()
 </script>
 
 <template>
-  <div class="bg-paper-green py-16 h-100">
+  <div class="bg-paper py-16 h-100">
     <v-container class="d-flex flex-column justify-center px-6">
       <PageHeader :title="'Contacts'" :color="'dark'" />
 
@@ -27,9 +25,11 @@ const { copy: copyThree, copied: copiedThree } = useClipboard()
               class="text-overline font-weight-bold mb-4 mb-md-0"
               :style="{ fontSize: '16px !important' }"
             >
-              Manager & General Enquiries
+              Management
             </h2>
-            <p class="text-body-2 font-weight-bold bg-green-lighten-2 py-1 mt-2 mb-4">
+            <p
+              class="text-body-2 font-weight-bold bg-red-darken-2 text-brown-lighten-5 py-1 mt-2 mb-4"
+            >
               Amalia Cicala
             </p>
             <span
@@ -52,36 +52,6 @@ const { copy: copyThree, copied: copiedThree } = useClipboard()
             <v-divider class="border-opacity-25 mt-10 mb-5" />
           </v-list-item>
 
-          <!-- <v-list-item class="text-center pa-0 w-100 w-sm-50">
-            <h2
-              class="text-overline font-weight-bold mb-4 mb-md-0"
-              :style="{ fontSize: '16px !important' }"
-            >
-              Record Label
-            </h2>
-            <p class="text-body-2 font-weight-bold bg-green-lighten-2 py-1 mt-2 mb-4">
-              Anabel Schmitt @ Inside Out Music
-            </p>
-            <span
-              v-if="!copiedTwo"
-              :class="[
-                isSupported ? 'cursor-pointer' : '',
-                'text-body-2 text-dark border-rounded py-2 px-4'
-              ]"
-              @click="isSupported ? copyTwo(sourceTwo) : ''"
-            >
-              {{ sourceTwo }}
-            </span>
-            <span
-              v-if="copiedTwo"
-              class="text-body-2 text-red-lighten-3 font-weight-bold py-2 px-2"
-            >
-              Email copied to clipboard.
-            </span>
-
-            <v-divider class="border-opacity-25 mt-10 mb-5" />
-          </v-list-item> -->
-
           <v-list-item class="text-center pa-0 w-100 w-sm-50">
             <h2
               class="text-overline font-weight-bold mb-4 mb-md-0"
@@ -89,19 +59,23 @@ const { copy: copyThree, copied: copiedThree } = useClipboard()
             >
               The Band
             </h2>
-            <p class="text-body-2 font-weight-bold bg-green-lighten-2 py-1 mt-2 mb-4">Benthos</p>
+            <p
+              class="text-body-2 font-weight-bold bg-red-darken-2 text-brown-lighten-5 py-1 mt-2 mb-4"
+            >
+              Benthos
+            </p>
             <span
-              v-if="!copiedThree"
+              v-if="!copiedTwo"
               :class="[
                 isSupported ? 'cursor-pointer' : '',
                 'text-body-2 text-dark border-rounded py-2  px-4'
               ]"
-              @click="isSupported ? copyThree(sourceThree) : ''"
+              @click="isSupported ? copyTwo(sourceTwo) : ''"
             >
-              {{ sourceThree }}
+              {{ sourceTwo }}
             </span>
             <span
-              v-if="copiedThree"
+              v-if="copiedTwo"
               class="text-body-2 text-red-lighten-3 font-weight-bold py-2 px-2"
             >
               Email copied to clipboard.

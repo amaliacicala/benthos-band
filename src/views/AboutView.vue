@@ -23,7 +23,7 @@ const { mobile } = useDisplay()
     <v-container class="px-8">
       <v-row class="d-flex justify-center">
         <v-col cols="12" md="8" class="mt-6 text-center">
-          <BiographyBlock :text-color="'text-brown-lighten-5'" />
+          <BiographyBlock :text-color="'text-brown-lighten-5'" :bio="'shortBio'" />
         </v-col>
       </v-row>
 
