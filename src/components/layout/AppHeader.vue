@@ -103,7 +103,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .v-app-bar {
-  border-bottom: solid 3px;
+  border-bottom: solid 5px;
   @media screen and (max-width: 959px) {
     border-image: url('@/assets/backgrounds/small/pattern-sm.avif') 20 round;
   }
