@@ -55,6 +55,11 @@ onMounted(() => {
             live photos
           </v-chip>
         </v-chip-group>
+
+        <p class="text-caption text-center mt-6">
+          Note: Images are displayed in a lower resolution for faster loading. <br />To view each
+          image in full quality, click the download button in the bottom right corner.
+        </p>
       </div>
 
       <div class="pt-6 pt-md-8 pb-8">

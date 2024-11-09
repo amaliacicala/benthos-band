@@ -73,7 +73,7 @@ const playVideo = (index: number) => {
               loop
               :src="mdAndDown ? dragonfly_clip_sm : dragonfly_clip_lg"
               alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
-              class="video-responsive"
+              class="video-responsive opacity-90 rounded-lg flat-shadow"
             />
             <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
           </div>

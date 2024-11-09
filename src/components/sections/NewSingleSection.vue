@@ -87,7 +87,7 @@ const { mobile, mdAndDown } = useDisplay()
               loop
               :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
               alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
-              class="video-responsive"
+              class="video-responsive opacity-90 rounded-lg flat-shadow"
             />
             <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
           </a>
