@@ -7,9 +7,9 @@ const { mdAndDown } = useDisplay()
 </script>
 
 <template>
-  <div class="bg-paper py-16 h-100 mb-8">
-    <v-container class="d-flex flex-column justify-center text-dark px-6">
-      <PageHeader :title="'Media'" :color="'dark'" />
+  <div class="bg-black-grain py-16 h-100 mb-8">
+    <v-container class="d-flex flex-column justify-center text-brown-lighten-5 px-6">
+      <PageHeader :title="'Media'" :color="'brown-lighten-5'" />
 
       <section v-for="(item, index) in media" :key="index" class="d-flex flex-column">
         <v-fade-transition appear>
@@ -40,7 +40,7 @@ const { mdAndDown } = useDisplay()
 
         <v-divider
           v-if="index !== media.length - 1"
-          color="dark"
+          color="brown-lighten-5"
           class="border-opacity-25 mt-12 pb-12"
         />
       </section>

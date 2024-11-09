@@ -25,7 +25,7 @@ const { copy: copyTwo, copied: copiedTwo } = useClipboard()
               class="text-overline font-weight-bold mb-4 mb-md-0"
               :style="{ fontSize: '16px !important' }"
             >
-              Management
+              Management & Booking
             </h2>
             <p
               class="text-body-2 font-weight-bold bg-red-darken-2 text-brown-lighten-5 py-1 mt-2 mb-4"
@@ -57,7 +57,7 @@ const { copy: copyTwo, copied: copiedTwo } = useClipboard()
               class="text-overline font-weight-bold mb-4 mb-md-0"
               :style="{ fontSize: '16px !important' }"
             >
-              The Band
+              General & Merchandise Enquiries
             </h2>
             <p
               class="text-body-2 font-weight-bold bg-red-darken-2 text-brown-lighten-5 py-1 mt-2 mb-4"
