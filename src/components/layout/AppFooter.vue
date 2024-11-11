@@ -39,13 +39,13 @@ const { mobile } = useDisplay()
 .v-footer {
   border-top: solid 3px;
   @media screen and (max-width: 959px) {
-    border-image: url('@/assets/backgrounds/small/pattern-sm.avif') 20 round;
+    border-image: url('/backgrounds/small/pattern-sm.avif') 20 round;
   }
   @media screen and (min-width: 960px) and (max-width: 1279px) {
-    border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 40 round;
+    border-image: url('/backgrounds/medium/pattern-md.avif') 40 round;
   }
   @media screen and (min-width: 1280px) {
-    border-image: url('@/assets/backgrounds/large/pattern-lg.avif') 50 round;
+    border-image: url('/backgrounds/large/pattern-lg.avif') 50 round;
   }
 }
 </style>
