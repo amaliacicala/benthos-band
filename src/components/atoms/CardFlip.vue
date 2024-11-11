@@ -130,7 +130,7 @@ onMounted(reportState)
           >
             <div class="d-flex align-center">
               <v-img
-                :src="`src/assets/icons/${link.icon}.svg`"
+                :src="`/icons/${link.icon}.svg`"
                 :alt="link.name"
                 width="20px"
                 height="20px"

@@ -85,7 +85,7 @@ const { mobile, mdAndDown } = useDisplay()
               target="_blank"
             >
               <v-img
-                :src="`src/assets/icons/white/${link.icon}.png`"
+                :src="`/icons/white/${link.icon}.png`"
                 :alt="link.name"
                 width="32px"
                 height="32px"

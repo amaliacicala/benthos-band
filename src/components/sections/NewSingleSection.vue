@@ -73,10 +73,7 @@ const { mobile, mdAndDown } = useDisplay()
               :href="service.link"
               target="_blank"
             >
-              <v-img
-                :src="`src/assets/icons/white/${service.name}.png`"
-                :width="mobile ? 30 : 40"
-              />
+              <v-img :src="`/icons/white/${service.name}.png`" :width="mobile ? 30 : 40" />
             </v-btn>
           </div>
 
