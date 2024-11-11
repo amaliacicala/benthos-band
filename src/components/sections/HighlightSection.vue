@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
-import highlight_lg from '@/assets/backgrounds/large/highlight-lg.avif'
-import highlight_sm from '@/assets/backgrounds/small/highlight-sm.avif'
+import highlight_lg from '/backgrounds/large/highlight-lg.avif'
+import highlight_sm from '/backgrounds/small/highlight-sm.avif'
 
 const { mobile } = useDisplay()
 </script>

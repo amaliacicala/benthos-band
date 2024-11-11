@@ -8,8 +8,8 @@ import TourDatesSection from '@/components/sections/TourDatesSection.vue'
 import LiveVideoSection from '@/components/sections/LiveVideoSection.vue'
 import HighlightSection from '@/components/sections/HighlightSection.vue'
 
-import hero_lg from '@/assets/backgrounds/large/bg_hero_fossil-lg.avif'
-import hero_sm from '@/assets/backgrounds/small/bg_hero_fossil-sm.avif'
+import hero_lg from '/backgrounds/large/bg_hero_fossil-lg.avif'
+import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
 </script>
 
 <template>

@@ -48,15 +48,15 @@ $heading-font-family: 'Bebas Neue', sans-serif;
   animation: animatedBgHero 15s ease-in-out infinite alternate;
 
   @media screen and (max-width: 959px) {
-    background-image: url('@/assets/backgrounds/small/bg_hero_fossil-sm.avif');
+    background-image: url('/backgrounds/small/bg_hero_fossil-sm.avif');
     opacity: 1;
     animation: none;
   }
   @media screen and (min-width: 960px) and (max-width: 1279px) {
-    background-image: url('@/assets/backgrounds/medium/bg_hero_fossil-md.avif');
+    background-image: url('/backgrounds/medium/bg_hero_fossil-md.avif');
   }
   @media screen and (min-width: 1280px) {
-    background-image: url('@/assets/backgrounds/large/bg_hero_fossil-lg.avif');
+    background-image: url('/backgrounds/large/bg_hero_fossil-lg.avif');
   }
 }
 .bg-debris {
@@ -64,14 +64,14 @@ $heading-font-family: 'Bebas Neue', sans-serif;
   animation: animatedBgDebris 30s ease-in-out infinite alternate;
 
   @media screen and (max-width: 959px) {
-    background-image: url('@/assets/backgrounds/small/bg_debris-sm.avif');
+    background-image: url('/backgrounds/small/bg_debris-sm.avif');
     animation-duration: 60s;
   }
   @media screen and (min-width: 960px) and (max-width: 1279px) {
-    background-image: url('@/assets/backgrounds/medium/bg_debris-md.avif');
+    background-image: url('/backgrounds/medium/bg_debris-md.avif');
   }
   @media screen and (min-width: 1280px) {
-    background-image: url('@/assets/backgrounds/large/bg_debris-lg.avif');
+    background-image: url('/backgrounds/large/bg_debris-lg.avif');
   }
 }
 .bg-pattern {
@@ -92,14 +92,14 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     z-index: -1;
 
     @media screen and (max-width: 959px) {
-      background-image: url('@/assets/backgrounds/small/pattern-sm.avif');
+      background-image: url('/backgrounds/small/pattern-sm.avif');
       animation-duration: 60s;
     }
     @media screen and (min-width: 960px) and (max-width: 1279px) {
-      background-image: url('@/assets/backgrounds/medium/pattern-md.avif');
+      background-image: url('/backgrounds/medium/pattern-md.avif');
     }
     @media screen and (min-width: 1280px) {
-      background-image: url('@/assets/backgrounds/large/pattern-lg.avif');
+      background-image: url('/backgrounds/large/pattern-lg.avif');
     }
   }
 }
@@ -123,15 +123,15 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     z-index: -1;
 
     @media screen and (max-width: 959px) {
-      background-image: url('@/assets/backgrounds/small/bg_red-sm.avif');
+      background-image: url('/backgrounds/small/bg_red-sm.avif');
       opacity: 1;
       animation: none;
     }
     @media screen and (min-width: 960px) and (max-width: 1279px) {
-      background-image: url('@/assets/backgrounds/medium/bg_red-md.avif');
+      background-image: url('/backgrounds/medium/bg_red-md.avif');
     }
     @media screen and (min-width: 1280px) {
-      background-image: url('@/assets/backgrounds/large/bg_red-lg.avif');
+      background-image: url('/backgrounds/large/bg_red-lg.avif');
     }
   }
 }
@@ -154,14 +154,14 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     z-index: -1;
 
     @media screen and (max-width: 959px) {
-      background-image: url('@/assets/backgrounds/small/paper-sm.avif');
+      background-image: url('/backgrounds/small/paper-sm.avif');
       animation-duration: 60s;
     }
     @media screen and (min-width: 960px) and (max-width: 1279px) {
-      background-image: url('@/assets/backgrounds/medium/paper-md.avif');
+      background-image: url('/backgrounds/medium/paper-md.avif');
     }
     @media screen and (min-width: 1280px) {
-      background-image: url('@/assets/backgrounds/large/paper-lg.avif');
+      background-image: url('/backgrounds/large/paper-lg.avif');
     }
   }
 }
@@ -184,14 +184,14 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     z-index: -1;
 
     @media screen and (max-width: 959px) {
-      background-image: url('@/assets/backgrounds/small/paper-sm.avif');
+      background-image: url('/backgrounds/small/paper-sm.avif');
       animation-duration: 60s;
     }
     @media screen and (min-width: 960px) and (max-width: 1279px) {
-      background-image: url('@/assets/backgrounds/medium/paper-md.avif');
+      background-image: url('/backgrounds/medium/paper-md.avif');
     }
     @media screen and (min-width: 1280px) {
-      background-image: url('@/assets/backgrounds/large/paper-lg.avif');
+      background-image: url('/backgrounds/large/paper-lg.avif');
     }
   }
 }
@@ -213,14 +213,14 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     z-index: -1;
 
     @media screen and (max-width: 959px) {
-      background-image: url('@/assets/backgrounds/small/pattern-sm.avif');
+      background-image: url('/backgrounds/small/pattern-sm.avif');
       animation-duration: 60s;
     }
     @media screen and (min-width: 960px) and (max-width: 1279px) {
-      background-image: url('@/assets/backgrounds/medium/pattern-md.avif');
+      background-image: url('/backgrounds/medium/pattern-md.avif');
     }
     @media screen and (min-width: 1280px) {
-      background-image: url('@/assets/backgrounds/large/pattern-lg.avif');
+      background-image: url('/backgrounds/large/pattern-lg.avif');
     }
   }
 }
@@ -242,7 +242,7 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     opacity: 0.5;
     z-index: -1;
 
-    background-image: url('@/assets/backgrounds/large/bg_black_grain-lg.png');
+    background-image: url('/backgrounds/large/bg_black_grain-lg.png');
   }
 }
 .bg-black-texture {
@@ -263,7 +263,7 @@ $heading-font-family: 'Bebas Neue', sans-serif;
     opacity: 0.2;
     z-index: -1;
 
-    background-image: url('@/assets/backgrounds/large/bg_black_texture-lg.png');
+    background-image: url('/backgrounds/large/bg_black_texture-lg.png');
   }
 }
 

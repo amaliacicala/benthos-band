@@ -4,7 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 import defaultNavigation from '@/data/navigation.json'
 import epkNavigation from '@/data/epkNavigation.json'
-import logo from '@/assets/logos/benthos_logo_black.png'
+import logo from '/logos/benthos_logo_black.png'
 import AppSideMenu from '@/components/layout/AppSideMenu.vue'
 
 const { mobile } = useDisplay()
@@ -105,13 +105,13 @@ onMounted(() => {
 .v-app-bar {
   border-bottom: solid 5px;
   @media screen and (max-width: 959px) {
-    border-image: url('@/assets/backgrounds/small/pattern-sm.avif') 20 round;
+    border-image: url('/backgrounds/small/pattern-sm.avif') 20 round;
   }
   @media screen and (min-width: 960px) and (max-width: 1279px) {
-    border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 40 round;
+    border-image: url('/backgrounds/medium/pattern-md.avif') 40 round;
   }
   @media screen and (min-width: 1280px) {
-    border-image: url('@/assets/backgrounds/large/pattern-lg.avif') 50 round;
+    border-image: url('/backgrounds/large/pattern-lg.avif') 50 round;
   }
 }
 .v-img {
@@ -137,14 +137,14 @@ onMounted(() => {
 .v-card {
   border: solid 10px;
   animation: animatedBorder 3s ease-in-out infinite alternate;
-  border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 100 round;
+  border-image: url('/backgrounds/medium/pattern-md.avif') 100 round;
 }
 @keyframes animatedBorder {
   from {
-    border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 20;
+    border-image: url('/backgrounds/medium/pattern-md.avif') 20;
   }
   to {
-    border-image: url('@/assets/backgrounds/medium/pattern-md.avif') 5;
+    border-image: url('/backgrounds/medium/pattern-md.avif') 5;
   }
 }
 </style>

@@ -3,9 +3,9 @@ import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
 import epkData from '@/data/epkData.json'
 import MarkdownText from '@/components/atoms/MarkdownText.vue'
-import cover_lg from '@/assets/album_covers/large/benthos_fromnothing_cover-lg.avif'
-import cover_sm from '@/assets/album_covers/small/benthos_fromnothing_cover-sm.avif'
-import plunge_thumbnail from '@/assets/thumbnails/medium/plunge_thumbnail.jpg'
+import cover_lg from '/album_covers/large/benthos_fromnothing_cover-lg.avif'
+import cover_sm from '/album_covers/small/benthos_fromnothing_cover-sm.avif'
+import plunge_thumbnail from '/thumbnails/medium/plunge_thumbnail.jpg'
 
 const { mobile, mdAndDown } = useDisplay()
 

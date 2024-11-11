@@ -2,8 +2,8 @@
 import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
 import type { SingleStreamingLink } from '@/types/Streaming'
-import dragonfly_clip_lg from '@/assets/thumbnails/large/dragonfly_clip-lg.webm'
-import dragonfly_clip_sm from '@/assets/thumbnails/small/dragonfly_clip-sm.webm'
+import dragonfly_clip_lg from '/thumbnails/large/dragonfly_clip-lg.webm'
+import dragonfly_clip_sm from '/thumbnails/small/dragonfly_clip-sm.webm'
 
 const props = defineProps({
   overline: {

@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
-import fossil_clip_lg from '@/assets/thumbnails/large/fossil_clip-lg.webm'
-import fossil_clip_sm from '@/assets/thumbnails/small/fossil_clip-sm.webm'
-import dragonfly_clip_lg from '@/assets/thumbnails/large/dragonfly_clip-lg.webm'
-import dragonfly_clip_sm from '@/assets/thumbnails/small/dragonfly_clip-sm.webm'
-import dragonfly from '@/assets/thumbnails/medium/dragonfly_thumbnail.avif'
-import debris from '@/assets/thumbnails/medium/debris_thumbnail.avif'
-import cartesio from '@/assets/thumbnails/medium/cartesio_thumbnail.avif'
+import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
+import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
+import dragonfly_clip_lg from '/thumbnails/large/dragonfly_clip-lg.webm'
+import dragonfly_clip_sm from '/thumbnails/small/dragonfly_clip-sm.webm'
+import dragonfly from '/thumbnails/medium/dragonfly_thumbnail.avif'
+import debris from '/thumbnails/medium/debris_thumbnail.avif'
+import cartesio from '/thumbnails/medium/cartesio_thumbnail.avif'
 
 const { mobile, mdAndDown } = useDisplay()
 

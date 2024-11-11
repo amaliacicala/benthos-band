@@ -4,8 +4,8 @@ import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 import { storeToRefs } from 'pinia'
 import { useBigcartelStore } from '@/stores/bigcartel'
-import bg_lg from '@/assets/backgrounds/large/bg_red-lg.avif'
-import bg_sm from '@/assets/backgrounds/small/bg_red-sm.avif'
+import bg_lg from '/backgrounds/large/bg_red-lg.avif'
+import bg_sm from '/backgrounds/small/bg_red-sm.avif'
 import MerchItemsCard from '@/components/atoms/MerchItemsCard.vue'
 
 const bigcartelStore = useBigcartelStore()

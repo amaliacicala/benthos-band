@@ -3,8 +3,8 @@ import { useDisplay } from 'vuetify'
 import epkData from '@/data/epkData.json'
 import PageHeader from '@/components/layout/PageHeader.vue'
 import BiographyBlock from '@/components/atoms/BiographyBlock.vue'
-import about_img from '@/assets/backgrounds/large/about_img-lg.avif'
-import about_img_sm from '@/assets/backgrounds/small/about_img-sm.avif'
+import about_img from '/backgrounds/large/about_img-lg.avif'
+import about_img_sm from '/backgrounds/small/about_img-sm.avif'
 
 const { mobile } = useDisplay()
 </script>

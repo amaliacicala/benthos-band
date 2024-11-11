@@ -4,8 +4,8 @@
     "releaseType": "Single",
     "title": "Fossil",
     "releaseDate": "November 12, 2024",
-    "coverLg": "src/assets/album_covers/large/benthos_fossil_cover-lg.avif",
-    "coverSm": "src/assets/album_covers/small/benthos_fossil_cover-sm.avif",
+    "coverLg": "/album_covers/large/benthos_fossil_cover-lg.avif",
+    "coverSm": "/album_covers/small/benthos_fossil_cover-sm.avif",
     "setlist": [
       {
         "title": "Fossil",
@@ -56,8 +56,8 @@
     "title": "Talk to Me, Dragonfly!",
     "releaseType": "Live version",
     "releaseDate": "October 20, 2023",
-    "coverLg": "src/assets/album_covers/large/benthos_dissonance_cover-lg.avif",
-    "coverSm": "src/assets/album_covers/small/benthos_dissonance_cover-sm.avif",
+    "coverLg": "/album_covers/large/benthos_dissonance_cover-lg.avif",
+    "coverSm": "/album_covers/small/benthos_dissonance_cover-sm.avif",
     "setlist": [
       {
         "title": "Talk to Me, Dragonfly! (Live at Dissonance Festival)",
@@ -108,8 +108,8 @@
     "releaseType": "Alternate version",
     "title": "Debris // Essence",
     "releaseDate": "January 14, 2022",
-    "coverLg": "src/assets/album_covers/large/benthos_debris_cover-lg.avif",
-    "coverSm": "src/assets/album_covers/small/benthos_debris_cover-sm.avif",
+    "coverLg": "/album_covers/large/benthos_debris_cover-lg.avif",
+    "coverSm": "/album_covers/small/benthos_debris_cover-sm.avif",
     "setlist": [
       {
         "title": "Debris // Essence (B-Side)",
@@ -160,8 +160,8 @@
     "releaseType": "Full-length album",
     "title": "II",
     "releaseDate": "April 23, 2021",
-    "coverLg": "src/assets/album_covers/large/benthos_ii_cover-lg.avif",
-    "coverSm": "src/assets/album_covers/small/benthos_ii_cover-sm.avif",
+    "coverLg": "/album_covers/large/benthos_ii_cover-lg.avif",
+    "coverSm": "/album_covers/small/benthos_ii_cover-sm.avif",
     "setlist": [
       {
         "title": "Cartesio",

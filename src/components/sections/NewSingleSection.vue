@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { useDisplay } from 'vuetify'
 import type { SingleStreamingLink } from '@/types/Streaming'
-import insideout_logo from '@/assets/logos/insideout_logo_white.png'
-import fossil_clip_lg from '@/assets/thumbnails/large/fossil_clip-lg.webm'
-import fossil_clip_sm from '@/assets/thumbnails/small/fossil_clip-sm.webm'
+import insideout_logo from '/logos/insideout_logo_white.png'
+import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
+import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
 
 const props = defineProps({
   overline: {
