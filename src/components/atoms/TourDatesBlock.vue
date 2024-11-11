@@ -3,7 +3,7 @@ import { onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
 import { storeToRefs } from 'pinia'
 import { useBandsintownStore } from '@/stores/bandsintown'
-import icon from '@/assets/icons/bandsintown.svg'
+import icon from '/icons/bandsintown.svg'
 import NoShowsBlock from '@/components/atoms/NoShowsBlock.vue'
 import ConcertListBlock from '@/components/atoms/ConcertListBlock.vue'
 

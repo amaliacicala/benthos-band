@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import icon from '@/assets/icons/bandsintown.svg'
+import icon from '/icons/bandsintown.svg'
 
 const props = defineProps({
   notifyLink: {
