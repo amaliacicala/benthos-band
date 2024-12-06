@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
-import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
-import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
 import dragonfly_clip_lg from '/thumbnails/large/dragonfly_clip-lg.webm'
 import dragonfly_clip_sm from '/thumbnails/small/dragonfly_clip-sm.webm'
 import dragonfly from '/thumbnails/medium/dragonfly_thumbnail.avif'
@@ -28,36 +26,6 @@ const playVideo = (index: number) => {
         <p class="text-overline text-center">From the archive</p>
         <h1 class="text-md-h1 text-h2">Videos</h1>
       </div>
-
-      <!-- Fossil -->
-      <v-row class="pt-8">
-        <v-col cols="12">
-          <div class="text-center mb-4">
-            <h3 class="text-body-1 font-weight-bold">Benthos - Fossil (Official Video)</h3>
-            <p class="text-overline text-center">Released on November, 12th 2024</p>
-          </div>
-
-          <div class="d-flex flex-column align-center">
-            <a
-              href="https://www.youtube.com/watch?v=vtXFiFwSIy0"
-              class="video-thumbnail"
-              target="_blank"
-            >
-              <video
-                autoplay
-                muted
-                loop
-                :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
-                alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
-                class="video-responsive"
-              />
-              <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
-            </a>
-          </div>
-        </v-col>
-      </v-row>
-
-      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
 
       <!-- Talk to Me, Dragonfly! Live at Dissonance-->
       <v-row class="pt-8">

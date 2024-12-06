@@ -5,7 +5,10 @@ import epkData from '@/data/epkData.json'
 import MarkdownText from '@/components/atoms/MarkdownText.vue'
 import cover_lg from '/album_covers/large/benthos_fromnothing_cover-lg.avif'
 import cover_sm from '/album_covers/small/benthos_fromnothing_cover-sm.avif'
+import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
+import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
 import plunge_thumbnail from '/thumbnails/medium/plunge_thumbnail.jpg'
+import cordyceps_thumbnail from '/thumbnails/medium/cordyceps_thumbnail.jpg'
 
 const { mobile, mdAndDown } = useDisplay()
 
@@ -59,8 +62,8 @@ const playVideo = (index: number) => {
         </v-col>
       </v-row>
 
-      <v-row class="mt-md-12">
-        <v-col cols="12" md="6">
+      <v-row class="mt-8">
+        <v-col cols="8">
           <div class="rounded bg-amber-lighten-1 text-dark font-weight-bold py-4 px-6 pb-7">
             <p class="text-overline font-weight-bold" style="font-size: 16px !important">
               behind the concept
@@ -75,8 +78,91 @@ const playVideo = (index: number) => {
           </div>
         </v-col>
 
-        <v-col cols="12" md="6" class="d-flex align-center">
+        <v-col cols="4" class="d-flex flex-column justify-center">
+          <p class="text-h4">tracklist</p>
+
+          <p
+            v-for="(track, index) in epkData.albumTrackList"
+            :key="index"
+            class="text-body-2 text-md-body-1 mt-2"
+          >
+            <span style="opacity: 0.5"> {{ (index + 1).toString().padStart(2, '0') }}. </span>
+            <span class="font-weight-bold">{{ track.songTitle }}</span>
+            <span style="opacity: 0.5"> ({{ track.length }}) </span>
+          </p>
+        </v-col>
+      </v-row>
+
+      <v-divider class="border-opacity-50 mt-14 mb-4" color="brown-lighten-5" />
+
+      <!-- Fossil -->
+      <v-row class="pt-8">
+        <v-col cols="12">
+          <div class="text-center mb-4">
+            <h3 class="text-body-1 font-weight-bold">Benthos - Fossil (Official Video)</h3>
+            <p class="text-overline text-center">Released on November, 12th 2024</p>
+          </div>
+
+          <div class="d-flex flex-column align-center">
+            <a
+              href="https://www.youtube.com/watch?v=vtXFiFwSIy0"
+              class="video-thumbnail"
+              target="_blank"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
+                alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+                class="video-responsive"
+              />
+              <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
+            </a>
+          </div>
+        </v-col>
+      </v-row>
+
+      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
+
+      <!-- As a Cordyceps, Let Me Plunge -->
+      <v-row class="mt-md-12">
+        <v-col cols="12" md="6" class="d-flex flex-column align-center">
+          <div class="text-center mb-4">
+            <h3 class="text-body-1 font-weight-bold">Benthos - As a Cordyceps (Official Video)</h3>
+            <p class="text-overline text-center">To be released on February, 7th 2025</p>
+          </div>
+
           <div v-if="!isPlaying[0]" class="video-thumbnail" @click="playVideo(0)">
+            <img
+              :src="cordyceps_thumbnail"
+              alt="Thumbnail for Benthos - Let Me Plunge (Official Video)"
+              class="thumbnail-responsive"
+              height="100%"
+            />
+            <v-icon icon="fas fa-circle-play" class="play-icon" color="white" />
+          </div>
+
+          <iframe
+            v-else
+            class="video-responsive"
+            src="https://www.youtube-nocookie.com/embed/hmHaqS-Iw4w?autoplay=1&si=uK7R80xJ0KP7GLBz"
+            alt="Benthos - Let Me Plunge (Official Video)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            :style="{ height: mobile ? '200px' : '600px' }"
+          ></iframe>
+        </v-col>
+
+        <v-col cols="12" md="6" class="d-flex flex-column justify-end align-center">
+          <div class="text-center mb-4">
+            <h3 class="text-body-1 font-weight-bold">Benthos - Let Me Plunge (Official Video)</h3>
+            <p class="text-overline text-center">To be released on March, 10th 2025</p>
+          </div>
+
+          <div v-if="!isPlaying[1]" class="video-thumbnail" @click="playVideo(1)">
             <img
               :src="plunge_thumbnail"
               alt="Thumbnail for Benthos - Let Me Plunge (Official Video)"
@@ -95,23 +181,8 @@ const playVideo = (index: number) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
-            :style="{ height: mobile ? '200px' : '550px' }"
+            :style="{ height: mobile ? '200px' : '600px' }"
           ></iframe>
-        </v-col>
-      </v-row>
-
-      <v-row class="mt-8">
-        <v-col cols="12" class="d-flex flex-column justify-center align-center">
-          <p class="text-h4">tracklist</p>
-
-          <p class="text-body-2 text-md-body-1 text-center mt-2">
-            <template v-for="(track, index) in epkData.albumTrackList" :key="index">
-              <span v-if="index > 0"> // </span>
-              <span style="opacity: 0.5"> {{ (index + 1).toString().padStart(2, '0') }}. </span>
-              <span class="font-weight-bold">{{ track.songTitle }}</span>
-              <span style="opacity: 0.5"> ({{ track.length }}) </span>
-            </template>
-          </p>
         </v-col>
       </v-row>
     </v-container>
@@ -162,5 +233,13 @@ iframe {
 .thumbnail-responsive {
   width: 100%;
   height: auto;
+  filter: saturate(50%);
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    filter: saturate(100%);
+    opacity: 1;
+  }
 }
 </style>
