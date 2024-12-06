@@ -22,7 +22,7 @@ const { copy: copyTwo, copied: copiedTwo } = useClipboard()
 
   <v-list class="d-flex flex-column align-end bg-transparent pt-6">
     <v-list-item v-if="isSupported" class="d-flex flex-column pa-0">
-      <p class="text-overline font-weight-bold text-right">Management</p>
+      <p class="text-overline font-weight-bold text-right">Management – Amalia Cicala</p>
       <v-btn
         elevation="0"
         size="large"
