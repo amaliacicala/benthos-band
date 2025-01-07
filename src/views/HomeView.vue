@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import pureStreamingLinks from '@/data/pureStreamingLinks.json'
 import fossilStreamingLinks from '@/data/fossilStreamingLinks.json'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import MerchSection from '@/components/sections/MerchSection.vue'
@@ -15,13 +16,20 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
 <template>
   <HeroSection :hero-lg="hero_lg" :hero-sm="hero_sm" />
   <NewSingleSection
-    :overline="'The brand new single'"
-    :title="'Fossil'"
+    :overline="'The latest single'"
+    :title="'pure'"
+    :fan-link="'https://benthos.lnk.to/PureSingle'"
+    :single-links="pureStreamingLinks"
+    :video-link="'https://youtu.be/GZorqyd95Zk'"
+  />
+  <MerchSection />
+  <NewSingleSection
+    :overline="'Released Nov 12th, 2024'"
+    :title="'fossil'"
     :fan-link="'https://benthos.lnk.to/Fossil-Single'"
     :single-links="fossilStreamingLinks"
     :video-link="'https://youtu.be/vtXFiFwSIy0'"
   />
-  <MerchSection />
   <HighlightSection />
   <MusicSection />
   <LiveVideoSection

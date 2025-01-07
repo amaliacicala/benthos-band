@@ -32,7 +32,7 @@ onMounted(() => {
 
   // filter music released before 2024"
   releases.value = (Object.values(data) as Release[]).filter(
-    (release) => !release.releaseDate.includes('2024')
+    (release) => !release.releaseDate.includes('2024') && !release.releaseDate.includes('2025')
   )
 })
 </script>

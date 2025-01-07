@@ -114,7 +114,7 @@ const playVideo = (index: number) => {
                 muted
                 loop
                 :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
-                alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+                alt="Thumbnail for Benthos - Talk to Me, Dragonfly! (Live at Dissonance)"
                 class="video-responsive"
               />
               <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />

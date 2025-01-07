@@ -1,6 +1,58 @@
 {
-  "fossil": {
+  "pure": {
     "overline": "The latest single",
+    "releaseType": "Single",
+    "title": "Pure",
+    "releaseDate": "January 13, 2025",
+    "coverLg": "/album_covers/large/benthos_pure_cover-lg.avif",
+    "coverSm": "/album_covers/small/benthos_pure_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "Pure",
+        "length": "04:45",
+        "video": "https://youtu.be/GZorqyd95Zk"
+      }
+    ],
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": ""
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": ""
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": ""
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": ""
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://youtu.be/GZorqyd95Zk"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": ""
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": ""
+      }
+    ]
+  },
+  "fossil": {
+    "overline": "Released Nov 12th, 2024",
     "releaseType": "Single",
     "title": "Fossil",
     "releaseDate": "November 12, 2024",

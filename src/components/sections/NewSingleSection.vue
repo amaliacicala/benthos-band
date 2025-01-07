@@ -1,9 +1,12 @@
 <script lang="ts" setup>
+import { computed } from 'vue'
 import { useDisplay } from 'vuetify'
 import type { SingleStreamingLink } from '@/types/Streaming'
 import insideout_logo from '/logos/insideout_logo_white.png'
 import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
 import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
+import pure_clip_lg from '/thumbnails/large/pure_clip-lg.webm'
+import pure_clip_sm from '/thumbnails/small/pure_clip-sm.webm'
 
 const props = defineProps({
   overline: {
@@ -19,7 +22,7 @@ const props = defineProps({
     required: true
   },
   singleLinks: {
-    type: Array<SingleStreamingLink>,
+    type: Array as () => SingleStreamingLink[],
     required: true
   },
   videoLink: {
@@ -29,6 +32,22 @@ const props = defineProps({
 })
 
 const { mobile, mdAndDown } = useDisplay()
+
+const videoSources: Record<string, { lg: string; sm: string }> = {
+  fossil: {
+    lg: fossil_clip_lg,
+    sm: fossil_clip_sm
+  },
+  pure: {
+    lg: pure_clip_lg,
+    sm: pure_clip_sm
+  }
+}
+
+const videoSrc = computed(() => {
+  const key = props.title.toLowerCase()
+  return mdAndDown.value ? videoSources[key]?.sm : videoSources[key]?.lg
+})
 </script>
 
 <template>
@@ -82,17 +101,15 @@ const { mobile, mdAndDown } = useDisplay()
               autoplay
               muted
               loop
-              :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
-              alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+              :src="videoSrc"
+              :alt="`Thumbnail for Benthos - ${props.title}`"
               class="video-responsive opacity-90 rounded-lg flat-shadow"
             />
+
             <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
           </a>
 
           <footer class="d-flex flex-column justify-center align-center">
-            <!-- <p class="text-overline mb-2" :style="{ fontSize: !mobile ? '16px !important' : '' }">
-            Out November 12th, 2024
-          </p> -->
             <v-img :src="insideout_logo" :width="150" alt="InsideOut Music" />
           </footer>
         </div>

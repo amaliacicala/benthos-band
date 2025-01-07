@@ -43,7 +43,7 @@ const playVideo = (index: number) => {
               muted
               loop
               :src="mdAndDown ? dragonfly_clip_sm : dragonfly_clip_lg"
-              alt="Thumbnail for Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+              alt="Thumbnail for Benthos - Talk to Me, Dragonfly! (Live at Dissonance)"
               class="video-responsive"
             />
             <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
@@ -53,7 +53,7 @@ const playVideo = (index: number) => {
             v-else
             class="video-responsive"
             src="https://www.youtube.com/embed/ue1BDz156Z4?autoplay=1&si=KsNdpRai5xPGilx7"
-            alt="Benthos - Talk to Me, Dragonly! (Live at Dissonance)"
+            alt="Benthos - Talk to Me, Dragonfly! (Live at Dissonance)"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
