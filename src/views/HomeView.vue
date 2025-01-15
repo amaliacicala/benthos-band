@@ -18,7 +18,7 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
   <NewSingleSection
     :overline="'The latest single'"
     :title="'pure'"
-    :fan-link="'https://benthos.lnk.to/PureSingle'"
+    :fan-link="'https://ffm.to/benthos-pure'"
     :single-links="pureStreamingLinks"
     :video-link="'https://youtu.be/GZorqyd95Zk'"
   />

@@ -17,22 +17,22 @@
       {
         "name": "Spotify",
         "icon": "spotify",
-        "link": ""
+        "link": "https://open.spotify.com/track/3dU1PcqidTkDP4mHhVbDvC?si=2a4ba45c76a64e78"
       },
       {
         "name": "Apple Music",
         "icon": "apple_music",
-        "link": ""
+        "link": "https://music.apple.com/it/album/pure/1783606881?i=1783606892"
       },
       {
         "name": "Amazon Music",
         "icon": "amazon_music",
-        "link": ""
+        "link": "https://music.amazon.com/tracks/B0DPNDPMNY"
       },
       {
         "name": "TIDAL",
         "icon": "tidal",
-        "link": ""
+        "link": "https://tidal.com/browse/track/403922148"
       },
       {
         "name": "YouTube",
@@ -42,12 +42,12 @@
       {
         "name": "YouTube Music",
         "icon": "youtube_music",
-        "link": ""
+        "link": "https://music.youtube.com/watch?v=BkXpfBfwZBc&feature=shared"
       },
       {
         "name": "Deezer",
         "icon": "deezer",
-        "link": ""
+        "link": "https://deezer.page.link/CoJBdrbAFy2H5FQN7"
       }
     ]
   },
