@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import PageHeader from '@/components/layout/PageHeader.vue'
 
-const sourceOne = ref('benthos@amaliacicala.com')
+const sourceOne = ref('amalia@bands.management')
 const sourceTwo = ref('benthos.milano@gmail.com')
 
 const { isSupported } = useClipboard()

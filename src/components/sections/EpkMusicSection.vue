@@ -7,6 +7,8 @@ import cover_lg from '/album_covers/large/benthos_fromnothing_cover-lg.avif'
 import cover_sm from '/album_covers/small/benthos_fromnothing_cover-sm.avif'
 import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
 import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
+import pure_clip_lg from '/thumbnails/large/pure_clip-lg.webm'
+import pure_clip_sm from '/thumbnails/small/pure_clip-sm.webm'
 import plunge_thumbnail from '/thumbnails/medium/plunge_thumbnail.jpg'
 import cordyceps_thumbnail from '/thumbnails/medium/cordyceps_thumbnail.jpg'
 
@@ -114,7 +116,37 @@ const playVideo = (index: number) => {
                 muted
                 loop
                 :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
-                alt="Thumbnail for Benthos - Talk to Me, Dragonfly! (Live at Dissonance)"
+                alt="Thumbnail for Benthos - Fossil (Official Video)"
+                class="video-responsive"
+              />
+              <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
+            </a>
+          </div>
+        </v-col>
+      </v-row>
+
+      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
+
+      <!-- Pure -->
+      <v-row class="pt-8">
+        <v-col cols="12">
+          <div class="text-center mb-4">
+            <h3 class="text-body-1 font-weight-bold">Benthos - Pure (Official Video)</h3>
+            <p class="text-overline text-center">Released on January, 13th 2025</p>
+          </div>
+
+          <div class="d-flex flex-column align-center">
+            <a
+              href="https://www.youtube.com/watch?v=GZorqyd95Zk"
+              class="video-thumbnail"
+              target="_blank"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                :src="mdAndDown ? pure_clip_sm : pure_clip_lg"
+                alt="Thumbnail for Benthos - Pure (Official Video)"
                 class="video-responsive"
               />
               <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />

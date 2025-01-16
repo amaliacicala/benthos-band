@@ -4,7 +4,7 @@ import { useClipboard } from '@vueuse/core'
 import epkData from '@/data/epkData.json'
 import SocialMediaButtons from '@/components/atoms/SocialMediaButtons.vue'
 
-const sourceOne = ref('benthos@amaliacicala.com')
+const sourceOne = ref('amalia@bands.management')
 const sourceTwo = ref('benthos.milano@gmail.com')
 
 const { isSupported } = useClipboard()
