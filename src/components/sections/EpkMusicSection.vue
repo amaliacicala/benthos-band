@@ -65,7 +65,7 @@ const playVideo = (index: number) => {
       </v-row>
 
       <v-row class="mt-8">
-        <v-col cols="8">
+        <v-col cols="12" md="8">
           <div class="rounded bg-amber-lighten-1 text-dark font-weight-bold py-4 px-6 pb-7">
             <p class="text-overline font-weight-bold" style="font-size: 16px !important">
               behind the concept
@@ -80,7 +80,7 @@ const playVideo = (index: number) => {
           </div>
         </v-col>
 
-        <v-col cols="4" class="d-flex flex-column justify-center">
+        <v-col cols="12" md="4" class="d-flex flex-column justify-center">
           <p class="text-h4">tracklist</p>
 
           <p
@@ -96,36 +96,6 @@ const playVideo = (index: number) => {
       </v-row>
 
       <v-divider class="border-opacity-50 mt-14 mb-4" color="brown-lighten-5" />
-
-      <!-- Fossil -->
-      <v-row class="pt-8">
-        <v-col cols="12">
-          <div class="text-center mb-4">
-            <h3 class="text-body-1 font-weight-bold">Benthos - Fossil (Official Video)</h3>
-            <p class="text-overline text-center">Released on November, 12th 2024</p>
-          </div>
-
-          <div class="d-flex flex-column align-center">
-            <a
-              href="https://www.youtube.com/watch?v=vtXFiFwSIy0"
-              class="video-thumbnail"
-              target="_blank"
-            >
-              <video
-                autoplay
-                muted
-                loop
-                :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
-                alt="Thumbnail for Benthos - Fossil (Official Video)"
-                class="video-responsive"
-              />
-              <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
-            </a>
-          </div>
-        </v-col>
-      </v-row>
-
-      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
 
       <!-- Pure -->
       <v-row class="pt-8">
@@ -157,12 +127,42 @@ const playVideo = (index: number) => {
 
       <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
 
+      <!-- Fossil -->
+      <v-row class="pt-8">
+        <v-col cols="12">
+          <div class="text-center mb-4">
+            <h3 class="text-body-1 font-weight-bold">Benthos - Fossil (Official Video)</h3>
+            <p class="text-overline text-center">Released on November, 12th 2024</p>
+          </div>
+
+          <div class="d-flex flex-column align-center">
+            <a
+              href="https://www.youtube.com/watch?v=vtXFiFwSIy0"
+              class="video-thumbnail"
+              target="_blank"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                :src="mdAndDown ? fossil_clip_sm : fossil_clip_lg"
+                alt="Thumbnail for Benthos - Fossil (Official Video)"
+                class="video-responsive"
+              />
+              <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
+            </a>
+          </div>
+        </v-col>
+      </v-row>
+
+      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
+
       <!-- As a Cordyceps, Let Me Plunge -->
       <v-row class="mt-md-12">
         <v-col cols="12" md="6" class="d-flex flex-column align-center">
           <div class="text-center mb-4">
             <h3 class="text-body-1 font-weight-bold">Benthos - As a Cordyceps (Official Video)</h3>
-            <p class="text-overline text-center">To be released on February, 7th 2025</p>
+            <p class="text-overline text-center">Released on February, 7th 2025</p>
           </div>
 
           <div v-if="!isPlaying[0]" class="video-thumbnail" @click="playVideo(0)">
