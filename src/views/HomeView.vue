@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import cordycepsStreamingLinks from '@/data/cordycepsStreamingLinks.json'
 import pureStreamingLinks from '@/data/pureStreamingLinks.json'
 import fossilStreamingLinks from '@/data/fossilStreamingLinks.json'
 import HeroSection from '@/components/sections/HeroSection.vue'
+import AlbumPreOrderSection from '@/components/sections/AlbumPreOrderSection.vue'
 import MerchSection from '@/components/sections/MerchSection.vue'
 import MusicSection from '@/components/sections/MusicSection.vue'
 import NewSingleSection from '@/components/sections/NewSingleSection.vue'
@@ -17,6 +19,18 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
   <HeroSection :hero-lg="hero_lg" :hero-sm="hero_sm" />
   <NewSingleSection
     :overline="'The latest single'"
+    :title="'as a cordyceps'"
+    :fan-link="'https://ffm.to/benthos-as-a-cordyceps'"
+    :single-links="cordycepsStreamingLinks"
+    :video-link="'https://www.youtube.com/watch?v=YyU3vCAol-E'"
+  />
+  <AlbumPreOrderSection
+    :overline="'The New Album'"
+    :title="'From Nothing'"
+    :subtitle="'Coming April 11th, 2025'"
+  />
+  <NewSingleSection
+    :overline="'Released January 13th, 2025'"
     :title="'pure'"
     :fan-link="'https://ffm.to/benthos-pure'"
     :single-links="pureStreamingLinks"

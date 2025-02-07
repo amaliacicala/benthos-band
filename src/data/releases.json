@@ -1,6 +1,58 @@
 {
-  "pure": {
+  "cordyceps": {
     "overline": "The latest single",
+    "releaseType": "Single",
+    "title": "As a Cordyceps",
+    "releaseDate": "February 7, 2025",
+    "coverLg": "/album_covers/large/benthos_cordyceps_cover-lg.avif",
+    "coverSm": "/album_covers/small/benthos_cordyceps_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "As a Cordyceps",
+        "length": "03:17",
+        "video": "https://youtu.be/YyU3vCAol-E"
+      }
+    ],
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": "https://open.spotify.com/album/1lG4DjTvmFaxJE4xbxphep?si=JwmDJ6hOQ4KYGnJaAKUNHA"
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": "https://music.apple.com/it/album/as-a-cordyceps/1791135265?i=1791135269"
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": "https://music.amazon.com/albums/B0DTB4V35Z/"
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": "http://www.tidal.com/album/412307906"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://youtu.be/YyU3vCAol-E"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": "https://music.youtube.com/playlist?list=OLAK5uy_nTCd9CphApCFnEo69qV52hViTPefyqnAM"
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": "https://deezer.page.link/9pVkZJn8MmrNHLJ6A"
+      }
+    ]
+  },
+  "pure": {
+    "overline": "Released January 13th, 2025",
     "releaseType": "Single",
     "title": "Pure",
     "releaseDate": "January 13, 2025",

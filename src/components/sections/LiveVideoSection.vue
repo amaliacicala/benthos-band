@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
-import type { SingleStreamingLink } from '@/types/Streaming'
 import dragonfly_clip_lg from '/thumbnails/large/dragonfly_clip-lg.webm'
 import dragonfly_clip_sm from '/thumbnails/small/dragonfly_clip-sm.webm'
 
