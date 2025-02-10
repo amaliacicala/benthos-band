@@ -5,11 +5,12 @@ import fossilStreamingLinks from '@/data/fossilStreamingLinks.json'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import AlbumPreOrderSection from '@/components/sections/AlbumPreOrderSection.vue'
 import MerchSection from '@/components/sections/MerchSection.vue'
-import MusicSection from '@/components/sections/MusicSection.vue'
+// import MusicSection from '@/components/sections/MusicSection.vue'
 import NewSingleSection from '@/components/sections/NewSingleSection.vue'
 import TourDatesSection from '@/components/sections/TourDatesSection.vue'
-import LiveVideoSection from '@/components/sections/LiveVideoSection.vue'
+// import LiveVideoSection from '@/components/sections/LiveVideoSection.vue'
 import HighlightSection from '@/components/sections/HighlightSection.vue'
+import NewsletterSection from '@/components/sections/NewsletterSection.vue'
 
 import hero_lg from '/backgrounds/large/bg_hero_fossil-lg.avif'
 import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
@@ -17,6 +18,11 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
 
 <template>
   <HeroSection :hero-lg="hero_lg" :hero-sm="hero_sm" />
+  <AlbumPreOrderSection
+    :overline="'The New Album'"
+    :title="'From Nothing'"
+    :subtitle="'Coming April 11th, 2025'"
+  />
   <NewSingleSection
     :overline="'The latest single'"
     :title="'as a cordyceps'"
@@ -24,11 +30,7 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
     :single-links="cordycepsStreamingLinks"
     :video-link="'https://www.youtube.com/watch?v=YyU3vCAol-E'"
   />
-  <AlbumPreOrderSection
-    :overline="'The New Album'"
-    :title="'From Nothing'"
-    :subtitle="'Coming April 11th, 2025'"
-  />
+  <HighlightSection :image="'cordyceps'" />
   <NewSingleSection
     :overline="'Released January 13th, 2025'"
     :title="'pure'"
@@ -44,14 +46,15 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
     :single-links="fossilStreamingLinks"
     :video-link="'https://youtu.be/vtXFiFwSIy0'"
   />
-  <HighlightSection />
-  <MusicSection />
-  <LiveVideoSection
+  <HighlightSection :image="'fossil'" />
+  <!-- <LiveVideoSection
     :overline="'Live at Dissonance Festival'"
     :title="'Talk to Me, Dragonfly!'"
     :fan-link="'https://lnk.to/bnttlk'"
     :single-links="fossilStreamingLinks"
     :video-link="'https://www.youtube.com/watch?v=ue1BDz156Z4'"
-  />
+  /> -->
+  <!-- <MusicSection /> -->
   <TourDatesSection :show-header="true" />
+  <NewsletterSection />
 </template>
