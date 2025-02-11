@@ -18,7 +18,7 @@ export interface Product {
   category_names: [string]
 }
 
-export interface Merch {
+export interface BGMerch {
   name: string
   description?: string
   price: string

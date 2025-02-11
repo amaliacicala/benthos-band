@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia'
 import { fetchMerch } from '@/api/bigcartel'
-import type { DataAttributes, Product, Merch } from '@/types/Bigcartel'
+import type { DataAttributes, Product, BGMerch } from '@/types/Bigcartel'
 
 export const useBigcartelStore = defineStore({
   id: 'bigcartel',
   state: () => ({
-    merch: [] as Merch[],
+    merch: [] as BGMerch[],
     loading: true
   }),
 
