@@ -9,7 +9,7 @@
       "@/*": ["./src/*"]
     },
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["vuetify"],
+    "types": ["vuetify", "jest", "./types/storefront.generated.d.ts"],
     "resolveJsonModule": true,
     "module": "es2020",
     "moduleResolution": "node",

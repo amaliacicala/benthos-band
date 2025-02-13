@@ -1,7 +1,5 @@
-import { beforeEach, describe, expect, it } from '@jest/globals'
-
 import { setActivePinia, createPinia } from 'pinia'
-import { useShopifyStore } from '../../stores/shopify'
+import { useShopifyStore } from '@/stores/shopify'
 
 describe('Shopify Store', () => {
   beforeEach(() => {
