@@ -20,10 +20,75 @@ async function articles() {
     throw errors.message
   }
 
-  return data?.articles.nodes
+  return data?.articles?.nodes
 }
 
-// --- Queries --- ///
+async function createCart() {}
+
+/*prettier-ignore*/
+
+// --- Queries and mutations --- //
+/// Fragments
+const cartFragment = `
+  cart {
+    id
+    checkoutUrl
+    buyerIdentity {
+      countryCode
+    }
+    discountCodes
+    subtotalAmount {
+      amount
+      currencyCode
+    }
+    totalAmount {
+      amount
+      currencyCode
+    }
+    totalDutyAmount {
+      amount
+      currencyCode
+    }
+    totalTaxAmount {
+      amount
+      currencyCode
+    }
+    lines {
+      nodes {
+        id
+        quantity
+        cost {
+          amountPerQuantity {
+            amount
+            currencyCode
+          }
+          subtotalAmount {
+            amount
+            currencyCode
+          }
+          totalAmount {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+`
+
+const mutationFeedbackFragment = `
+  userErrors {
+    field
+    message
+  }
+  warnings {
+    code
+    message
+    target
+  }
+`
+
+/// Queries
 const Articles = `#graphql
 query Articles {
   articles {
@@ -47,3 +112,14 @@ query Articles {
     }
   }
 }`
+
+/// Mutations
+const CartCreate = `#graphql
+mutation cartCreate($input: CartInput) {
+  cartCreate(input: $input) {
+  ` + cartFragment + `
+  ` + mutationFeedbackFragment + `
+  }
+}`
+
+/*prettier-ignore*/
