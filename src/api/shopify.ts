@@ -14,7 +14,7 @@ function client(): StorefrontApiClient {
   return _client
 }
 
-async function articles() {
+export async function articles() {
   const { data, errors } = await client().request(Articles)
   if (errors) {
     throw errors.message
@@ -23,72 +23,16 @@ async function articles() {
   return data?.articles?.nodes
 }
 
-async function createCart() {}
+export async function createCart() {
+  const { data, errors } = await client().request(CartCreate)
+  if (errors) {
+    throw errors.message
+  }
 
-/*prettier-ignore*/
+  return data?.cartCreate
+}
 
 // --- Queries and mutations --- //
-/// Fragments
-const cartFragment = `
-  cart {
-    id
-    checkoutUrl
-    buyerIdentity {
-      countryCode
-    }
-    discountCodes
-    subtotalAmount {
-      amount
-      currencyCode
-    }
-    totalAmount {
-      amount
-      currencyCode
-    }
-    totalDutyAmount {
-      amount
-      currencyCode
-    }
-    totalTaxAmount {
-      amount
-      currencyCode
-    }
-    lines {
-      nodes {
-        id
-        quantity
-        cost {
-          amountPerQuantity {
-            amount
-            currencyCode
-          }
-          subtotalAmount {
-            amount
-            currencyCode
-          }
-          totalAmount {
-            amount
-            currencyCode
-          }
-        }
-      }
-    }
-  }
-`
-
-const mutationFeedbackFragment = `
-  userErrors {
-    field
-    message
-  }
-  warnings {
-    code
-    message
-    target
-  }
-`
-
-/// Queries
 const Articles = `#graphql
 query Articles {
   articles {
@@ -117,8 +61,64 @@ query Articles {
 const CartCreate = `#graphql
 mutation cartCreate($input: CartInput) {
   cartCreate(input: $input) {
-  ` + cartFragment + `
-  ` + mutationFeedbackFragment + `
+    cart {
+      id
+      checkoutUrl
+      buyerIdentity {
+        countryCode
+      }
+      discountCodes {
+        code
+        applicable
+      }
+      estimatedCost {
+        subtotalAmount {
+          amount
+          currencyCode
+        }
+        totalAmount {
+          amount
+          currencyCode
+        }
+        totalDutyAmount {
+          amount
+          currencyCode
+        }
+        totalTaxAmount {
+          amount
+          currencyCode
+        }
+      }
+      lines {
+        nodes {
+          id
+          quantity
+          cost {
+            amountPerQuantity {
+              amount
+              currencyCode
+            }
+            subtotalAmount {
+              amount
+              currencyCode
+            }
+            totalAmount {
+              amount
+              currencyCode
+            }
+          }
+        }
+      }
+    }
+    userErrors {
+      field
+      message
+    }
+    warnings {
+      code
+      message
+      target
+    }
   }
 }`
 
