@@ -5,10 +5,12 @@ import epkData from '@/data/epkData.json'
 import MarkdownText from '@/components/atoms/MarkdownText.vue'
 import cover_lg from '/album_covers/large/benthos_fromnothing_cover-lg.avif'
 import cover_sm from '/album_covers/small/benthos_fromnothing_cover-sm.avif'
-import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
-import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
+import cordyceps_clip_lg from '/thumbnails/large/cordyceps_clip-lg.webm'
+import cordyceps_clip_sm from '/thumbnails/small/cordyceps_clip-sm.webm'
 import pure_clip_lg from '/thumbnails/large/pure_clip-lg.webm'
 import pure_clip_sm from '/thumbnails/small/pure_clip-sm.webm'
+import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
+import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
 import plunge_thumbnail from '/thumbnails/medium/plunge_thumbnail.jpg'
 import cordyceps_thumbnail from '/thumbnails/medium/cordyceps_thumbnail.jpg'
 
@@ -48,7 +50,7 @@ const playVideo = (index: number) => {
               rel="noopener noreferrer"
             >
               Alejandro Chavetta</a
-            >.
+            >
           </p>
         </v-col>
 
@@ -96,6 +98,36 @@ const playVideo = (index: number) => {
       </v-row>
 
       <v-divider class="border-opacity-50 mt-14 mb-4" color="brown-lighten-5" />
+
+      <!-- As a Cordyceps -->
+      <v-row class="pt-8">
+        <v-col cols="12">
+          <div class="text-center mb-4">
+            <h3 class="text-body-1 font-weight-bold">Benthos - As a Cordyceps (Official Video)</h3>
+            <p class="text-overline text-center">Released on February, 7th 2025</p>
+          </div>
+
+          <div class="d-flex flex-column align-center">
+            <a
+              href="https://www.youtube.com/watch?v=YyU3vCAol-E"
+              class="video-thumbnail"
+              target="_blank"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                :src="mdAndDown ? cordyceps_clip_sm : cordyceps_clip_lg"
+                alt="Thumbnail for Benthos - As a Cordyceps (Official Video)"
+                class="video-responsive"
+              />
+              <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
+            </a>
+          </div>
+        </v-col>
+      </v-row>
+
+      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
 
       <!-- Pure -->
       <v-row class="pt-8">
@@ -152,69 +184,6 @@ const playVideo = (index: number) => {
               <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
             </a>
           </div>
-        </v-col>
-      </v-row>
-
-      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
-
-      <!-- As a Cordyceps, Let Me Plunge -->
-      <v-row class="mt-md-12">
-        <v-col cols="12" md="6" class="d-flex flex-column align-center">
-          <div class="text-center mb-4">
-            <h3 class="text-body-1 font-weight-bold">Benthos - As a Cordyceps (Official Video)</h3>
-            <p class="text-overline text-center">Released on February, 7th 2025</p>
-          </div>
-
-          <div v-if="!isPlaying[0]" class="video-thumbnail" @click="playVideo(0)">
-            <img
-              :src="cordyceps_thumbnail"
-              alt="Thumbnail for Benthos - Let Me Plunge (Official Video)"
-              class="thumbnail-responsive"
-              height="100%"
-            />
-            <v-icon icon="fas fa-circle-play" class="play-icon" color="white" />
-          </div>
-
-          <iframe
-            v-else
-            class="video-responsive"
-            src="https://www.youtube-nocookie.com/embed/hmHaqS-Iw4w?autoplay=1&si=uK7R80xJ0KP7GLBz"
-            alt="Benthos - Let Me Plunge (Official Video)"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            :style="{ height: mobile ? '200px' : '600px' }"
-          ></iframe>
-        </v-col>
-
-        <v-col cols="12" md="6" class="d-flex flex-column justify-end align-center">
-          <div class="text-center mb-4">
-            <h3 class="text-body-1 font-weight-bold">Benthos - Let Me Plunge (Official Video)</h3>
-            <p class="text-overline text-center">To be released on March, 10th 2025</p>
-          </div>
-
-          <div v-if="!isPlaying[1]" class="video-thumbnail" @click="playVideo(1)">
-            <img
-              :src="plunge_thumbnail"
-              alt="Thumbnail for Benthos - Let Me Plunge (Official Video)"
-              class="thumbnail-responsive"
-              height="100%"
-            />
-            <v-icon icon="fas fa-circle-play" class="play-icon" color="white" />
-          </div>
-
-          <iframe
-            v-else
-            class="video-responsive"
-            src="https://www.youtube-nocookie.com/embed/UxDaC-RhwNk?autoplay=1&si=uK7R80xJ0KP7GLBz"
-            alt="Benthos - Let Me Plunge (Official Video)"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            :style="{ height: mobile ? '200px' : '600px' }"
-          ></iframe>
         </v-col>
       </v-row>
     </v-container>
