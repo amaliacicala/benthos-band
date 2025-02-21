@@ -47,7 +47,7 @@ const navigateToUrl = (url: string) => {
           variant="flat"
           class="bg-green-lighten-2 text-body-2 text-md-body-1 mr-4 w-50 w-md-25 mt-6 mb-8"
           :size="mobile ? 'large' : 'x-large'"
-          :href="'https://benthos.lnk.to/FromNothing-Album'"
+          :href="'https://ffm.bio/benthos'"
           target="_blank"
         >
           Pre-order now
