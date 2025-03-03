@@ -16,7 +16,7 @@ export const useBandsintownStore = defineStore({
     isPastDate: () => (event: Event) => {
       const eventDate = new Date(event.date)
       const currentDate = new Date()
-      return eventDate < currentDate
+      return eventDate.getTime() < currentDate.getTime()
     }
   },
 

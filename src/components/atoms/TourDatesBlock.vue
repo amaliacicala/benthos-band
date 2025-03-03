@@ -76,12 +76,7 @@ onMounted(() => {
         :text-color="props.textColor"
       />
 
-      <ConcertListBlock
-        v-else
-        :concert-list="events"
-        :past-date="isPastDate"
-        :primary-color="props.primaryColor"
-      />
+      <ConcertListBlock v-else :concert-list="events" :primary-color="props.primaryColor" />
 
       <v-row v-if="!noUpcomingShows" class="justify-center mt-8">
         <v-btn

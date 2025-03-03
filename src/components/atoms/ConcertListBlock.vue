@@ -1,13 +1,12 @@
 <script lang="ts" setup>
+import { useBandsintownStore } from '@/stores/bandsintown'
 import type { Event } from '@/types/Bandsintown'
+import { storeToRefs } from 'pinia'
+import { onMounted } from 'vue'
 
 const props = defineProps({
   concertList: {
     type: Array<Event>,
-    required: true
-  },
-  pastDate: {
-    type: Boolean,
     required: true
   },
   primaryColor: {
@@ -15,6 +14,9 @@ const props = defineProps({
     default: 'red-darken-2'
   }
 })
+
+const bandsintownStore = useBandsintownStore()
+const { isPastDate } = storeToRefs(bandsintownStore)
 
 const formatDate = (date: string | number | Date) => {
   const optionsDate: Intl.DateTimeFormatOptions = {
@@ -29,6 +31,10 @@ const formatDate = (date: string | number | Date) => {
 
   return { datePart, weekdayTimePart }
 }
+
+onMounted(() => {
+  console.log(props.concertList)
+})
 </script>
 
 <template>
@@ -74,8 +80,8 @@ const formatDate = (date: string | number | Date) => {
         target="_blank"
         size="large"
         variant="plain"
-        :class="`bg-${props.primaryColor} text-brown-lighten-5 flat-shadow`"
-        :disabled="props.pastDate"
+        :class="`bg-${props.primaryColor} text-brown-lighten-5 flat-shadow opacity-100`"
+        :disabled="isPastDate(event)"
       >
         buy tickets
       </v-btn>
