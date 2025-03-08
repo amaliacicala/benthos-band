@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import plungeStreamingLinks from '@/data/plungeStreamingLinks.json'
 import cordycepsStreamingLinks from '@/data/cordycepsStreamingLinks.json'
 import pureStreamingLinks from '@/data/pureStreamingLinks.json'
 import fossilStreamingLinks from '@/data/fossilStreamingLinks.json'
@@ -25,12 +26,20 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
   />
   <NewSingleSection
     :overline="'The latest single'"
+    :title="'let me plunge'"
+    :fan-link="'https://ffm.to/benthos-let-me-plunge'"
+    :single-links="plungeStreamingLinks"
+    :video-link="'https://www.youtube.com/watch?v=b2SJj3cd1NE'"
+  />
+  <HighlightSection :image="'plunge'" />
+  <NewSingleSection
+    :overline="'Released February 7th, 2025'"
     :title="'as a cordyceps'"
     :fan-link="'https://ffm.to/benthos-as-a-cordyceps'"
     :single-links="cordycepsStreamingLinks"
     :video-link="'https://www.youtube.com/watch?v=YyU3vCAol-E'"
   />
-  <HighlightSection :image="'cordyceps'" />
+  <MerchSection />
   <NewSingleSection
     :overline="'Released January 13th, 2025'"
     :title="'pure'"
@@ -38,7 +47,7 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
     :single-links="pureStreamingLinks"
     :video-link="'https://youtu.be/GZorqyd95Zk'"
   />
-  <MerchSection />
+  <HighlightSection :image="'fossil'" />
   <NewSingleSection
     :overline="'Released Nov 12th, 2024'"
     :title="'fossil'"
@@ -46,7 +55,6 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
     :single-links="fossilStreamingLinks"
     :video-link="'https://youtu.be/vtXFiFwSIy0'"
   />
-  <HighlightSection :image="'fossil'" />
   <!-- <LiveVideoSection
     :overline="'Live at Dissonance Festival'"
     :title="'Talk to Me, Dragonfly!'"

@@ -1,6 +1,58 @@
 {
-  "cordyceps": {
+  "plunge": {
     "overline": "The latest single",
+    "releaseType": "Single",
+    "title": "Let Me Plunge",
+    "releaseDate": "March 10th, 2025",
+    "coverLg": "/album_covers/large/benthos_plunge_cover-lg.avif",
+    "coverSm": "/album_covers/small/benthos_plunge_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "Let Me Plunge",
+        "length": "03:59",
+        "video": "https://www.youtube.com/watch?v=b2SJj3cd1NE"
+      }
+    ],
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": ""
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": ""
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": ""
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": ""
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://www.youtube.com/watch?v=b2SJj3cd1NE"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": ""
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": ""
+      }
+    ]
+  },
+  "cordyceps": {
+    "overline": "Released February 7th, 2025",
     "releaseType": "Single",
     "title": "As a Cordyceps",
     "releaseDate": "February 7, 2025",

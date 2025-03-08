@@ -1,0 +1,30 @@
+[
+  {
+    "name": "spotify",
+    "link": ""
+  },
+  {
+    "name": "apple_music",
+    "link": ""
+  },
+  {
+    "name": "amazon_music",
+    "link": ""
+  },
+  {
+    "name": "tidal",
+    "link": ""
+  },
+  {
+    "name": "youtube",
+    "link": "https://www.youtube.com/watch?v=b2SJj3cd1NE"
+  },
+  {
+    "name": "youtube_music",
+    "link": ""
+  },
+  {
+    "name": "deezer",
+    "link": ""
+  }
+]

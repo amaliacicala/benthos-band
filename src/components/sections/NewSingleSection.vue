@@ -9,6 +9,8 @@ import pure_clip_lg from '/thumbnails/large/pure_clip-lg.webm'
 import pure_clip_sm from '/thumbnails/small/pure_clip-sm.webm'
 import cordyceps_clip_lg from '/thumbnails/large/cordyceps_clip-lg.webm'
 import cordyceps_clip_sm from '/thumbnails/small/cordyceps_clip-sm.webm'
+import plunge_clip_lg from '/thumbnails/large/plunge_clip-lg.webm'
+import plunge_clip_sm from '/thumbnails/small/plunge_clip-sm.webm'
 
 const props = defineProps({
   overline: {
@@ -47,6 +49,10 @@ const videoSources: Record<string, { lg: string; sm: string }> = {
   'as a cordyceps': {
     lg: cordyceps_clip_lg,
     sm: cordyceps_clip_sm
+  },
+  'let me plunge': {
+    lg: plunge_clip_lg,
+    sm: plunge_clip_sm
   }
 }
 
