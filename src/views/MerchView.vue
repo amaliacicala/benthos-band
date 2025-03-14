@@ -45,7 +45,7 @@ const { mobile, mdAndDown } = useDisplay()
 
         <v-img
           :src="mdAndDown ? merch_mockups_sm : merch_mockups_lg"
-          :class="[mdAndDown ? 'px-4' : '', 'cursor-pointer py-8']"
+          :class="[mdAndDown ? 'px-4' : '', 'py-8']"
           alt="Benthos Official Merchandise"
           :width="mdAndDown ? '100%' : '80%'"
           eager
