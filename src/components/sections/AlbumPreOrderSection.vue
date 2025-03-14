@@ -101,10 +101,10 @@ const navigateToUrl = (url: string) => {
             variant="flat"
             class="text-body-2 text-md-body-15 bg-green-lighten-2 text-dark"
             :size="mobile ? 'large' : 'x-large'"
-            :href="'https://centurymedia.store/search?q=benthos&options%5Bprefix%5D=last'"
+            :href="'https://burningshed.com/index.php?route=product/search&filter_name=benthos&filter_sub_category=true'"
             target="_blank"
           >
-            Century Media (US)
+            Burning Shed (UK)
           </v-btn>
         </div>
 
@@ -113,15 +113,20 @@ const navigateToUrl = (url: string) => {
           :style="{ gap: mdAndDown ? '12px' : '24px' }"
         >
           <v-btn
-            variant="flat"
-            class="text-body-2 text-md-body-15 bg-green-lighten-2 text-dark"
+            variant="outlined"
+            class="text-body-2 text-primary"
             :size="mobile ? 'large' : 'x-large'"
-            :href="'https://burningshed.com/index.php?route=product/search&filter_name=benthos&filter_sub_category=true'"
+            :href="'https://www.amazon.co.uk/dp/B0DTB5M7TP/ref=sr_1_2?crid=1IRR1CUYTH26D&dib=eyJ2IjoiMSJ9.Ao7b20ky5vAHuVo3giwi9LJSsaONRIeHvaHbOgT29-saQOpjJ9kii3aljCAkXKl4l4MKqwXpHbq-m7R8fIUAnqP7I36AV_3PX7tInem--wc.Z8tTdDvysOeDW7BjflbLoIRDrS7Ly7qsG0DfF879IAA&dib_tag=se&keywords=benthos+from+nothing&qid=1739194887&sprefix=benthos+from+nothing%2Caps%2C98&sr=8-2'"
             target="_blank"
           >
-            Burning Shed (UK)
+            MerchBooth - Benthos Official Store (US, Canada & Worldwide)
           </v-btn>
+        </div>
 
+        <div
+          class="d-flex justify-center align-center flex-wrap mt-4 mt-md-6"
+          :style="{ gap: mdAndDown ? '12px' : '24px' }"
+        >
           <v-btn
             variant="flat"
             class="text-body-2 text-md-body-15 bg-green-lighten-2 text-dark"
@@ -146,7 +151,7 @@ const navigateToUrl = (url: string) => {
         <v-img
           :src="mdAndDown ? fromnothing_mockups_sm : fromnothing_mockups_lg"
           :class="[mdAndDown ? 'px-4' : '', 'cursor-pointer pt-6']"
-          @click="navigateToUrl('https://benthos.lnk.to/FromNothing-Album')"
+          @click="navigateToUrl('https://ffm.bio/benthos')"
           alt="Benthos - From Nothing"
           :width="mdAndDown ? '100%' : '80%'"
           eager

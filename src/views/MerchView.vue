@@ -1,57 +1,10 @@
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue'
 import { useDisplay } from 'vuetify'
-import { storeToRefs } from 'pinia'
-import { useBigcartelStore } from '@/stores/bigcartel'
 import PageHeader from '@/components/layout/PageHeader.vue'
-import MerchItemsCard from '@/components/atoms/MerchItemsCard.vue'
+import merch_mockups_sm from '/images/merch_mockups-sm.png'
+import merch_mockups_lg from '/images/merch_mockups-lg.png'
 
-const { mobile } = useDisplay()
-
-const bigcartelStore = useBigcartelStore()
-const { loading, merch } = storeToRefs(bigcartelStore)
-
-const selectedCategory = ref('all')
-const showAvailableOnly = ref(false)
-const sortBy = ref('Price: Low to High')
-
-const parsePrice = (price: string) => {
-  return parseFloat(price.replace(/[^\d.-]/g, '')) || 0
-}
-
-const filteredMerch = computed(() => {
-  let filteredItems = [...merch.value]
-
-  // filter by category
-  if (selectedCategory.value !== 'all') {
-    filteredItems = filteredItems.filter((item) =>
-      selectedCategory.value === 'Apparel'
-        ? item.category.includes('T-shirt')
-        : item.category.includes(selectedCategory.value)
-    )
-  }
-
-  // filter by availability
-  if (showAvailableOnly.value) {
-    filteredItems = filteredItems.filter((item) => item.status !== 'sold_out')
-  }
-
-  // sort by price
-  filteredItems.sort((a, b) => {
-    const priceA = parsePrice(a.price)
-    const priceB = parsePrice(b.price)
-
-    if (sortBy.value === 'Price: Low to High') return priceA - priceB
-    if (sortBy.value === 'Price: High to Low') return priceB - priceA
-    return 0
-  })
-
-  return filteredItems
-})
-
-onMounted(() => {
-  bigcartelStore.loadMerch()
-})
+const { mobile, mdAndDown } = useDisplay()
 </script>
 
 <template>
@@ -61,48 +14,42 @@ onMounted(() => {
     </v-container>
 
     <v-fade-transition appear>
-      <v-container>
-        <v-row class="d-flex align-end px-4 px-md-0">
-          <v-col cols="12" md="4" class="py-0">
-            <v-checkbox v-model="showAvailableOnly" hide-details label="show available only" />
-          </v-col>
-
-          <v-col cols="12" md="4">
-            <v-select
-              v-model="selectedCategory"
-              hide-details
-              :items="['all', 'Apparel', 'Music']"
-              label="Filter by Category"
-            />
-          </v-col>
-
-          <v-col cols="12" md="4">
-            <v-select
-              v-model="sortBy"
-              hide-details
-              :items="['Price: Low to High', 'Price: High to Low']"
-              label="Sort by Price"
-            />
-          </v-col>
-        </v-row>
-
-        <v-row class="mt-8 mb-4 my-md-8 mx-4 mx-md-4 justify-end font-weight-bold">
-          <p>
-            {{ filteredMerch.length + ' ' + (filteredMerch.length === 1 ? 'product' : 'products') }}
-          </p>
-        </v-row>
-
-        <div v-if="loading" class="d-flex align-center justify-center my-16">
-          <v-progress-circular color="brown-lighten-5" size="50" indeterminate />
-        </div>
-
-        <div
-          v-else
-          class="d-flex justify-center flex-wrap"
-          :style="{ gap: mobile ? '18px' : '32px' }"
+      <v-container
+        class="d-flex flex-column justify-center align-center py-0 px-md-0 px-6"
+        :style="{ gap: '1rem' }"
+      >
+        <p class="text-h4 text-brown-lighten-5 text-center pb-6">
+          Shop official Benthos merch from the stores below.
+        </p>
+        <v-btn
+          variant="flat"
+          class="bg-brown-lighten-5 w-md-50 w-100"
+          height="4rem"
+          :size="mobile ? 'large' : 'x-large'"
+          :href="'http://store.benthos-band.com/'"
+          target="_blank"
         >
-          <MerchItemsCard :merch="filteredMerch" />
-        </div>
+          EU & UK STORE
+        </v-btn>
+
+        <v-btn
+          variant="flat"
+          class="bg-brown-lighten-5 w-md-50 w-100"
+          height="4rem"
+          :size="mobile ? 'large' : 'x-large'"
+          :href="'https://merchbooth.net/benthos/'"
+          target="_blank"
+        >
+          US, CANADA & WORLDWIDE STORE
+        </v-btn>
+
+        <v-img
+          :src="mdAndDown ? merch_mockups_sm : merch_mockups_lg"
+          :class="[mdAndDown ? 'px-4' : '', 'cursor-pointer py-8']"
+          alt="Benthos Official Merchandise"
+          :width="mdAndDown ? '100%' : '80%'"
+          eager
+        />
       </v-container>
     </v-fade-transition>
   </div>

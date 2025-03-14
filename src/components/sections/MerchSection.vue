@@ -1,30 +1,16 @@
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
-import { storeToRefs } from 'pinia'
-import { useBigcartelStore } from '@/stores/bigcartel'
 import bg_lg from '/backgrounds/large/bg_red-lg.avif'
 import bg_sm from '/backgrounds/small/bg_red-sm.avif'
-import MerchItemsCard from '@/components/atoms/MerchItemsCard.vue'
+import merch_mockups_sm from '/images/merch_mockups-sm.png'
+import merch_mockups_lg from '/images/merch_mockups-lg.png'
 
-const bigcartelStore = useBigcartelStore()
-const { loading, merch } = storeToRefs(bigcartelStore)
-
-const router = useRouter()
-
-const { mobile } = useDisplay()
-
-const model = ref(0)
-
-onMounted(() => {
-  bigcartelStore.loadMerch()
-})
+const { mobile, mdAndDown } = useDisplay()
 </script>
 
 <template>
   <v-lazy transition="fade-transition">
-    <v-parallax :src="mobile ? bg_sm : bg_lg" :style="{ maxHeight: '860px' }">
+    <v-parallax :src="mobile ? bg_sm : bg_lg">
       <v-container>
         <div class="d-flex flex-column align-center pt-16" :style="{ gap: '24px' }">
           <div class="text-center">
@@ -32,46 +18,39 @@ onMounted(() => {
             <h1 class="text-md-h1 text-h2">Merchandise</h1>
           </div>
 
-          <v-progress-circular
-            v-if="loading"
-            color="primary"
-            size="50"
-            class="my-16"
-            indeterminate
+          <v-img
+            :src="mdAndDown ? merch_mockups_sm : merch_mockups_lg"
+            :class="[mdAndDown ? 'px-4' : '', 'cursor-pointer']"
+            alt="Benthos Official Merchandise"
+            :width="mdAndDown ? '100%' : '80%'"
+            eager
           />
 
-          <v-slide-group
-            v-else
-            v-model="model"
-            show-arrows
-            mandatory
-            center-active
-            :style="{ maxWidth: '100%', gap: '24px' }"
-          >
-            <v-slide-group-item v-for="(item, index) in merch" :key="index">
-              <MerchItemsCard :merch="[item]" />
-            </v-slide-group-item>
-          </v-slide-group>
-        </div>
+          <div class="d-flex justify-center pt-10" :style="{ gap: '2rem' }">
+            <v-btn
+              variant="outlined"
+              class="text-brown-lighten-5 w-md-75 w-100"
+              height="4rem"
+              :size="mobile ? 'large' : 'x-large'"
+              :href="'http://store.benthos-band.com/'"
+              target="_blank"
+            >
+              EU & UK STORE
+            </v-btn>
 
-        <div class="d-flex justify-center py-8">
-          <v-btn
-            variant="outlined"
-            class="text-body-2 text-md-body-1 mr-4 w-50 w-md-25"
-            :size="mobile ? 'large' : 'x-large'"
-            @click="router.push({ name: 'Merch' })"
-          >
-            Shop Merch
-          </v-btn>
+            <v-btn
+              variant="outlined"
+              class="text-brown-lighten-5 w-md-75 w-100"
+              height="4rem"
+              :size="mobile ? 'large' : 'x-large'"
+              :href="'https://merchbooth.net/benthos/'"
+              target="_blank"
+            >
+              US, CANADA & WORLDWIDE STORE
+            </v-btn>
+          </div>
         </div>
       </v-container>
     </v-parallax>
   </v-lazy>
 </template>
-
-<style lang="scss" scoped>
-:deep(.mdi) {
-  font-size: 40px !important;
-  color: rgb(var(--v-theme-primary)) !important;
-}
-</style>
