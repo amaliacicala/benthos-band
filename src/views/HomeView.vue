@@ -2,7 +2,7 @@
 import plungeStreamingLinks from '@/data/plungeStreamingLinks.json'
 import cordycepsStreamingLinks from '@/data/cordycepsStreamingLinks.json'
 import pureStreamingLinks from '@/data/pureStreamingLinks.json'
-import fossilStreamingLinks from '@/data/fossilStreamingLinks.json'
+// import fossilStreamingLinks from '@/data/fossilStreamingLinks.json'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import AlbumPreOrderSection from '@/components/sections/AlbumPreOrderSection.vue'
 import MerchSection from '@/components/sections/MerchSection.vue'
@@ -32,6 +32,7 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
     :video-link="'https://www.youtube.com/watch?v=b2SJj3cd1NE'"
   />
   <HighlightSection :image="'plunge'" />
+  <MerchSection />
   <NewSingleSection
     :overline="'Released February 7th, 2025'"
     :title="'as a cordyceps'"
@@ -39,7 +40,7 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
     :single-links="cordycepsStreamingLinks"
     :video-link="'https://www.youtube.com/watch?v=YyU3vCAol-E'"
   />
-  <MerchSection />
+  <HighlightSection :image="'fossil'" />
   <NewSingleSection
     :overline="'Released January 13th, 2025'"
     :title="'pure'"
@@ -47,14 +48,13 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
     :single-links="pureStreamingLinks"
     :video-link="'https://youtu.be/GZorqyd95Zk'"
   />
-  <HighlightSection :image="'fossil'" />
-  <NewSingleSection
+  <!-- <NewSingleSection
     :overline="'Released Nov 12th, 2024'"
     :title="'fossil'"
     :fan-link="'https://benthos.lnk.to/Fossil-Single'"
     :single-links="fossilStreamingLinks"
     :video-link="'https://youtu.be/vtXFiFwSIy0'"
-  />
+  /> -->
   <!-- <LiveVideoSection
     :overline="'Live at Dissonance Festival'"
     :title="'Talk to Me, Dragonfly!'"
@@ -63,6 +63,7 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
     :video-link="'https://www.youtube.com/watch?v=ue1BDz156Z4'"
   /> -->
   <!-- <MusicSection /> -->
+  <HighlightSection :image="'live'" />
   <TourDatesSection :show-header="true" />
   <NewsletterSection />
 </template>

@@ -2,7 +2,6 @@
 import { computed } from 'vue'
 import { useDisplay } from 'vuetify'
 import type { SingleStreamingLink } from '@/types/Streaming'
-import insideout_logo from '/logos/insideout_logo_white.png'
 import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
 import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
 import pure_clip_lg from '/thumbnails/large/pure_clip-lg.webm'
@@ -120,10 +119,6 @@ const videoSrc = computed(() => {
 
             <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
           </a>
-
-          <footer class="d-flex flex-column justify-center align-center">
-            <v-img :src="insideout_logo" :width="150" alt="InsideOut Music" />
-          </footer>
         </div>
       </v-container>
     </v-lazy>

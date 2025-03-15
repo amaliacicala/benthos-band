@@ -6,6 +6,7 @@ import cover_lg from '/album_covers/large/benthos_fromnothing_cover-lg.avif'
 import cover_sm from '/album_covers/small/benthos_fromnothing_cover-sm.avif'
 import fromnothing_mockups_lg from '/images/fromnothing_mockups-lg.png'
 import fromnothing_mockups_sm from '/images/fromnothing_mockups-sm.png'
+import insideout_logo from '/logos/insideout_logo_white.png'
 
 const props = defineProps({
   overline: {
@@ -150,12 +151,16 @@ const navigateToUrl = (url: string) => {
 
         <v-img
           :src="mdAndDown ? fromnothing_mockups_sm : fromnothing_mockups_lg"
-          :class="[mdAndDown ? 'px-4' : '', 'cursor-pointer pt-6']"
+          :class="[mdAndDown ? 'px-4' : '', 'cursor-pointer mt-6']"
           @click="navigateToUrl('https://ffm.bio/benthos')"
           alt="Benthos - From Nothing"
           :width="mdAndDown ? '100%' : '80%'"
           eager
         />
+
+        <footer class="d-flex flex-column justify-center align-center opacity-70 mt-6">
+          <v-img :src="insideout_logo" :width="120" alt="InsideOut Music" />
+        </footer>
       </v-container>
     </v-lazy>
   </div>

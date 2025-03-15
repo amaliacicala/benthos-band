@@ -6,6 +6,7 @@ import fossil_highlight_sm from '/backgrounds/small/fossil_highlight-sm.avif'
 import cordyceps_highlight_lg from '/backgrounds/large/cordyceps_highlight-lg.jpg'
 import cordyceps_highlight_sm from '/backgrounds/large/cordyceps_highlight-lg.jpg'
 import plunge_highlight from '/backgrounds/large/bg_hero-lg.avif'
+import live_highlight from '/backgrounds/large/bg_live-lg.avif'
 
 const props = defineProps({
   image: {
@@ -23,6 +24,8 @@ const imageSrc = computed(() => {
     return mobile.value ? cordyceps_highlight_sm : cordyceps_highlight_lg
   } else if (props.image === 'plunge') {
     return plunge_highlight
+  } else if (props.image === 'live') {
+    return live_highlight
   }
   return ''
 })
