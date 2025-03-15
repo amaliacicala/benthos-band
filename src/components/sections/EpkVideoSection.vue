@@ -24,7 +24,7 @@ const playVideo = (index: number) => {
     <v-container>
       <div class="d-flex flex-column align-center">
         <p class="text-overline text-center">From the archive</p>
-        <h1 class="text-md-h1 text-h2">Videos</h1>
+        <h1 class="text-md-h1 text-h2">LIVE PERFORMANCES</h1>
       </div>
 
       <!-- Talk to Me, Dragonfly! Live at Dissonance-->
@@ -62,7 +62,7 @@ const playVideo = (index: number) => {
           ></iframe>
         </v-col>
       </v-row>
-
+      <!--
       <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
 
       <h3 class="text-body-1 font-weight-bold text-center mb-8">
@@ -138,7 +138,7 @@ const playVideo = (index: number) => {
             :style="{ height: mobile ? '100%' : '315px' }"
           ></iframe>
         </v-col>
-      </v-row>
+      </v-row> -->
     </v-container>
   </div>
 </template>
