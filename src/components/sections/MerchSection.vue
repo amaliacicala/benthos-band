@@ -26,7 +26,10 @@ const { mobile, mdAndDown } = useDisplay()
             eager
           />
 
-          <div class="d-flex justify-center pt-10" :style="{ gap: '2rem' }">
+          <div
+            class="d-flex flex-column flex-md-row justify-center pt-4 pb-6 pb-md-0 pt-md-10"
+            :style="{ gap: mobile ? '1rem' : '2rem' }"
+          >
             <v-btn
               variant="outlined"
               class="text-brown-lighten-5 w-md-75 w-100"

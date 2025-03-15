@@ -22,5 +22,9 @@
   {
     "name": "youtube",
     "link": "https://www.youtube.com/@benthos"
+  },
+  {
+    "name": "bandcamp",
+    "link": "https://benthosmusic.bandcamp.com/"
   }
 ]

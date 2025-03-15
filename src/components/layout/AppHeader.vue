@@ -93,7 +93,7 @@ onMounted(() => {
         class="justify-start"
         transition="slide-x-transition"
       >
-        <v-card height="100%" class="py-2 px-4 bg-brown-lighten-5" rounded="0">
+        <v-card height="100%" class="d-flex justify-center py-2 bg-brown-lighten-5" rounded="0">
           <AppSideMenu :nav-links="navigation" @close="showDialog = false" />
         </v-card>
       </v-dialog>

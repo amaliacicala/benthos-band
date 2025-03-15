@@ -119,7 +119,7 @@ const navigateToUrl = (url: string) => {
             :href="'https://www.amazon.co.uk/dp/B0DTB5M7TP/ref=sr_1_2?crid=1IRR1CUYTH26D&dib=eyJ2IjoiMSJ9.Ao7b20ky5vAHuVo3giwi9LJSsaONRIeHvaHbOgT29-saQOpjJ9kii3aljCAkXKl4l4MKqwXpHbq-m7R8fIUAnqP7I36AV_3PX7tInem--wc.Z8tTdDvysOeDW7BjflbLoIRDrS7Ly7qsG0DfF879IAA&dib_tag=se&keywords=benthos+from+nothing&qid=1739194887&sprefix=benthos+from+nothing%2Caps%2C98&sr=8-2'"
             target="_blank"
           >
-            MerchBooth - Benthos Official Store (US, Canada & Worldwide)
+            MerchBooth (US, Canada & Worldwide)
           </v-btn>
         </div>
 
