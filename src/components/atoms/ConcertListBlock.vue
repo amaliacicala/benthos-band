@@ -80,7 +80,10 @@ onMounted(() => {
         target="_blank"
         size="large"
         variant="plain"
-        :class="`bg-${props.primaryColor} text-brown-lighten-5 flat-shadow opacity-100`"
+        :class="[
+          `bg-${props.primaryColor} text-brown-lighten-5`,
+          isPastDate(event) ? 'opacity-40' : 'opacity-100 flat-shadow'
+        ]"
         :disabled="isPastDate(event)"
       >
         buy tickets
