@@ -27,17 +27,29 @@ export const useBandsintownStore = defineStore({
 
         const bandsintownEvents = await fetchEvents(showPastEvents)
 
-        this.events = bandsintownEvents
-          .map((e: EventData) => ({
-            name: e.title,
-            date: new Date(e.datetime),
-            venue: e.venue.name,
-            city: e.venue.city,
-            country: e.venue.country,
-            eventUrl: e.url,
-            ticketsUrl: e.offers[0]?.url
-          }))
-          .sort((a: any, b: any) => b.date.getTime() - a.date.getTime()) // sort the events from most recent to oldest
+        this.events = bandsintownEvents.map((e: EventData) => ({
+          name: e.title,
+          date: new Date(e.datetime),
+          venue: e.venue.name,
+          city: e.venue.city,
+          country: e.venue.country,
+          eventUrl: e.url,
+          ticketsUrl: e.offers[0]?.url
+        }))
+
+        const now = new Date().getTime()
+
+        // sort upcoming events as earliest first (ascending)
+        const upcomingEvents = this.events
+          .filter((event) => new Date(event.date).getTime() >= now)
+          .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+
+        // sort past events as latest first (descending)
+        const pastEvents = this.events
+          .filter((event) => new Date(event.date).getTime() < now)
+          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
+        this.events = [...upcomingEvents, ...pastEvents]
 
         // show "Notify Me" if no events are found
         if (this.events.length === 0) {
