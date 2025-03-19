@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
 import { useDisplay } from 'vuetify'
 import epkData from '@/data/epkData.json'
 import MarkdownText from '@/components/atoms/MarkdownText.vue'
@@ -11,16 +10,10 @@ import pure_clip_lg from '/thumbnails/large/pure_clip-lg.webm'
 import pure_clip_sm from '/thumbnails/small/pure_clip-sm.webm'
 import fossil_clip_lg from '/thumbnails/large/fossil_clip-lg.webm'
 import fossil_clip_sm from '/thumbnails/small/fossil_clip-sm.webm'
-import plunge_thumbnail from '/thumbnails/medium/plunge_thumbnail.jpg'
-import cordyceps_thumbnail from '/thumbnails/medium/cordyceps_thumbnail.jpg'
+import plunge_clip_lg from '/thumbnails/large/plunge_clip-lg.webm'
+import plunge_clip_sm from '/thumbnails/small/plunge_clip-sm.webm'
 
-const { mobile, mdAndDown } = useDisplay()
-
-const isPlaying = ref([false])
-
-const playVideo = (index: number) => {
-  isPlaying.value[index] = true
-}
+const { mdAndDown } = useDisplay()
 </script>
 
 <template>
@@ -99,9 +92,34 @@ const playVideo = (index: number) => {
 
       <v-divider class="border-opacity-50 mt-14 mb-4" color="brown-lighten-5" />
 
-      <!-- As a Cordyceps -->
+      <!-- As a Cordyceps, Let Me Plunge -->
       <v-row class="pt-8">
-        <v-col cols="12">
+        <v-col cols="12" md="6">
+          <div class="text-center mb-4">
+            <h3 class="text-body-1 font-weight-bold">Benthos - Let Me Plunge (Official Video)</h3>
+            <p class="text-overline text-center">Released on March, 10th 2025</p>
+          </div>
+
+          <div class="d-flex flex-column align-center">
+            <a
+              href="https://www.youtube.com/watch?v=b2SJj3cd1NE"
+              class="video-thumbnail"
+              target="_blank"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                :src="mdAndDown ? plunge_clip_sm : plunge_clip_lg"
+                alt="Thumbnail for Benthos - As a Cordyceps (Official Video)"
+                class="video-responsive"
+              />
+              <v-icon icon="fas fa-circle-play" class="play-icon" color="brown-lighten-5" />
+            </a>
+          </div>
+        </v-col>
+
+        <v-col cols="12" md="6">
           <div class="text-center mb-4">
             <h3 class="text-body-1 font-weight-bold">Benthos - As a Cordyceps (Official Video)</h3>
             <p class="text-overline text-center">Released on February, 7th 2025</p>
@@ -127,11 +145,9 @@ const playVideo = (index: number) => {
         </v-col>
       </v-row>
 
-      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
-
-      <!-- Pure -->
+      <!-- Pure, Fossil -->
       <v-row class="pt-8">
-        <v-col cols="12">
+        <v-col cols="12" md="6">
           <div class="text-center mb-4">
             <h3 class="text-body-1 font-weight-bold">Benthos - Pure (Official Video)</h3>
             <p class="text-overline text-center">Released on January, 13th 2025</p>
@@ -155,13 +171,8 @@ const playVideo = (index: number) => {
             </a>
           </div>
         </v-col>
-      </v-row>
 
-      <v-divider class="border-opacity-50 my-12" color="brown-lighten-5" />
-
-      <!-- Fossil -->
-      <v-row class="pt-8">
-        <v-col cols="12">
+        <v-col cols="12" md="6">
           <div class="text-center mb-4">
             <h3 class="text-body-1 font-weight-bold">Benthos - Fossil (Official Video)</h3>
             <p class="text-overline text-center">Released on November, 12th 2024</p>
@@ -199,10 +210,16 @@ a:active {
 a:hover {
   color: rgb(var(--v-theme-red-lighten-2)) !important;
 }
-
 .video-thumbnail {
   position: relative;
   cursor: pointer;
+
+  video {
+    filter: grayscale(100%) contrast(90%) brightness(80%);
+    &:hover {
+      filter: grayscale(0%) contrast(100%) brightness(100%);
+    }
+  }
 }
 .play-icon {
   position: absolute;
