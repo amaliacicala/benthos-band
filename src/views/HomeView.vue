@@ -4,7 +4,7 @@ import cordycepsStreamingLinks from '@/data/cordycepsStreamingLinks.json'
 import pureStreamingLinks from '@/data/pureStreamingLinks.json'
 // import fossilStreamingLinks from '@/data/fossilStreamingLinks.json'
 import HeroSection from '@/components/sections/HeroSection.vue'
-import AlbumPreOrderSection from '@/components/sections/AlbumPreOrderSection.vue'
+import AlbumSection from '@/components/sections/AlbumSection.vue'
 import MerchSection from '@/components/sections/MerchSection.vue'
 // import MusicSection from '@/components/sections/MusicSection.vue'
 import NewSingleSection from '@/components/sections/NewSingleSection.vue'
@@ -19,11 +19,7 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
 
 <template>
   <HeroSection :hero-lg="hero_lg" :hero-sm="hero_sm" />
-  <AlbumPreOrderSection
-    :overline="'The New Album'"
-    :title="'From Nothing'"
-    :subtitle="'Coming April 11th, 2025'"
-  />
+  <AlbumSection :overline="'The New Album'" :title="'From Nothing'" :subtitle="'Out now'" />
   <NewSingleSection
     :overline="'The latest single'"
     :title="'let me plunge'"

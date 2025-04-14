@@ -29,7 +29,7 @@ const { mobile, mdAndDown } = useDisplay()
           :href="'http://store.benthos-band.com/'"
           target="_blank"
         >
-          EU & UK STORE
+          EU / UK / WORLD STORE
         </v-btn>
 
         <v-btn
@@ -40,7 +40,7 @@ const { mobile, mdAndDown } = useDisplay()
           :href="'https://merchbooth.net/benthos/'"
           target="_blank"
         >
-          US, CANADA & WORLDWIDE STORE
+          US / WORLD STORE
         </v-btn>
 
         <v-img
