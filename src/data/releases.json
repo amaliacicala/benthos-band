@@ -1,4 +1,110 @@
 {
+  "fromNothing": {
+    "overline": "The new album",
+    "releaseType": "Album",
+    "title": "From Nothing",
+    "releaseDate": "April 11, 2025",
+    "coverLg": "/album_covers/large/benthos_fromnothing_cover-lg.avif",
+    "coverSm": "/album_covers/small/benthos_fromnothing_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "It Starts",
+        "length": "01:10"
+      },
+      {
+        "title": "From Nothing",
+        "length": "05:41"
+      },
+      {
+        "title": "Let Me Plunge",
+        "length": "03:59",
+        "video": "https://youtu.be/b2SJj3cd1NE"
+      },
+      {
+        "title": "As a Cordyceps",
+        "length": "03:18",
+        "video": "https://www.youtube.com/watch?v=YyU3vCAol-E"
+      },
+      {
+        "title": "Fossil",
+        "length": "06:30",
+        "video": "https://www.youtube.com/watch?v=vtXFiFwSIy0"
+      },
+      {
+        "title": "Recompose",
+        "length": "01:34"
+      },
+      {
+        "title": "The Giant Child",
+        "length": "04:34"
+      },
+      {
+        "title": "Pure",
+        "length": "04:45",
+        "video": "https://www.youtube.com/watch?v=GZorqyd95Zk"
+      },
+      {
+        "title": "Athletic Worms",
+        "length": "02:21"
+      },
+      {
+        "title": "Perpetual Drone Monkeys",
+        "length": "04:55",
+        "video": "https://youtu.be/b2SJj3cd1NE?feature=shared"
+      },
+      {
+        "title": "To Everything",
+        "length": "04:44"
+      },
+      {
+        "title": "It Ends",
+        "length": "01:54"
+      }
+    ],
+    "albumLinks": {
+      "btnText": "Buy vinyl / CD",
+      "btnLink": "http://ffm.bio/benthos",
+      "bandcampLink": "https://benthosmusic.bandcamp.com/album/from-nothing-24-bit-hd-audio"
+    },
+
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": "https://linkfire.prf.hn/click/camref:1101lpEMJ/pubref:Benthos%3BBenthos.lnk.to%2FFromNothing-Album%3B16482af3abfc6daf23dcfef89aa8c432/sportifyurl:https%3A%2F%2Fopen.spotify.com%2Falbum%2F6NBzyj5wkRF2ILEoAaIQRQ%3Fgo%3D1/destination:https%3A%2F%2Fopen.spotify.com%2Falbum%2F6NBzyj5wkRF2ILEoAaIQRQ%3Fgo%3D1"
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": "https://music.apple.com/it/album/1791135265?app=music&at=1010lNLq&ct=LFV_16482af3abfc6daf23dcfef89aa8c432&itscg=30440&itsct=catchall_p2&lId=211969221&cId=none&sr=2&src=Linkfire&ls=1"
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": "https://music.amazon.com/albums/B0DTB4V35Z?tag=1165492_pink_beautifultrauma-21&ie=UTF8&linkCode=as2&ascsubtag=16482af3abfc6daf23dcfef89aa8c432&ref=dmm_acq_soc_it_u_lfire_lp_x_16482af3abfc6daf23dcfef89aa8c432"
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": "http://www.tidal.com/album/412307382"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://www.youtube.com/playlist?list=PLUdz-epcjgwy80ddBe5Irr-HBVyy6f1_i&src=Linkfire&lId=4d430bd0-0bba-4e04-a353-04c02b6929a2&cId=d3d58fd7-4c47-11e6-9fd0-066c3e7a8751"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": "https://music.youtube.com/playlist?list=OLAK5uy_k2nJoIn_3B1fjnwFr6DxXEo28OG4xgHPA&src=Linkfire&lId=4d430bd0-0bba-4e04-a353-04c02b6929a2&cId=d3d58fd7-4c47-11e6-9fd0-066c3e7a8751"
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": "https://www.deezer.com/album/699318951?app_id=140685&utm_source=partner_linkfire&utm_campaign=16482af3abfc6daf23dcfef89aa8c432&utm_medium=Original&utm_term=century-media-records&utm_content=album-699318951"
+      }
+    ]
+  },
   "plunge": {
     "overline": "The latest single",
     "releaseType": "Single",
@@ -313,7 +419,7 @@
   },
   "ii": {
     "overline": "The debut album",
-    "releaseType": "Full-length album",
+    "releaseType": "Album",
     "title": "II",
     "releaseDate": "April 23, 2021",
     "coverLg": "/album_covers/large/benthos_ii_cover-lg.avif",
@@ -339,6 +445,11 @@
       { "title": "II", "length": "05:40" },
       { "title": "Dissolving Flowers", "length": "06:45" }
     ],
+    "albumLinks": {
+      "btnText": "Buy CD",
+      "btnLink": "https://store.benthos-band.com/",
+      "bandcampLink": "https://benthosmusic.bandcamp.com/album/ii"
+    },
     "links": [
       {
         "name": "Spotify",

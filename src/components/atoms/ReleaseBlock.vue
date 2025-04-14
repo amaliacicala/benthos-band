@@ -38,6 +38,21 @@ const { mobile, mdAndDown } = useDisplay()
         <div v-if="mobile" class="text-center text-md-right py-4 opacity-80">
           <p class="text-overline">{{ release.releaseType }}</p>
           <p class="text-overline">{{ release.releaseDate }}</p>
+
+          <div v-if="release.albumLinks" class="d-flex justify-center align-center w-100 pt-4">
+            <v-btn
+              class="bg-primary text-overline mr-4"
+              :href="release.albumLinks.btnLink"
+              target="_blank"
+              >{{ release.albumLinks.btnText }}</v-btn
+            >
+            <v-btn
+              class="bg-primary text-overline"
+              :href="release.albumLinks.bandcampLink"
+              target="_blank"
+              >Bandcamp</v-btn
+            >
+          </div>
         </div>
 
         <v-list class="text-primary bg-transparent pa-0 mt-2">
@@ -65,6 +80,21 @@ const { mobile, mdAndDown } = useDisplay()
         <div v-if="!mobile" class="text-primary text-center text-md-right pr-0 pr-md-4">
           <p class="text-overline">{{ release.releaseType }}</p>
           <p class="text-overline">{{ release.releaseDate }}</p>
+
+          <div v-if="release.albumLinks" class="pt-4">
+            <v-btn
+              class="bg-primary text-overline pr-0 pr-md-4 mb-2"
+              :href="release.albumLinks.btnLink"
+              target="_blank"
+              >{{ release.albumLinks.btnText }}</v-btn
+            >
+            <v-btn
+              class="bg-primary text-overline pr-0 pr-md-4"
+              :href="release.albumLinks.bandcampLink"
+              target="_blank"
+              >Bandcamp</v-btn
+            >
+          </div>
         </div>
 
         <div class="d-flex flex-column pt-6">
