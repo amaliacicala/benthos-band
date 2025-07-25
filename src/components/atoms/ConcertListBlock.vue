@@ -1,8 +1,10 @@
 <script lang="ts" setup>
+import { onMounted } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useDisplay } from 'vuetify'
 import { useBandsintownStore } from '@/stores/bandsintown'
 import type { Event } from '@/types/Bandsintown'
-import { storeToRefs } from 'pinia'
-import { onMounted } from 'vue'
+import icon from '/icons/bandsintown.svg'
 
 const props = defineProps({
   concertList: {
@@ -14,6 +16,8 @@ const props = defineProps({
     default: 'red-darken-2'
   }
 })
+
+const { mobile } = useDisplay()
 
 const bandsintownStore = useBandsintownStore()
 const { isPastDate } = storeToRefs(bandsintownStore)
@@ -31,6 +35,8 @@ const formatDate = (date: string | number | Date) => {
 
   return { datePart, weekdayTimePart }
 }
+
+const requestShowUrl = `https://www.bandsintown.com/a/${import.meta.env.VITE_BANDSINTOWN_ARTIST_ID}?came_from=267&app_id=${import.meta.env.VITE_BANDSINTOWN_APP_ID}&affil_code=${import.meta.env.VITE_BANDSINTOWN_AFFIL_CODE}&utm_source=public_api&utm_medium=api&utm_campaign=play_my_city&trigger=play_my_city`
 
 onMounted(() => {
   console.log(props.concertList)
@@ -89,5 +95,20 @@ onMounted(() => {
         buy tickets
       </v-btn>
     </v-col>
+  </v-row>
+
+  <v-row class="d-flex flex-column align-center mt-16">
+    <h3 class="text-brown-lighten-5 text-h4">Don't see a show near you?</h3>
+    <v-btn
+      variant="outlined"
+      class="text-brown-lighten-5 text-h4 mt-4"
+      height="5rem"
+      :size="mobile ? 'large' : 'x-large'"
+      :href="requestShowUrl"
+      target="_blank"
+    >
+      <img :src="icon" width="20px" class="mr-3" />
+      Request a show
+    </v-btn>
   </v-row>
 </template>

@@ -31,17 +31,31 @@ const props = defineProps({
   >
     <p class="text-h4 text-brown-lighten-5">Sorry, no upcoming shows for the moment.</p>
     <p :class="`text-body-1 text-${props.secondaryColor} mt-6 mt-md-2`">
-      But you can be the first to know when we're back on stage.
+      But you can be the first to know when we're back on stage,<br />or request a show in your
+      city.
     </p>
-    <v-btn
-      :href="props.notifyLink"
-      target="_blank"
-      size="large"
-      :color="props.primaryColor"
-      :class="`mt-8 text-${props.textColor} flat-shadow`"
-    >
-      <img :src="icon" width="20px" class="mr-3" />
-      Notify Me
-    </v-btn>
+    <v-row class="d-flex flex-column flex-md-row pb-8 mt-2 align-center">
+      <v-btn
+        :href="props.notifyLink"
+        target="_blank"
+        size="large"
+        :color="props.primaryColor"
+        :class="`mt-8 text-${props.textColor} flat-shadow`"
+      >
+        <img :src="icon" width="20px" class="mr-3" />
+        Notify Me
+      </v-btn>
+      <v-btn
+        :href="props.notifyLink"
+        target="_blank"
+        size="large"
+        variant="outlined"
+        :color="props.primaryColor"
+        :class="`ml-0 ml-md-12 mt-8 text-${props.textColor} flat-shadow`"
+      >
+        <img :src="icon" width="20px" class="mr-3" />
+        Request a show
+      </v-btn>
+    </v-row>
   </div>
 </template>
