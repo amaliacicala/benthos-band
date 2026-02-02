@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useDisplay } from 'vuetify'
+import home_lg from '/backgrounds/large/bg_home-lg.avif'
 import fossil_highlight_lg from '/backgrounds/large/fossil_highlight-lg.avif'
 import fossil_highlight_sm from '/backgrounds/small/fossil_highlight-sm.avif'
 import cordyceps_highlight_lg from '/backgrounds/large/cordyceps_highlight-lg.jpg'
@@ -26,6 +27,8 @@ const imageSrc = computed(() => {
     return plunge_highlight
   } else if (props.image === 'live') {
     return live_highlight
+  } else if (props.image === 'home') {
+    return home_lg
   }
   return ''
 })

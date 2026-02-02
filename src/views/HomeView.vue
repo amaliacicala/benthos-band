@@ -13,22 +13,20 @@ import TourDatesSection from '@/components/sections/TourDatesSection.vue'
 import HighlightSection from '@/components/sections/HighlightSection.vue'
 import NewsletterSection from '@/components/sections/NewsletterSection.vue'
 
-import hero_lg from '/backgrounds/large/bg_hero_fossil-lg.avif'
-import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
+import hero_lg from '/backgrounds/large/bg_hero-lg.avif'
+import hero_sm from '/backgrounds/small/bg_hero-sm.avif'
 </script>
 
 <template>
   <HeroSection :hero-lg="hero_lg" :hero-sm="hero_sm" />
   <AlbumSection :overline="'The New Album'" :title="'From Nothing'" :subtitle="'Out now'" />
-  <NewSingleSection
+  <!-- <NewSingleSection
     :overline="'The latest single'"
     :title="'let me plunge'"
     :fan-link="'https://ffm.to/benthos-let-me-plunge'"
     :single-links="plungeStreamingLinks"
     :video-link="'https://www.youtube.com/watch?v=b2SJj3cd1NE'"
-  />
-  <HighlightSection :image="'plunge'" />
-  <MerchSection />
+  /> -->
   <NewSingleSection
     :overline="'Released February 7th, 2025'"
     :title="'as a cordyceps'"
@@ -36,6 +34,8 @@ import hero_sm from '/backgrounds/small/bg_hero_fossil-sm.avif'
     :single-links="cordycepsStreamingLinks"
     :video-link="'https://www.youtube.com/watch?v=YyU3vCAol-E'"
   />
+  <HighlightSection :image="'home'" />
+  <MerchSection />
   <HighlightSection :image="'fossil'" />
   <NewSingleSection
     :overline="'Released January 13th, 2025'"
