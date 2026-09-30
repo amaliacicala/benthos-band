@@ -29,7 +29,7 @@ const { mobile, mdAndDown } = useDisplay()
           :href="'http://store.benthos-band.com/'"
           target="_blank"
         >
-          EU / UK / WORLD STORE
+          EU / UK STORE
         </v-btn>
 
         <v-btn
@@ -41,6 +41,17 @@ const { mobile, mdAndDown } = useDisplay()
           target="_blank"
         >
           US / WORLD STORE
+        </v-btn>
+
+        <v-btn
+          variant="flat"
+          class="bg-brown-lighten-5 w-md-50 w-100"
+          height="4rem"
+          :size="mobile ? 'large' : 'x-large'"
+          :href="'https://benthosmusic.bandcamp.com/merch/'"
+          target="_blank"
+        >
+          BANDCAMP
         </v-btn>
 
         <v-img
