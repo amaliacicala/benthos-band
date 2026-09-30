@@ -3,8 +3,8 @@ import { useDisplay } from 'vuetify'
 import epkData from '@/data/epkData.json'
 import PageHeader from '@/components/layout/PageHeader.vue'
 import BiographyBlock from '@/components/atoms/BiographyBlock.vue'
-import about_img from '/backgrounds/large/about_img-lg.avif'
-import about_img_sm from '/backgrounds/small/about_img-sm.avif'
+// import about_img from '/backgrounds/large/about_img-lg.jpg'
+// import about_img_sm from '/backgrounds/small/about_img-sm.avif'
 
 const { mobile } = useDisplay()
 </script>
@@ -15,14 +15,15 @@ const { mobile } = useDisplay()
       <PageHeader :title="'About'" :color="'brown-lighten-5'" />
     </v-container>
 
+    <!--
     <v-fade-transition appear>
       <v-parallax v-if="mobile" :src="about_img_sm" position="top" height="15rem" />
       <v-parallax v-else :src="about_img" height="23rem" position="top" />
     </v-fade-transition>
-
+-->
     <v-container class="px-8">
       <v-row class="d-flex justify-center">
-        <v-col cols="12" md="8" class="mt-6 text-center">
+        <v-col cols="12" md="8" class="text-center">
           <BiographyBlock :text-color="'text-brown-lighten-5'" :bio="'shortBio'" />
         </v-col>
       </v-row>

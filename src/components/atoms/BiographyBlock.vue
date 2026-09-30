@@ -21,12 +21,13 @@ const bioContent = computed(() => {
 </script>
 
 <template>
+  <!--
   <h2
     :class="[props.textColor, 'text-body-1 font-weight-bold text-decoration-underline pb-6']"
     :style="{ textUnderlineOffset: '4px !important' }"
   >
     biography
   </h2>
-
+-->
   <MarkdownText :source="bioContent" :class="[props.textColor, 'col-6']" />
 </template>
