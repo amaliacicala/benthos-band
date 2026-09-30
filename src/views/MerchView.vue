@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
 import PageHeader from '@/components/layout/PageHeader.vue'
-import merch_mockups_sm from '/images/merch_mockups-sm.png'
-import merch_mockups_lg from '/images/merch_mockups-lg.png'
+import merch_mockups_sm from '/images/merch26_mockups-sm.png'
+import merch_mockups_lg from '/images/merch26_mockups-lg.png'
 
 const { mobile, mdAndDown } = useDisplay()
 </script>

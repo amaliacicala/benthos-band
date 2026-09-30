@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import plungeStreamingLinks from '@/data/plungeStreamingLinks.json'
+// import plungeStreamingLinks from '@/data/plungeStreamingLinks.json'
 import cordycepsStreamingLinks from '@/data/cordycepsStreamingLinks.json'
 import pureStreamingLinks from '@/data/pureStreamingLinks.json'
 // import fossilStreamingLinks from '@/data/fossilStreamingLinks.json'
@@ -34,7 +34,7 @@ import hero_sm from '/backgrounds/small/bg_hero-sm.avif'
     :single-links="cordycepsStreamingLinks"
     :video-link="'https://www.youtube.com/watch?v=YyU3vCAol-E'"
   />
-  <HighlightSection :image="'home'" />
+  <!-- <HighlightSection :image="'home'" /> -->
   <MerchSection />
   <HighlightSection :image="'fossil'" />
   <NewSingleSection

@@ -2,8 +2,8 @@
 import { useDisplay } from 'vuetify'
 import bg_lg from '/backgrounds/large/bg_red-lg.avif'
 import bg_sm from '/backgrounds/small/bg_red-sm.avif'
-import merch_mockups_sm from '/images/merch_mockups-sm.png'
-import merch_mockups_lg from '/images/merch_mockups-lg.png'
+import merch_mockups_sm from '/images/merch26_mockups-sm.png'
+import merch_mockups_lg from '/images/merch26_mockups-lg.png'
 
 const { mobile, mdAndDown } = useDisplay()
 </script>
@@ -38,7 +38,7 @@ const { mobile, mdAndDown } = useDisplay()
               :href="'http://store.benthos-band.com/'"
               target="_blank"
             >
-              EU / UK / WORLD STORE
+              EU / UK STORE
             </v-btn>
 
             <v-btn
@@ -49,7 +49,7 @@ const { mobile, mdAndDown } = useDisplay()
               :href="'https://merchbooth.net/benthos/'"
               target="_blank"
             >
-              US STORE
+              US / WORLD STORE
             </v-btn>
           </div>
         </div>
