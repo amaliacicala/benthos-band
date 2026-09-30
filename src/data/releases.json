@@ -105,6 +105,58 @@
       }
     ]
   },
+  "dissolvingFlowers": {
+    "overline": "Alternative version",
+    "releaseType": "Single",
+    "title": "Dissolving Flowers - Acoustic Live Session",
+    "releaseDate": "April 23, 2026",
+    "coverLg": "/album_covers/large/benthos_dissolvingflowers_cover-lg.avif",
+    "coverSm": "/album_covers/small/benthos_dissolvingflowers_cover-sm.avif",
+    "setlist": [
+      {
+        "title": "Dissolving Flowers (Acoustic Live Session)",
+        "length": "05:42",
+        "video": "https://www.youtube.com/watch?v=pQ6Y_dKzCQc"
+      }
+    ],
+    "links": [
+      {
+        "name": "Spotify",
+        "icon": "spotify",
+        "link": "https://open.spotify.com/track/5ygoK08QlAWlcY3tak2lc9"
+      },
+      {
+        "name": "Apple Music",
+        "icon": "apple_music",
+        "link": "https://music.apple.com/it/album/1890144161?i=1890144352"
+      },
+      {
+        "name": "Amazon Music",
+        "icon": "amazon_music",
+        "link": "https://music.amazon.com/tracks/B0GVSSS99M/"
+      },
+      {
+        "name": "TIDAL",
+        "icon": "tidal",
+        "link": "http://www.tidal.com/track/512510860"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "link": "https://www.youtube.com/watch?v=pQ6Y_dKzCQc"
+      },
+      {
+        "name": "YouTube Music",
+        "icon": "youtube_music",
+        "link": "https://music.youtube.com/watch?v=6vTFBdxSdaw"
+      },
+      {
+        "name": "Deezer",
+        "icon": "deezer",
+        "link": "https://www.deezer.com/track/3938028501?app_id=140685"
+      }
+    ]
+  },
   "plunge": {
     "overline": "The latest single",
     "releaseType": "Single",
