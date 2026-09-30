@@ -30,7 +30,7 @@ const { copy: copyTwo, copied: copiedTwo } = useClipboard()
             <p
               class="text-body-2 font-weight-bold bg-red-darken-2 text-brown-lighten-5 py-1 mt-2 mb-4"
             >
-              Amalia Cicala
+              Amalia Cicala - BANDS Management
             </p>
             <span
               v-if="!copiedOne"

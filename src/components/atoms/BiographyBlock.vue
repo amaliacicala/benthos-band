@@ -28,11 +28,5 @@ const bioContent = computed(() => {
     biography
   </h2>
 
-  <MarkdownText :source="bioContent" :class="[props.textColor, 'col-6 font-family']" />
+  <MarkdownText :source="bioContent" :class="[props.textColor, 'col-6']" />
 </template>
-
-<style lang="scss" scoped>
-.font-family {
-  font-family: 'Open Sans', sans-serif;
-}
-</style>
