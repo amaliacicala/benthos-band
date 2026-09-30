@@ -24,6 +24,9 @@ const { mobile } = useDisplay()
     <v-container class="px-8">
       <v-row class="d-flex justify-center">
         <v-col cols="12" md="8" class="text-center">
+          <h2 class="mb-9 text-brown-lighten-5 text-lg-h3 text-h4 text-uppercase">
+            “The Italian prog metal merchants questioning the universe” — Metal Hammer UK
+          </h2>
           <BiographyBlock :text-color="'text-brown-lighten-5'" :bio="'shortBio'" />
         </v-col>
       </v-row>
@@ -39,7 +42,7 @@ const { mobile } = useDisplay()
           <v-list-item
             v-for="(bandMember, index) in epkData.bandMembers"
             :key="index"
-            class="text-body-2 rounded-lg py-2 mb-2"
+            class="text-body-1 rounded-lg py-2 mb-2"
           >
             <p>{{ bandMember.name }} - {{ bandMember.instrument }}</p>
           </v-list-item>
